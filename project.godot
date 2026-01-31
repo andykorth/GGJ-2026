@@ -23,14 +23,17 @@ GlobalGameVariables="*uid://e2hlgw0okjte"
 [dialogic]
 
 directories/dch_directory={
+"Easton": "res://DialogicFiles/Timelines/Easton.dch",
+"Lena": "res://DialogicFiles/Timelines/Lena.dch",
 "Mask": "res://DialogicFiles/Characters/Mask.dch",
+"Youa": "res://DialogicFiles/Timelines/Youa.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"Direct": "res://DialogicFiles/Timelines/Direct.dtl",
+"Easton": "res://DialogicFiles/Timelines/Easton.dtl",
 "Lena": "res://DialogicFiles/Timelines/Lena.dtl",
-"Shy": "res://DialogicFiles/Timelines/Shy.dtl",
-"Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl"
+"Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl",
+"Youa": "res://DialogicFiles/Timelines/Youa.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
