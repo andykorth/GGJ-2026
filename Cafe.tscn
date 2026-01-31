@@ -18,10 +18,11 @@ position = Vector2(587.5, 512)
 scale = Vector2(1.1474609, 1)
 texture = ExtResource("1_v4hdd")
 
-[node name="CharacterNode" type="Node2D" parent="." unique_id=212993648]
+[node name="CharacterNode" type="Node2D" parent="." unique_id=212993648 node_paths=PackedStringArray("cafe")]
 position = Vector2(512, 512)
 script = ExtResource("2_12iff")
 currentChar = ExtResource("3_12iff")
+cafe = NodePath("..")
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
 position = Vector2(0, -64)

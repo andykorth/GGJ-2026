@@ -6,6 +6,7 @@ extends Node2D
 
 @export var speed:float = 120.0
 @export var currentChar : CharacterAttributes
+@export var cafe : Node
 var wiggleAmplitude:float = 1.0
 var destination: Vector2
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
@@ -56,7 +57,25 @@ func _process(delta: float) -> void:
 	
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
+	
+	CheckForNewChats()
+	
 	pass
+
+# you should NOTICE this cool method
+func CheckForNewChats():
+	
+	for childNode in cafe.get_children():
+		if childNode is CafeNPC:
+			var delta = position - childNode.position
+			if delta.length() < 30:
+				StartDialogWith(childNode.currentChar)
+	
+func StartDialogWith(character : CharacterAttributes):
+	# stop any additional motion
+	destination = position
+	# do blocked input but only when you open the dialog successfully
+	print('start dialog with ' + character.character_name);
 
 func SetDestination(newDest : Vector2):
 	if GlobalGameVariables.playerControlsActive && !blockedInput:

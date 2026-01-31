@@ -1,3 +1,4 @@
+class_name CafeNPC
 extends Node2D
 
 # A character that is not us. we can talk to them.
