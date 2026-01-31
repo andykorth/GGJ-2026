@@ -1,6 +1,11 @@
-label Start
-Lena: Hey there, friend! What can I get for ya?
-- I need to borrow your body.
-	Lena: ... I'm sorry, what?
-- The question is, what can I do for you?
-	Lena: Hahaha. That's cute.
+Lena: Hey, you're awake! I was wondering if today would be the day. Are you ready to party?
+- ...
+	Lena: You poor thing, you're confused. Whenever a mask awakes, it's sure to be a party. Just how good the party is depends on YOU!
+	Lena: First thing to do is convince a few people to celebrate with you. The more the merrier, as they say!
+	Lena: I'll happily take you around for a spin. Just because I consent doesn't mean everyone will though!
+	Make sure you earn their trust before you ask for a ride. Otherwise it's just rude.
+	jump Game begins
+- I know what to do!
+	jump Game begins
+label Game begins
+Lena: Take me away!
