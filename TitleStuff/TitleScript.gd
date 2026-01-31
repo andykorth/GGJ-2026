@@ -10,6 +10,14 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func AndysButton():
+func PlayGameButton():
 	print("Hello global game jam")
+	get_tree().change_scene_to_file("res://Cafe.tscn")
+
+
+func QuitButton():
+	get_tree().quit()
+	
+func CreditsButton():
+	OS.shell_open("https://globalgamejam.org/games/2026/masqafe-2")
 	
