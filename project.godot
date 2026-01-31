@@ -24,11 +24,10 @@ DialogicConnector="*uid://hxhkhdiywikk"
 [dialogic]
 
 directories/dch_directory={
-"Easton": "res://DialogicFiles/Timelines/Easton.dch",
+"Easton": "res://DialogicFiles/Easton.dch",
 "Lena": "res://DialogicFiles/Characters/Lena.dch",
 "Mask": "res://DialogicFiles/Characters/Mask.dch",
-"Timelines/Lena": "res://DialogicFiles/Timelines/Lena.dch",
-"Youa": "res://DialogicFiles/Timelines/Youa.dch",
+"Youa": "res://DialogicFiles/Characters/Youa.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
@@ -36,8 +35,7 @@ directories/dtl_directory={
 "Lena": "res://DialogicFiles/Timelines/Lena.dtl",
 "LenaTest": "res://DialogicFiles/Timelines/LenaTest.dtl",
 "Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl",
-"Youa": "res://DialogicFiles/Timelines/Youa.dtl",
-"Shy": "res://DialogicFiles/Timelines/Shy.dtl"
+"Youa": "res://DialogicFiles/Timelines/Youa.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
