@@ -6,26 +6,34 @@ extends Node2D
 
 @export var speed:float = 120.0
 @export var currentChar : CharacterAttributes
+@export var cafe : Node
 var wiggleAmplitude:float = 1.0
 var destination: Vector2
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
+
+var blockedInput: bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# starting position
 	destination = position
 	SetUpCharacter()
+	Dialogic.timeline_ended.connect(DialogEnded)
+
+func DialogEnded():
+	blockedInput = true;
+	await get_tree().create_timer(0.1).timeout
+	blockedInput = false;
 	
 func SetUpCharacter():
 	bodySprite.texture = currentChar.art_overworld_body_neutral
 	pass
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
 	# if dialogic ui is open, return here, so we don't walk around.
-	if !GlobalGameVariables.playerControlsActive:
+	if !GlobalGameVariables.playerControlsActive || blockedInput:
 		return
 	
 	# process keyboard input as a test, via arrow keys
@@ -44,18 +52,37 @@ func _process(delta: float) -> void:
 	# animate wiggles based on velocity.
 	var normalizedSpeed = velocity.length() / speed
 	var x = cos(Time.get_ticks_msec() / 80.0)
-	rotation = deg_to_rad(x * 15.0 * normalizedSpeed) 
-	scale = Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
+	bodySprite.rotation = deg_to_rad(x * 15.0 * normalizedSpeed) 
+	bodySprite.scale = Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
 	
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
+	
+	CheckForNewChats()
+	
 	pass
 
+# you should NOTICE this cool method
+func CheckForNewChats():
+	
+	for childNode in cafe.get_children():
+		if childNode is CafeNPC:
+			var delta = position - childNode.position
+			if delta.length() < 30:
+				StartDialogWith(childNode.currentChar)
+	
+func StartDialogWith(character : CharacterAttributes):
+	# stop any additional motion
+	destination = position
+	# do blocked input but only when you open the dialog successfully
+	print('start dialog with ' + character.character_name);
+
 func SetDestination(newDest : Vector2):
-	destination = newDest;
+	if GlobalGameVariables.playerControlsActive && !blockedInput:
+		print("Set walk dest to: " + str(destination) )
+		destination = newDest;
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("mouse_left"):
 		# just for testing
 		SetDestination(get_global_mouse_position())
-		print("Clicked at: " + str(destination) )

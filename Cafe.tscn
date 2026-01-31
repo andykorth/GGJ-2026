@@ -1,36 +1,44 @@
 [gd_scene format=3 uid="uid://dbmfnlrrect2g"]
 
-[ext_resource type="Texture2D" uid="uid://dbm3jqyx64tcw" path="res://placeholder title bg.png" id="1_v4hdd"]
+[ext_resource type="Texture2D" uid="uid://ba5ul3swgdnqi" path="res://resources/testerbg.PNG" id="1_qt8ew"]
 [ext_resource type="Script" uid="uid://cphvlekiglgoj" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
 [ext_resource type="Resource" uid="uid://bi2ja0rgmn4x7" path="res://resources/TestCharacterAttributes.tres" id="3_12iff"]
 [ext_resource type="Script" uid="uid://bmsx5hpfqhkla" path="res://DialogicFiles/DialogManager.gd" id="4_12iff"]
+[ext_resource type="Resource" uid="uid://dlqhpf0enooch" path="res://resources/BaristaCharacterAttributes.tres" id="5_h87hw"]
+[ext_resource type="Script" uid="uid://cif2qmibwq5vg" path="res://Scripts/CafeNPC.gd" id="5_qt8ew"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=632607298]
-offset = Vector2(576, 324)
-
 [node name="CafeBackground" type="Sprite2D" parent="." unique_id=321000899]
-position = Vector2(587.5, 512)
-scale = Vector2(1.1474609, 1)
-texture = ExtResource("1_v4hdd")
+position = Vector2(1207, 292)
+scale = Vector2(0.31289563, 0.2726852)
+texture = ExtResource("1_qt8ew")
 
-[node name="CharacterNode" type="Node2D" parent="." unique_id=212993648]
+[node name="CharacterNode" type="Node2D" parent="." unique_id=212993648 node_paths=PackedStringArray("cafe")]
 position = Vector2(512, 512)
 script = ExtResource("2_12iff")
 currentChar = ExtResource("3_12iff")
+cafe = NodePath("..")
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
 position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
 
-[node name="NPCNode" type="Node2D" parent="." unique_id=1325653488]
-position = Vector2(512, 512)
-script = ExtResource("2_12iff")
-currentChar = ExtResource("3_12iff")
+[node name="Camera2D" type="Camera2D" parent="CharacterNode" unique_id=632607298]
+position = Vector2(-512, -512)
+offset = Vector2(576, 324)
+limit_top = 0
+limit_bottom = 0
 
-[node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNode" unique_id=1594672184]
+[node name="NPCNode Barista" type="Node2D" parent="." unique_id=1325653488]
+position = Vector2(1042, 428)
+script = ExtResource("5_qt8ew")
+currentChar = ExtResource("5_h87hw")
+metadata/_edit_group_ = true
+
+[node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNode Barista" unique_id=1594672184]
+modulate = Color(1, 0.19, 0.19, 1)
 position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
 
