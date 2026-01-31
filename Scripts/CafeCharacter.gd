@@ -10,11 +10,13 @@ var destination: Vector2;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	# starting position
+	destination = position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	# if dialogic ui is open, return here, so we don't walk around.
 	
 	# process keyboard input as a test, via arrow keys
 	var input_direction = Input.get_vector("left", "right", "up", "down")
@@ -30,6 +32,10 @@ func _process(delta: float) -> void:
 			velocity = speed * deltaPos.normalized();
 	
 	# animate wiggles based on velocity.
+	var normalizedSpeed = velocity.length() / speed
+	var x = cos(Time.get_ticks_msec() / 80.0)
+	rotation = deg_to_rad(x * 15.0 * normalizedSpeed) 
+	scale = Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
 	
 	# apply position but need to handle collisions.
 	position = position + velocity * delta

@@ -14,5 +14,6 @@ texture = ExtResource("1_v4hdd")
 position = Vector2(512, 512)
 script = ExtResource("2_12iff")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
+[node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
+position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
