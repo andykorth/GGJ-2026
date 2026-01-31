@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbmfnlrrect2g"]
 
-[ext_resource type="Texture2D" uid="uid://ba5ul3swgdnqi" path="res://resources/testerbg.PNG" id="1_qt8ew"]
+[ext_resource type="Texture2D" uid="uid://ekdln6tkbxq6" path="res://resources/background.png" id="1_qt8ew"]
 [ext_resource type="Script" uid="uid://cphvlekiglgoj" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
 [ext_resource type="Resource" uid="uid://bi2ja0rgmn4x7" path="res://resources/TestCharacterAttributes.tres" id="3_12iff"]
@@ -10,7 +10,7 @@
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 
-[node name="CafeBackground" type="Sprite2D" parent="." unique_id=321000899]
+[node name="CafeBackground" type="Sprite2D" parent="." unique_id=257859885]
 position = Vector2(1207, 292)
 scale = Vector2(0.31289563, 0.2726852)
 texture = ExtResource("1_qt8ew")
