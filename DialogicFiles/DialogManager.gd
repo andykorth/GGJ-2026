@@ -8,4 +8,10 @@ func _ready():
 	pass
 	
 func _process(delta):
-	pass	
+	pass
+	
+func start_character_dialog(character: CharacterAttributes):
+	##var willingnessThreshold
+	##var willingnessSplit = 
+	
+	pass

@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bmsx5hpfqhkla" path="res://DialogicFiles/DialogManager.gd" id="4_12iff"]
 [ext_resource type="Resource" uid="uid://dlqhpf0enooch" path="res://resources/BaristaCharacterAttributes.tres" id="5_h87hw"]
 [ext_resource type="Script" uid="uid://cif2qmibwq5vg" path="res://Scripts/CafeNPC.gd" id="5_qt8ew"]
+[ext_resource type="AudioStream" uid="uid://dwrefr6ly236j" path="res://boogie, man!.mp3" id="8_2kfh8"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 
@@ -44,3 +45,7 @@ texture = ExtResource("2_lddrg")
 
 [node name="DialogManager" type="Node2D" parent="." unique_id=59356439]
 script = ExtResource("4_12iff")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1846297719]
+stream = ExtResource("8_2kfh8")
+autoplay = true
