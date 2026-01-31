@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://dbmfnlrrect2g"]
+[gd_scene format=3 uid="uid://davnrwufhppu7"]
 
 [ext_resource type="Texture2D" uid="uid://dbm3jqyx64tcw" path="res://placeholder title bg.png" id="1_v4hdd"]
-[ext_resource type="Script" uid="uid://cphvlekiglgoj" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
+[ext_resource type="Script" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
+[ext_resource type="Script" uid="uid://bmsx5hpfqhkla" path="res://DialogicFiles/DialogManager.gd" id="4_12iff"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 
@@ -17,3 +18,6 @@ script = ExtResource("2_12iff")
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
 position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
+
+[node name="DialogManager" type="Node2D" parent="." unique_id=59356439]
+script = ExtResource("4_12iff")
