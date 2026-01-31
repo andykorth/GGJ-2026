@@ -6,8 +6,12 @@
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=632607298]
+offset = Vector2(576, 324)
+
 [node name="CafeBackground" type="Sprite2D" parent="." unique_id=321000899]
-position = Vector2(512, 512)
+position = Vector2(587.5, 512)
+scale = Vector2(1.1474609, 1)
 texture = ExtResource("1_v4hdd")
 
 [node name="CharacterNode" type="Node2D" parent="." unique_id=212993648]
