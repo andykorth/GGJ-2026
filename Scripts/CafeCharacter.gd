@@ -76,6 +76,8 @@ func StartDialogWith(character : CharacterAttributes):
 	destination = position
 	# do blocked input but only when you open the dialog successfully
 	print('start dialog with ' + character.character_name);
+	print(character.intro_timeline)
+	DialogicConnector.startDialogue(character.intro_timeline, character)
 
 func SetDestination(newDest : Vector2):
 	if GlobalGameVariables.playerControlsActive && !blockedInput:

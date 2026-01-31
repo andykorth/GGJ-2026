@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
 [ext_resource type="Resource" uid="uid://bi2ja0rgmn4x7" path="res://resources/TestCharacterAttributes.tres" id="3_12iff"]
 [ext_resource type="Script" uid="uid://bmsx5hpfqhkla" path="res://DialogicFiles/DialogManager.gd" id="4_12iff"]
-[ext_resource type="Resource" uid="uid://dlqhpf0enooch" path="res://resources/BaristaCharacterAttributes.tres" id="5_h87hw"]
 [ext_resource type="Script" uid="uid://cif2qmibwq5vg" path="res://Scripts/CafeNPC.gd" id="5_qt8ew"]
 [ext_resource type="AudioStream" uid="uid://dwrefr6ly236j" path="res://boogie, man!.mp3" id="8_2kfh8"]
 
@@ -35,7 +34,6 @@ limit_bottom = 0
 [node name="NPCNode Barista" type="Node2D" parent="." unique_id=1325653488]
 position = Vector2(1042, 428)
 script = ExtResource("5_qt8ew")
-currentChar = ExtResource("5_h87hw")
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNode Barista" unique_id=1594672184]

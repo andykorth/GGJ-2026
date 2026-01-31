@@ -7,4 +7,5 @@ script = ExtResource("1_fednm")
 character_name = "Lena"
 willingness = 55.0
 willingness_mask = 50.0
+intro_timeline = "LenaTest"
 metadata/_custom_type_script = "uid://ftcnopfvt30g"

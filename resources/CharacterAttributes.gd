@@ -31,4 +31,4 @@ extends Resource
 
 ## Returns whether the character is currently willing to wear the player mask.
 func is_willing_to_wear_mask() -> bool:
-    return willingness >= willingness_mask
+	return willingness >= willingness_mask
