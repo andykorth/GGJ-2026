@@ -1,7 +1,9 @@
 extends Node
 
-var playerControlsActive = true
-var stepsTakenInDialog = 0
+
+var currentCharacter: CharacterAttributes ## The dialogue's current character attributes. This should be set whenever starting a timeline.
+var playerControlsActive := true
+var stepsTakenInDialog := 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
