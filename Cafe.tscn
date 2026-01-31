@@ -10,9 +10,9 @@
 position = Vector2(512, 512)
 texture = ExtResource("1_v4hdd")
 
-[node name="CharacterNode" type="Node2D" parent="CafeBackground" unique_id=212993648]
+[node name="CharacterNode" type="Node2D" parent="." unique_id=212993648]
+position = Vector2(512, 512)
 script = ExtResource("2_12iff")
 
-[node name="Sprite2D" type="Sprite2D" parent="CafeBackground/CharacterNode" unique_id=2085887346]
-position = Vector2(-346, 21)
+[node name="Sprite2D" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
 texture = ExtResource("2_lddrg")

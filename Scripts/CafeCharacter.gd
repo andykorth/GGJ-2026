@@ -4,8 +4,7 @@ extends Node2D
 # Might be scripted to move aroudn, but maybe we allow free movement
 # once the mask takes control of a character.
 
-@export
-var speed:float = 120.0;
+@export var speed:float = 120.0;
 var wiggleAmplitude:float = 1.0;
 var destination: Vector2;
 
@@ -24,13 +23,16 @@ func _process(delta: float) -> void:
 		velocity = input_direction * speed
 	else:
 		# if there's no input, use the scripted destination:
-		velocity = speed * (position - destination)
+		var deltaPos = destination - position
+		if(deltaPos.length() < 1.0):
+			velocity = Vector2.ZERO
+		else:
+			velocity = speed * deltaPos.normalized();
 	
 	# animate wiggles based on velocity.
 	
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
-	
 	pass
 
 func SetDestination(newDest : Vector2):
@@ -39,5 +41,5 @@ func SetDestination(newDest : Vector2):
 func _physics_process(delta):
 	if Input.is_action_just_pressed("mouse_left"):
 		# just for testing
-		destination = get_local_mouse_position()
+		SetDestination(get_global_mouse_position())
 		print("Clicked at: " + str(destination) )
