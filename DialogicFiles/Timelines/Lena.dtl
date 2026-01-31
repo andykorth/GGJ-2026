@@ -1,11 +1,15 @@
 Lena: Hey, you're awake! I was wondering if today would be the day. Are you ready to party?
+join Lena center [animation="Slide In Down"]
+set {Lena.Emotion} = 1.0
 - ...
 	Lena: You poor thing, you're confused. Whenever a mask awakes, it's sure to be a party. Just how good the party is depends on YOU!
 	Lena: First thing to do is convince a few people to celebrate with you. The more the merrier, as they say! I'll happily take you around for a spin.
+	set {Lena.Emotion} = 2.0
 	Lena: ...
 	Lena: Just because I consent doesn't mean everyone will though! Make sure you earn their trust before you ask for a ride. Otherwise it's just plain rude.
 	jump Game begins
 - I know what to do!
 	jump Game begins
 label Game begins
+set {Lena.Emotion} = 1.0
 Lena: Take me away!
