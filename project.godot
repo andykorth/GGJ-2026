@@ -22,13 +22,12 @@ Dialogic="*uid://ds2q0uclmolvu"
 [dialogic]
 
 directories/dch_directory={
-"Mask": "res://Mask.dch",
-"Ty": "res://Ty.dch",
+
+"Mask": "res://DialogicFiles/Characters/Mask.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"Starting Dialog": "res://Starting Dialog.dtl",
-"test": "res://test.dtl"
+"Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
