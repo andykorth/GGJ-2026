@@ -1,3 +1,4 @@
-join Youa center
-Youa: What?
--
+Youa: What? Is there something on my face?
+- Not yet!
+- You have a lovely face.
+	set {GlobalGameVariables.currentCharacter.willingness} += "10"
