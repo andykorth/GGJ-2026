@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*uid://ds2q0uclmolvu"
 GlobalGameVariables="*uid://e2hlgw0okjte"
+DialogicConnector="*uid://hxhkhdiywikk"
 
 [dialogic]
 
@@ -35,7 +36,8 @@ directories/dtl_directory={
 "Lena": "res://DialogicFiles/Timelines/Lena.dtl",
 "LenaTest": "res://DialogicFiles/Timelines/LenaTest.dtl",
 "Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl",
-"Youa": "res://DialogicFiles/Timelines/Youa.dtl"
+"Youa": "res://DialogicFiles/Timelines/Youa.dtl",
+"Shy": "res://DialogicFiles/Timelines/Shy.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
