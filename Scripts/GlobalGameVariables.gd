@@ -1,6 +1,6 @@
 extends Node
 
-static var playerControlsActive = true
+var playerControlsActive = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,10 +10,10 @@ func _ready():
 func _process(delta):
 	pass
 
-static func activatePlayerControls():
+func activatePlayerControls():
 	playerControlsActive = true
 	pass
 	
-static func deactivatePlayerControls():
+func deactivatePlayerControls():
 	playerControlsActive = false
 	pass

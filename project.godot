@@ -18,16 +18,18 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
+GlobalGameVariables="*uid://e2hlgw0okjte"
 
 [dialogic]
 
 directories/dch_directory={
-
-"Mask": "res://DialogicFiles/Characters/Mask.dch",
+"Characters/Mask": "res://DialogicFiles/Characters/Mask.dch",
+"Ty": "res://Ty.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl"
+"Timelines/Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl",
+"test": "res://test.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
