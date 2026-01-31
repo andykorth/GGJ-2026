@@ -10,9 +10,6 @@
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=632607298]
-offset = Vector2(576, 324)
-
 [node name="CafeBackground" type="Sprite2D" parent="." unique_id=321000899]
 position = Vector2(1207, 292)
 scale = Vector2(0.31289563, 0.2726852)
@@ -27,6 +24,12 @@ cafe = NodePath("..")
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
 position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterNode" unique_id=632607298]
+position = Vector2(-512, -512)
+offset = Vector2(576, 324)
+limit_top = 0
+limit_bottom = 0
 
 [node name="NPCNode Barista" type="Node2D" parent="." unique_id=1325653488]
 position = Vector2(1042, 428)

@@ -52,8 +52,8 @@ func _process(delta: float) -> void:
 	# animate wiggles based on velocity.
 	var normalizedSpeed = velocity.length() / speed
 	var x = cos(Time.get_ticks_msec() / 80.0)
-	rotation = deg_to_rad(x * 15.0 * normalizedSpeed) 
-	scale = Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
+	bodySprite.rotation = deg_to_rad(x * 15.0 * normalizedSpeed) 
+	bodySprite.scale = Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
 	
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
