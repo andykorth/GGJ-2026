@@ -24,7 +24,7 @@ DialogicConnector="*uid://hxhkhdiywikk"
 [dialogic]
 
 directories/dch_directory={
-"Easton": "res://DialogicFiles/Easton.dch",
+"Easton": "res://DialogicFiles/Characters/Easton.dch",
 "Lena": "res://DialogicFiles/Characters/Lena.dch",
 "Mask": "res://DialogicFiles/Characters/Mask.dch",
 "Youa": "res://DialogicFiles/Characters/Youa.dch",
@@ -40,7 +40,15 @@ directories/dtl_directory={
 layout/style_directory={}
 glossary/default_case_sensitive=true
 variables={
+"Easton": {
+"Emotion": 0,
+"WhimsyMaskState": false
+},
 "Lena": {
+"Emotion": 0,
+"WhimsyMaskState": false
+},
+"Youa": {
 "Emotion": 0,
 "WhimsyMaskState": false
 }

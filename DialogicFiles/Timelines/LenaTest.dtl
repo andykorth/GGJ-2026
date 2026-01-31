@@ -1,5 +1,6 @@
 join Lena center [animation="Slide From Left"]
 Lena: Hey there! The name's Lena!
+set {Lena.Emotion} = 1.0
 Lena: I was told there was a mask I was supposed to put on? Happy to help any way I can.
 - Yes put me on please
 	set {GlobalGameVariables.currentCharacter.willingness} += 10.0
@@ -7,4 +8,5 @@ Lena: I was told there was a mask I was supposed to put on? Happy to help any wa
 	Lena: Ooh, nice and snug!
 - Actually no I'm good
 	set {GlobalGameVariables.currentCharacter.willingness} -= 10.0
+	set {Lena.Emotion} = 2.0
 	Lena: Oh sorry, must have the wrong talking mask! Have a good day!
