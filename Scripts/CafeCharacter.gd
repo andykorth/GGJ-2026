@@ -8,7 +8,6 @@ extends Node2D
 @export var currentChar : CharacterAttributes
 var wiggleAmplitude:float = 1.0
 var destination: Vector2
-var disableMovement: bool = false
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
 
 # Called when the node enters the scene tree for the first time.
@@ -21,17 +20,12 @@ func SetUpCharacter():
 	bodySprite.texture = currentChar.art_overworld_body_neutral
 	pass
 
-func EnableMovement():
-	disableMovement = false
-
-func DisableMovement():
-	disableMovement = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
 	# if dialogic ui is open, return here, so we don't walk around.
-	if disableMovement:
+	if !GlobalGameVariables.playerControlsActive:
 		return
 	
 	# process keyboard input as a test, via arrow keys
