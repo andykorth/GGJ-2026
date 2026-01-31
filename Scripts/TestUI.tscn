@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dr45ht7q4csbs"]
+
+[ext_resource type="Texture2D" uid="uid://c6hrg5iuhbtn7" path="res://kenney_ui_blue_placeholders/button_rectangle_depth_gradient.png" id="1_j4pwq"]
+[ext_resource type="Texture2D" uid="uid://cecblfdsx5de7" path="res://kenney_ui_blue_placeholders/button_rectangle_depth_flat.png" id="2_0bqjh"]
+[ext_resource type="Texture2D" uid="uid://vr18bhcvkgp6" path="res://kenney_ui_blue_placeholders/button_rectangle_gloss.png" id="3_ctgh8"]
+[ext_resource type="Script" uid="uid://ccgiws166y8yq" path="res://Scripts/basicButtons.gd" id="4_15acr"]
+
+[node name="Control" type="Control" unique_id=146038311]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=531080555]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_j4pwq")
+texture_pressed = ExtResource("2_0bqjh")
+texture_hover = ExtResource("3_ctgh8")
+script = ExtResource("4_15acr")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="AndysButton"]
