@@ -11,12 +11,9 @@ config_version=5
 [application]
 
 config/name="GGJ-2026"
+run/main_scene="uid://nushyyf0aauf"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
-
-[dotnet]
-
-project/assembly_name="GGJ-2026"
 
 [physics]
 
