@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
 [ext_resource type="Resource" uid="uid://bi2ja0rgmn4x7" path="res://resources/TestCharacterAttributes.tres" id="3_12iff"]
 [ext_resource type="Script" uid="uid://bmsx5hpfqhkla" path="res://DialogicFiles/DialogManager.gd" id="4_12iff"]
+[ext_resource type="Resource" uid="uid://dlqhpf0enooch" path="res://resources/BaristaCharacterAttributes.tres" id="5_h87hw"]
+[ext_resource type="Script" uid="uid://cif2qmibwq5vg" path="res://Scripts/CafeNPC.gd" id="5_qt8ew"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 
@@ -25,12 +27,14 @@ currentChar = ExtResource("3_12iff")
 position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
 
-[node name="NPCNode" type="Node2D" parent="." unique_id=1325653488]
-position = Vector2(512, 512)
-script = ExtResource("2_12iff")
-currentChar = ExtResource("3_12iff")
+[node name="NPCNode Barista" type="Node2D" parent="." unique_id=1325653488]
+position = Vector2(1042, 428)
+script = ExtResource("5_qt8ew")
+currentChar = ExtResource("5_h87hw")
+metadata/_edit_group_ = true
 
-[node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNode" unique_id=1594672184]
+[node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNode Barista" unique_id=1594672184]
+modulate = Color(1, 0.19, 0.19, 1)
 position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
 

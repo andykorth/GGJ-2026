@@ -10,22 +10,29 @@ var wiggleAmplitude:float = 1.0
 var destination: Vector2
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
 
+var blockedInput: bool = false;
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# starting position
 	destination = position
 	SetUpCharacter()
+	Dialogic.timeline_ended.connect(DialogEnded)
+
+func DialogEnded():
+	blockedInput = true;
+	await get_tree().create_timer(0.1).timeout
+	blockedInput = false;
 	
 func SetUpCharacter():
 	bodySprite.texture = currentChar.art_overworld_body_neutral
 	pass
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
 	# if dialogic ui is open, return here, so we don't walk around.
-	if !GlobalGameVariables.playerControlsActive:
+	if !GlobalGameVariables.playerControlsActive || blockedInput:
 		return
 	
 	# process keyboard input as a test, via arrow keys
@@ -52,10 +59,11 @@ func _process(delta: float) -> void:
 	pass
 
 func SetDestination(newDest : Vector2):
-	destination = newDest;
+	if GlobalGameVariables.playerControlsActive && !blockedInput:
+		print("Set walk dest to: " + str(destination) )
+		destination = newDest;
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("mouse_left"):
 		# just for testing
 		SetDestination(get_global_mouse_position())
-		print("Clicked at: " + str(destination) )
