@@ -24,20 +24,27 @@ GlobalGameVariables="*uid://e2hlgw0okjte"
 
 directories/dch_directory={
 "Easton": "res://DialogicFiles/Timelines/Easton.dch",
-"Lena": "res://DialogicFiles/Timelines/Lena.dch",
+"Lena": "res://DialogicFiles/Characters/Lena.dch",
 "Mask": "res://DialogicFiles/Characters/Mask.dch",
+"Timelines/Lena": "res://DialogicFiles/Timelines/Lena.dch",
 "Youa": "res://DialogicFiles/Timelines/Youa.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "Easton": "res://DialogicFiles/Timelines/Easton.dtl",
 "Lena": "res://DialogicFiles/Timelines/Lena.dtl",
+"LenaTest": "res://DialogicFiles/Timelines/LenaTest.dtl",
 "Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl",
 "Youa": "res://DialogicFiles/Timelines/Youa.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"Lena": {
+"Emotion": 0,
+"WhimsyMaskState": false
+}
+}
 
 [display]
 
@@ -96,3 +103,5 @@ mouse_left={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true

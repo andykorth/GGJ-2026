@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://m6qh06de6qyu"]
+
+[ext_resource type="Script" uid="uid://cfwf5d8exox4f" path="res://addons/dialogic/Modules/LayeredPortrait/custom_layered_portrait.gd" id="1_uubi5"]
+[ext_resource type="Texture2D" uid="uid://c7nmdow87m6hj" path="res://DialogicFiles/Sprites/tester_base.PNG" id="2_uhxkn"]
+[ext_resource type="Script" uid="uid://dcgike7u5a25m" path="res://Scripts/UpdateCharacterSpriteLayer.gd" id="3_7mi3e"]
+[ext_resource type="Texture2D" uid="uid://c7loc665qiu6g" path="res://DialogicFiles/Sprites/tester_mask01.PNG" id="3_g0ktw"]
+[ext_resource type="Texture2D" uid="uid://bpikphh5pm4gq" path="res://DialogicFiles/Sprites/tester_mask02.PNG" id="4_7mi3e"]
+[ext_resource type="Texture2D" uid="uid://b5dvglhsp02fx" path="res://DialogicFiles/Sprites/tester_eyes01.PNG" id="4_ojsje"]
+[ext_resource type="Texture2D" uid="uid://i7i0eayt8d21" path="res://DialogicFiles/Sprites/tester_mouth01.PNG" id="5_11b71"]
+
+[node name="LayeredPortrait" type="CanvasGroup" unique_id=505737323]
+script = ExtResource("1_uubi5")
+
+[node name="BaseLayer" type="Sprite2D" parent="." unique_id=620332597]
+texture = ExtResource("2_uhxkn")
+
+[node name="Layers" type="Node2D" parent="BaseLayer" unique_id=424708332 node_paths=PackedStringArray("emotionLayers", "maskLayers")]
+script = ExtResource("3_7mi3e")
+characterName = "Lena"
+emotionLayers = [NodePath("EmotionLayers/Emotion1")]
+maskLayers = [NodePath("MaskLayers/OGMask"), NodePath("MaskLayers/WhimsyMask")]
+
+[node name="EmotionLayers" type="Node2D" parent="BaseLayer/Layers" unique_id=1596870267]
+
+[node name="Emotion1" type="Node2D" parent="BaseLayer/Layers/EmotionLayers" unique_id=1470034320]
+
+[node name="Eyes" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=1764012788]
+texture = ExtResource("4_ojsje")
+
+[node name="Mouth" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=139976205]
+texture = ExtResource("5_11b71")
+
+[node name="MaskLayers" type="Node2D" parent="BaseLayer/Layers" unique_id=1926921973]
+
+[node name="OGMask" type="Sprite2D" parent="BaseLayer/Layers/MaskLayers" unique_id=577743147]
+texture = ExtResource("3_g0ktw")
+
+[node name="WhimsyMask" type="Sprite2D" parent="BaseLayer/Layers/MaskLayers" unique_id=463063410]
+texture = ExtResource("4_7mi3e")

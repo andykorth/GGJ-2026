@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://dr45ht7q4csbs"]
+
+[ext_resource type="Texture2D" uid="uid://dbm3jqyx64tcw" path="res://placeholder title bg.png" id="1_3ph5k"]
+[ext_resource type="Texture2D" uid="uid://c6hrg5iuhbtn7" path="res://kenney_ui_blue_placeholders/button_rectangle_depth_gradient.png" id="2_bqk26"]
+[ext_resource type="Texture2D" uid="uid://cecblfdsx5de7" path="res://kenney_ui_blue_placeholders/button_rectangle_depth_flat.png" id="3_e8uxl"]
+[ext_resource type="Texture2D" uid="uid://vr18bhcvkgp6" path="res://kenney_ui_blue_placeholders/button_rectangle_gloss.png" id="4_ekx28"]
+[ext_resource type="Script" uid="uid://ccgiws166y8yq" path="res://TitleStuff/TitleScript.gd" id="5_gbxlg"]
+[ext_resource type="Texture2D" uid="uid://p1tu0lfho808" path="res://TitleStuff/GGJLogo.png" id="6_e8uxl"]
+[ext_resource type="Texture2D" uid="uid://dqfulikxjlnjg" path="res://TitleStuff/IGDATC.png" id="7_ekx28"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0bqjh"]
+font_size = 88
+font_color = Color(0.352, 0.36519998, 0.55, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ctgh8"]
+font_size = 35
+font_color = Color(0.352, 0.36519998, 0.55, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3bbum"]
+line_spacing = 0.0
+font_size = 45
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="GameTitle" type="Control" unique_id=146038311]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_gbxlg")
+
+[node name="Background" type="TextureRect" parent="." unique_id=439593961]
+layout_mode = 0
+offset_left = -19.0
+offset_top = -8.0
+offset_right = 1191.0
+offset_bottom = 747.0
+texture = ExtResource("1_3ph5k")
+expand_mode = 3
+
+[node name="title" type="Label" parent="." unique_id=1859665268]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 24.0
+offset_right = 1046.0
+offset_bottom = 145.0
+text = "Masqafe  / Mask Cafe"
+label_settings = SubResource("LabelSettings_0bqjh")
+
+[node name="subtitle" type="Label" parent="." unique_id=1736155271]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 145.0
+offset_right = 1053.0
+offset_bottom = 236.0
+text = "minimum moves to party"
+label_settings = SubResource("LabelSettings_ctgh8")
+horizontal_alignment = 1
+
+[node name="example text panel" type="Panel" parent="." unique_id=646997688]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -201.0
+offset_top = -371.0
+offset_right = 201.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+tooltip_text = "dialog goes in here"
+
+[node name="Credits" type="TextureButton" parent="example text panel" unique_id=860536252]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 129.0
+offset_right = 364.0
+offset_bottom = 212.0
+texture_normal = ExtResource("2_bqk26")
+texture_pressed = ExtResource("3_e8uxl")
+texture_hover = ExtResource("4_ekx28")
+stretch_mode = 5
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="example text panel/Credits" unique_id=1939412771]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.74
+offset_bottom = 3.7399979
+grow_horizontal = 2
+grow_vertical = 2
+text = "Credits"
+label_settings = SubResource("LabelSettings_3bbum")
+horizontal_alignment = 1
+script = ExtResource("5_gbxlg")
+
+[node name="Playbutton" type="TextureButton" parent="example text panel" unique_id=531080555]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 32.0
+offset_right = 364.0
+offset_bottom = 115.0
+texture_normal = ExtResource("2_bqk26")
+texture_pressed = ExtResource("3_e8uxl")
+texture_hover = ExtResource("4_ekx28")
+stretch_mode = 5
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="example text panel/Playbutton" unique_id=582351710]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.74
+offset_bottom = 3.7399979
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+label_settings = SubResource("LabelSettings_3bbum")
+horizontal_alignment = 1
+script = ExtResource("5_gbxlg")
+
+[node name="Quit" type="TextureButton" parent="example text panel" unique_id=1973591783]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 228.0
+offset_right = 364.0
+offset_bottom = 311.0
+texture_normal = ExtResource("2_bqk26")
+texture_pressed = ExtResource("3_e8uxl")
+texture_hover = ExtResource("4_ekx28")
+stretch_mode = 5
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="example text panel/Quit" unique_id=1298145805]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.74
+offset_bottom = 3.7399979
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+label_settings = SubResource("LabelSettings_3bbum")
+horizontal_alignment = 1
+script = ExtResource("5_gbxlg")
+
+[node name="GgjLogo" type="Sprite2D" parent="." unique_id=144482976]
+position = Vector2(73, 603)
+scale = Vector2(0.10263161, 0.10263161)
+texture = ExtResource("6_e8uxl")
+
+[node name="Igdatc2" type="Sprite2D" parent="." unique_id=358114897]
+position = Vector2(1105, 592)
+scale = Vector2(0.39142856, 0.39142856)
+texture = ExtResource("7_ekx28")
+
+[connection signal="pressed" from="example text panel/Credits" to="." method="CreditsButton"]
+[connection signal="pressed" from="example text panel/Playbutton" to="." method="PlayGameButton"]
+[connection signal="pressed" from="example text panel/Quit" to="." method="QuitButton"]
