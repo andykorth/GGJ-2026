@@ -32,6 +32,11 @@ layout/style_directory={}
 glossary/default_case_sensitive=true
 variables={}
 
+[display]
+
+window/size/resizable=false
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
