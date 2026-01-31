@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterAttributes" format=3 uid="uid://bi2ja0rgmn4x7"]
+
+[ext_resource type="Script" uid="uid://ftcnopfvt30g" path="res://resources/CharacterAttributes.gd" id="1_xs5r0"]
+
+[resource]
+script = ExtResource("1_xs5r0")
+character_name = "Shark the Rabbit"
+willingness = 24.561
+metadata/_custom_type_script = "uid://ftcnopfvt30g"

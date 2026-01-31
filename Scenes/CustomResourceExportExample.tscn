@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://butcbhsxl673r"]
+
+[ext_resource type="Script" uid="uid://cuk78wx6aahvs" path="res://Scenes/custom_resource_export_example.gd" id="1_58pxw"]
+[ext_resource type="Script" uid="uid://ftcnopfvt30g" path="res://resources/CharacterAttributes.gd" id="2_o468a"]
+
+[sub_resource type="Resource" id="Resource_rd3vt"]
+script = ExtResource("2_o468a")
+metadata/_custom_type_script = "uid://ftcnopfvt30g"
+
+[node name="CustomResourceExportExample" type="Node2D" unique_id=262271866]
+script = ExtResource("1_58pxw")
+characterAttributes = SubResource("Resource_rd3vt")

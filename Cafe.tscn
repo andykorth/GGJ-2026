@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dbmfnlrrect2g"]
+
+[ext_resource type="Texture2D" uid="uid://dbm3jqyx64tcw" path="res://placeholder title bg.png" id="1_v4hdd"]
+[ext_resource type="Script" uid="uid://cphvlekiglgoj" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
+
+[node name="Cafe" type="Node2D" unique_id=1597265293]
+
+[node name="CafeBackground" type="Sprite2D" parent="." unique_id=321000899]
+position = Vector2(512, 512)
+texture = ExtResource("1_v4hdd")
+
+[node name="CharacterNode" type="Node2D" parent="." unique_id=212993648]
+position = Vector2(512, 512)
+script = ExtResource("2_12iff")
+
+[node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
+position = Vector2(0, -64)
+texture = ExtResource("2_lddrg")
