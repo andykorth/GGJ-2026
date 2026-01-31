@@ -1,3 +1,4 @@
+class_name CafeCharacter
 extends Node2D
 
 # A character we can move around on the "overworld" map of the cafe.

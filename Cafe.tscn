@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbmfnlrrect2g"]
 
 [ext_resource type="Texture2D" uid="uid://ba5ul3swgdnqi" path="res://resources/testerbg.PNG" id="1_qt8ew"]
+[ext_resource type="Script" uid="uid://ccpoqts362t8g" path="res://Scripts/CafeCamera.gd" id="2_2kfh8"]
 [ext_resource type="Script" uid="uid://cphvlekiglgoj" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
 [ext_resource type="Resource" uid="uid://bi2ja0rgmn4x7" path="res://resources/TestCharacterAttributes.tres" id="3_12iff"]
@@ -15,6 +16,13 @@ position = Vector2(1207, 292)
 scale = Vector2(0.31289563, 0.2726852)
 texture = ExtResource("1_qt8ew")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=632607298 node_paths=PackedStringArray("characterNode")]
+offset = Vector2(576, 324)
+limit_top = 0
+limit_bottom = 0
+script = ExtResource("2_2kfh8")
+characterNode = NodePath("../CharacterNode")
+
 [node name="CharacterNode" type="Node2D" parent="." unique_id=212993648 node_paths=PackedStringArray("cafe")]
 position = Vector2(512, 512)
 script = ExtResource("2_12iff")
@@ -24,12 +32,6 @@ cafe = NodePath("..")
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
 position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterNode" unique_id=632607298]
-position = Vector2(-512, -512)
-offset = Vector2(576, 324)
-limit_top = 0
-limit_bottom = 0
 
 [node name="NPCNode Barista" type="Node2D" parent="." unique_id=1325653488]
 position = Vector2(1042, 428)
