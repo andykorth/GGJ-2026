@@ -18,7 +18,7 @@ func _on_Dialogic_timeline_ended() -> void:
 
 
 ## Runs all prep work needed for the game before starting a Dialogic dialogue.
-func startDialog(dialogue_name: String, characterAttributes: CharacterAttributes) -> void:
+func startDialogue(dialogue_name: String, characterAttributes: CharacterAttributes) -> void:
     GlobalGameVariables.currentCharacter = characterAttributes
     print('DBG: character assign %s' % [characterAttributes.character_name])
     Dialogic.start(dialogue_name)
