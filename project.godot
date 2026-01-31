@@ -23,6 +23,7 @@ GlobalGameVariables="*uid://e2hlgw0okjte"
 [dialogic]
 
 directories/dch_directory={
+"Lena": "res://DialogicFiles/Characters/Lena.dch",
 "Mask": "res://DialogicFiles/Characters/Mask.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
@@ -30,11 +31,17 @@ directories/dtl_directory={
 "Direct": "res://DialogicFiles/Timelines/Direct.dtl",
 "Lena": "res://DialogicFiles/Timelines/Lena.dtl",
 "Shy": "res://DialogicFiles/Timelines/Shy.dtl",
+"LenaTest": "res://DialogicFiles/Timelines/LenaTest.dtl",
 "Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"Lena": {
+"Emotion": 0,
+"WhimsyMaskState": false
+}
+}
 
 [display]
 

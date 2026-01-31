@@ -10,21 +10,21 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Default",
-&"description": "The player character, hoping to make a killer party for its friend.",
-&"display_name": "Mask",
+&"default_portrait": "Base",
+&"description": "",
+&"display_name": "Lena",
 &"mirror": false,
-&"nicknames": ["Mask"],
+&"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Default": {
+"Base": {
 "export_overrides": {
-"image": "\"res://tester sprite.PNG\""
+"image": "\"res://DialogicFiles/Sprites/tester_base.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": ""
+"scene": "res://DialogicFiles/Sprites/layered_portrait_lena.tscn"
 }
 },
 &"scale": 1.0

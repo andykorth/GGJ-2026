@@ -6,6 +6,10 @@ extends Resource
 
 @export_range(0.0, 100.0, 0.001) var willingness: float ## The character's willingness to stay at the cafe.
 
+@export_group('Character Timelines')
+@export var intro_timeline: String ## The name of the character's introduction timeline
+@export var timelines_due_to_willingness: Array[String] ## The timelines associated with the characters' willingness
+
 @export_group('Art Assets')
 @export_subgroup('Overworld')
 @export var art_overworld_body_neutral: Texture

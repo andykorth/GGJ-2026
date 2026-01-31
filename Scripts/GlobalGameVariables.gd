@@ -1,6 +1,7 @@
 extends Node
 
 var playerControlsActive = true
+var stepsTakenInDialog = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,4 +17,9 @@ func activatePlayerControls():
 	
 func deactivatePlayerControls():
 	playerControlsActive = false
+	pass
+	
+func incrementDialogStepsTaken():
+	stepsTakenInDialog += 1
+	print(str(stepsTakenInDialog))
 	pass
