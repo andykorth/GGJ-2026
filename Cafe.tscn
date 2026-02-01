@@ -30,6 +30,7 @@
 [ext_resource type="Resource" uid="uid://brwg0b0lho0ph" path="res://resources/YouaCA.tres" id="18_gg70q"]
 [ext_resource type="Resource" uid="uid://cjlvthwxnuq47" path="res://resources/JesterCA.tres" id="19_inlb2"]
 [ext_resource type="Script" uid="uid://dblob17d14283" path="res://debug_end_button.gd" id="22_gg70q"]
+[ext_resource type="Texture2D" uid="uid://bfl6wl6dscmy5" path="res://resources/Overworld/Chalkboard.png" id="31_nprpk"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 script = ExtResource("1_qy1wl")
@@ -94,11 +95,6 @@ texture = ExtResource("6_n7jui")
 
 [node name="WindowSprite2" type="Sprite2D" parent="." unique_id=1017766577]
 position = Vector2(369, 153)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("6_n7jui")
-
-[node name="WindowSprite3" type="Sprite2D" parent="." unique_id=708661787]
-position = Vector2(2062, 148)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_n7jui")
 
@@ -278,3 +274,8 @@ z_index = 1
 position = Vector2(1580, -62)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("14_o5jln")
+
+[node name="Chalkboard" type="Sprite2D" parent="." unique_id=1955811365]
+position = Vector2(2074, 147)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("31_nprpk")
