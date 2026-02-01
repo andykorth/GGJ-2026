@@ -3,6 +3,7 @@ extends Node2D
 
 # A character that is not us. we can talk to them.
 
+@export var spriteScale:float = 0.5
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
 @export var currentChar : CharacterAttributes = preload('res://resources/LenaCA.tres')
 var destination: Vector2
@@ -30,7 +31,7 @@ func _process(delta: float) -> void:
 	var normalizedSpeed = velocity.length() / speed
 	var x = cos(Time.get_ticks_msec() / 80.0)
 	bodySprite.rotation = deg_to_rad(x * 15.0 * normalizedSpeed) 
-	bodySprite.scale = Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
+	bodySprite.scale = spriteScale*Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
 	
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
@@ -40,6 +41,10 @@ func SetUpCharacter():
 	pass
 	
 func StartChatWith():
+	# If you are already in a chat do not let them start another
+	if !GlobalGameVariables.playerControlsActive:
+		return
+	
 	print("Start a chat with: " + currentChar.character_name)
 	if currentChar.intro_timeline == null:
 		printerr("ERROR, intro_timeline missing for " + currentChar.character_name)
