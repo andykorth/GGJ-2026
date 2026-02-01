@@ -1,8 +1,8 @@
 join Lena center [animation="Slide From Right"]
-set {Lena.Emotion} = 1.0
+set {Lena.Emotion} = 10.0
 Lena: Hey, you're awake! I was wondering if today would be the day. Are you ready to party?
 - ...
-	Lena: You poor thing, you're confused. Whenever a mask awakes, it's sure to be a party. Just how good the party is depends on you.
+	Lena: You poor thing, you're confused. Whenever a mask awakes, it's sure to be a party. Just how good the party is depends on YOU!
 	Lena: First thing to do is convince a few people to celebrate with you. The more the merrier, as they say! I'll happily take you around for a spin.
 	Lena: ...
 	set {Lena.Emotion} = 2.0
