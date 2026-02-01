@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://vfry0nvfg5x3"
+path="res://.godot/imported/GGJ - Mask SFX - womp womp.wav-8be9bdf7488b5d81e10e3ca06908c28f.sample"
+
+[deps]
+
+source_file="res://GGJ - Mask SFX - womp womp.wav"
+dest_files=["res://.godot/imported/GGJ - Mask SFX - womp womp.wav-8be9bdf7488b5d81e10e3ca06908c28f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
