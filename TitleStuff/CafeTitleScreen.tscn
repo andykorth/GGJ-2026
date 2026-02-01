@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://p1tu0lfho808" path="res://TitleStuff/GGJLogo.png" id="6_e8uxl"]
 [ext_resource type="Texture2D" uid="uid://dqfulikxjlnjg" path="res://TitleStuff/IGDATC.png" id="7_ekx28"]
 [ext_resource type="Texture2D" uid="uid://bslhfl213nyt" path="res://TitleStuff/TitleMasqafe.png" id="8_ekx28"]
+[ext_resource type="AudioStream" uid="uid://lvlibtlksnlv" path="res://Audio/Masqafe Menu Theme.mp3" id="9_gbxlg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ctgh8"]
 font_size = 35
@@ -155,6 +156,10 @@ texture = ExtResource("7_ekx28")
 position = Vector2(563, 257)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_ekx28")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1393763866]
+stream = ExtResource("9_gbxlg")
+autoplay = true
 
 [connection signal="pressed" from="example text panel/Credits" to="." method="CreditsButton"]
 [connection signal="pressed" from="example text panel/Playbutton" to="." method="PlayGameButton"]

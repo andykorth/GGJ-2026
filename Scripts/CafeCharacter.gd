@@ -163,6 +163,7 @@ func CheckForNewChats():
 func StartDialogWith(character : CharacterAttributes):
 	# stop any additional motion
 	destination = position
+	stepSound.stop()
 	
 	if GlobalGameVariables.isDialogueActive:
 		print("Already in a dialog. Can't start another")
