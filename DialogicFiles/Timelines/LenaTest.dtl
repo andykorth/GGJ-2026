@@ -4,6 +4,8 @@ Lena: Hey there! The name's Lena!
 	set {GlobalGameVariables.currentCharacter.willingness} += 10.0
 	set {Lena.Emotion} = 1.0
 - Not interested in talking, sorry.
+	do SoundPlayer.play_current_character_sigh()
+	do SoundPlayer.play_current_character_fail()
 Lena: I was told there was a mask I was supposed to put on?
 - Yes put me on please
 	if GlobalGameVariables.currentCharacter.is_willing_to_wear_mask():
