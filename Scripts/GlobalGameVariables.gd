@@ -1,11 +1,15 @@
 extends Node
 
 
+const END_STEPS := 10 ## How many text events to process before trigging the endgame.
+
 var currentCharacter: CharacterAttributes ## The dialogue's current character attributes. This should be set whenever starting a timeline.
 var playerControlsActive := true
 var stepsTakenInDialog := 0
 var cam: CafeCamera
 var player: CafeCharacter
+var isDialogueActive := false ## Dialogic doesn't have an equivalent to this, so this tracks when Dialogic is running a timeline.
+var isGameOver := false ## Is the game over?
 
 # it is helpful to have fixed references to each character
 # so we can reference them when swapping characters
@@ -55,7 +59,7 @@ func MoveJesterNPCTo(x: float, y := 0.0):
 
 func incrementDialogStepsTaken():
 	stepsTakenInDialog += 1
-	print(str(stepsTakenInDialog))
+	print('DBG: steps taken: %s' % [stepsTakenInDialog])
 	pass
 
 func animateCamera(x: float):

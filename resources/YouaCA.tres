@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("2_fuc2s")
-character_name = "Easton"
+character_name = "Youa"
 willingness = 55.0
 willingness_mask = 50.0
 intro_timeline = "Youa"

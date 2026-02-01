@@ -1,2 +1,3 @@
 join Lena center [animation="Slide From Right"]
 Lena: Uff da! Looks like that didn't go so well. Let's see if you can convince someone else to join the party.
+do GlobalGameVariables.ChangePlayerCharacterToLena()
