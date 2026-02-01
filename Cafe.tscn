@@ -29,6 +29,7 @@
 [ext_resource type="Resource" uid="uid://cvelytv1rqof6" path="res://resources/EastonCA.tres" id="17_inlb2"]
 [ext_resource type="Resource" uid="uid://brwg0b0lho0ph" path="res://resources/YouaCA.tres" id="18_gg70q"]
 [ext_resource type="Resource" uid="uid://cjlvthwxnuq47" path="res://resources/JesterCA.tres" id="19_inlb2"]
+[ext_resource type="Texture2D" uid="uid://cstjuaphc6iry" path="res://chatIconSpace.png" id="22_a0nfj"]
 [ext_resource type="Script" uid="uid://dblob17d14283" path="res://debug_end_button.gd" id="22_gg70q"]
 [ext_resource type="Texture2D" uid="uid://hsmgug0aovxh" path="res://DialogicFiles/Sprites/EastonOverworldCharacter.png" id="28_ewqa7"]
 [ext_resource type="AudioStream" uid="uid://cpk5wnmwidwa7" path="res://resources/audio/Masqafe Theme - loop trim.mp3" id="29_nprpk"]
@@ -194,6 +195,8 @@ TEST_SOUND_FILE = ExtResource("5_f2f8e")
 spriteScale = 0.25
 currentChar = ExtResource("3_12iff")
 cafe = NodePath("..")
+chatFrame1 = ExtResource("22_a0nfj")
+chatFrame2 = ExtResource("6_4no61")
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]

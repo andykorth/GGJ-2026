@@ -23,6 +23,9 @@ const PLAYER_MAX_Y = 610
 @onready var maskSprite: Sprite2D = $CharacterWorldMapSprite/maskSprite
 @onready var chatIcon: Sprite2D = $CharacterWorldMapSprite/ChatIcon
 
+@export var chatFrame1: Texture
+@export var chatFrame2: Texture
+
 var destination: Vector2
 var isWearingMask: bool
 
@@ -76,6 +79,11 @@ func _process(delta: float) -> void:
 	# if dialogic ui is open, return here, so we don't walk around.
 	if !GlobalGameVariables.playerControlsActive || blockedInput:
 		return
+	
+	if Time.get_ticks_msec() % 1500 > 750:
+		chatIcon.texture = chatFrame1
+	else:
+		chatIcon.texture = chatFrame2
 	
 	# process keyboard input as a test, via arrow keys
 	var input_direction = Input.get_vector("left", "right", "up", "down")
