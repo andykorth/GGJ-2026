@@ -34,6 +34,7 @@ directories/dtl_directory={
 "Easton": "res://DialogicFiles/Timelines/Easton.dtl",
 "Lena": "res://DialogicFiles/Timelines/Lena.dtl",
 "LenaTest": "res://DialogicFiles/Timelines/LenaTest.dtl",
+"SavedByLena": "res://SavedByLena.dtl",
 "Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl",
 "Youa": "res://DialogicFiles/Timelines/Youa.dtl"
 }

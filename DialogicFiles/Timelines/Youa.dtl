@@ -1,4 +1,21 @@
+join Youa center
+set {Youa.Emotion} = 2.0
 Youa: What? Is there something on my face?
 - Not yet!
+	Youa: EXCUSE ME?!
+	set {GlobalGameVariables.currentCharacter} -= 5.0
+	- I'm sorry! Why so glum?
+		set {GlobalGameVariables} += "5.0"
+		jump Youa Story
+	- I'd like you to wear me.
+		set {GlobalGameVariables.currentCharacter} -= 10.0
+		Youa: Go away!
+		jump SavedByLena/
 - You have a lovely face.
-	set {GlobalGameVariables.currentCharacter.willingness} += "10"
+	set {Youa.Emotion} = 1.0
+	set {GlobalGameVariables.currentCharacter.willingness} += "10.0"
+	Youa: Awww. That is sweet of you to say.
+	jump Youa Story
+label Youa Story
+Youa: I came here today because I was feeling a little lonely. But I am far too shy to actually talk to anyone.
+Youa: ... Can you keep a secret?
