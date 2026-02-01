@@ -9,4 +9,5 @@ func _ready() -> void:
 
 
 func _on_pressed() -> void:
+	GlobalGameVariables.isGameOver = true
 	DialogicConnector.startDialogue(jesterCARes.intro_timeline, jesterCARes)

@@ -58,8 +58,8 @@ func _on_Dialogic_timeline_ended() -> void:
 
 
 func endGame() -> void:
-	DialogicConnector.startDialogue(jesterCARes.intro_timeline, jesterCARes)
 	GlobalGameVariables.isGameOver = true
+	DialogicConnector.startDialogue(jesterCARes.intro_timeline, jesterCARes)
 
 
 ## Runs all prep work needed for the game before starting a Dialogic dialogue.

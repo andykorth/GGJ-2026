@@ -1,5 +1,6 @@
 if {General.PeopleStaying} > 0.0:
 	set {Lena.IsStaying} = true
+	set {General.PeopleStaying} += 1.0
 do GlobalGameVariables.animateCamera(3000.0)
 do GlobalGameVariables.showCharacter("Jester")
 [wait time="0.2"]
