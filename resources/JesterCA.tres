@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CharacterAttributes" format=3 uid="uid://cjlvthwxnuq47"]
 
 [ext_resource type="Script" uid="uid://ftcnopfvt30g" path="res://resources/CharacterAttributes.gd" id="1_drcx3"]
-[ext_resource type="Texture2D" uid="uid://qsjorgn0564a" path="res://DialogicFiles/Sprites/LenaOverworldCharacter.png" id="1_pjs28"]
+[ext_resource type="Texture2D" uid="uid://brbhim58031y6" path="res://DialogicFiles/Sprites/JesterPawn.png" id="1_hymcq"]
 [ext_resource type="Texture2D" uid="uid://ci8t3oxw1b2r0" path="res://DialogicFiles/Sprites/WhimsyMaskOverworld.png" id="2_hymcq"]
 [ext_resource type="Texture2D" uid="uid://cp3fwus7rqdn7" path="res://DialogicFiles/Sprites/LenaOverworldMask.png" id="3_d80cn"]
 
@@ -9,7 +9,7 @@
 script = ExtResource("1_drcx3")
 character_name = "Jester"
 intro_timeline = "TheEnd"
-art_overworld_body_neutral = ExtResource("1_pjs28")
+art_overworld_body_neutral = ExtResource("1_hymcq")
 art_overworld_mask_self = ExtResource("3_d80cn")
 art_overworld_mask_player = ExtResource("2_hymcq")
 metadata/_custom_type_script = "uid://ftcnopfvt30g"
