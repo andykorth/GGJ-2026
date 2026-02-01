@@ -18,6 +18,11 @@ var eastonNPC: CafeNPC
 var youaNPC: CafeNPC
 var jesterNPC: CafeNPC
 
+var musicPlayer: AudioStreamPlayer
+@export var badMusic: AudioStream
+@export var neutralMusic: AudioStream
+@export var goodMusic: AudioStream
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -95,3 +100,15 @@ func showCharacter(character_name: String) -> void:
 		jesterNPC.ShowCharacter()
 	else:
 		push_error('Character %s not found, aborting.' % [character_name])
+
+func change_music_bad():
+	musicPlayer.stream = badMusic
+	musicPlayer.play()
+	
+func change_music_neutral():
+	musicPlayer.stream = neutralMusic
+	musicPlayer.play()
+	
+func change_music_good():
+	musicPlayer.stream = goodMusic
+	musicPlayer.play()
