@@ -29,9 +29,11 @@ elif {Easton.WhimsyMaskState} == true:
 	Youa: I would really like to get to know Lena better. She is so kind and graceful. I have trouble speaking to her.
 	- Stay for the party!
 		set {Youa.Emotion} = 1.0
-		Youa: Oh, do you think she would talk to me at the party? That is a great idea. How can I help you to play?
+		Youa: Oh, do you think she would talk to me at the party? That is a great idea. How can I help you to plan?
 		set {Youa.WhimsyMaskState} = true
+		set {Youa.IsStaying} = true
 		set {General.PeopleStaying} += 1.0
+		do GlobalGameVariables.ChangePlayerCharacterToYoua()
 else:
 	Youa: You should go talk to Easton. Maybe he would like to attend your party.
 	set {Youa.Emotion} = 2.0
