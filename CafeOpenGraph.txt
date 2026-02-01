@@ -7,9 +7,7 @@
 <meta property="og:url" content="https://kortham.net/Masqafe/">
 <meta property="og:locale" content="en">
 <meta name="theme-color" content="#1f2937">
-<meta name="twitter:card" content="summary_large_image">
-
-
+<meta name="twitter:card" content="summary">
 <meta property="og:image" content="index.png">
 <meta property="og:image:secure_url" content="https://kortham.net/Masqafe/index.png">
 <meta name="twitter:image" content="https://kortham.net/Masqafe/index.png">
