@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cfwf5d8exox4f" path="res://addons/dialogic/Modules/LayeredPortrait/custom_layered_portrait.gd" id="1_uubi5"]
 [ext_resource type="Texture2D" uid="uid://cfgthfk6b8a25" path="res://DialogicFiles/Sprites/lena_base.PNG" id="2_6eq6i"]
 [ext_resource type="Script" uid="uid://dcgike7u5a25m" path="res://Scripts/UpdateCharacterSpriteLayer.gd" id="3_7mi3e"]
-[ext_resource type="Texture2D" uid="uid://c7loc665qiu6g" path="res://DialogicFiles/Sprites/tester_mask01.PNG" id="3_g0ktw"]
 [ext_resource type="Texture2D" uid="uid://bpikphh5pm4gq" path="res://DialogicFiles/Sprites/tester_mask02.PNG" id="4_7mi3e"]
 [ext_resource type="Texture2D" uid="uid://wod2akb30w8r" path="res://DialogicFiles/Sprites/lena_eyes01.PNG" id="4_ohof8"]
 [ext_resource type="Texture2D" uid="uid://gndwjd3gcsdf" path="res://DialogicFiles/Sprites/lena_mouth01.PNG" id="5_mtkp7"]
@@ -11,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://drcopjd6qq53i" path="res://DialogicFiles/Sprites/lena_mouth02.PNG" id="7_ca8vl"]
 [ext_resource type="Texture2D" uid="uid://bbn7uiy2p2qyf" path="res://DialogicFiles/Sprites/lena_eyes03.PNG" id="8_y2kqi"]
 [ext_resource type="Texture2D" uid="uid://bnwxi1jmvgeb4" path="res://DialogicFiles/Sprites/lena_mouth03.PNG" id="9_mgdm5"]
+[ext_resource type="Texture2D" uid="uid://cswrwwbb05sfn" path="res://DialogicFiles/Sprites/lena_mask.PNG" id="10_6eq6i"]
 
 [node name="LayeredPortrait" type="CanvasGroup" unique_id=505737323]
 script = ExtResource("1_uubi5")
@@ -53,10 +53,10 @@ texture = ExtResource("8_y2kqi")
 texture = ExtResource("9_mgdm5")
 
 [node name="MaskLayers" type="Node2D" parent="BaseLayer/Layers" unique_id=1926921973]
-visible = false
 
 [node name="OGMask" type="Sprite2D" parent="BaseLayer/Layers/MaskLayers" unique_id=577743147]
-texture = ExtResource("3_g0ktw")
+texture = ExtResource("10_6eq6i")
 
 [node name="WhimsyMask" type="Sprite2D" parent="BaseLayer/Layers/MaskLayers" unique_id=463063410]
+visible = false
 texture = ExtResource("4_7mi3e")
