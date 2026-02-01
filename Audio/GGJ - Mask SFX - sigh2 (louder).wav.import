@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cj5wi45fdq7bc"
+path="res://.godot/imported/GGJ - Mask SFX - sigh2 (louder).wav-02c2ef279e30c484bef7d38ce0df43a7.sample"
+
+[deps]
+
+source_file="res://Audio/GGJ - Mask SFX - sigh2 (louder).wav"
+dest_files=["res://.godot/imported/GGJ - Mask SFX - sigh2 (louder).wav-02c2ef279e30c484bef7d38ce0df43a7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

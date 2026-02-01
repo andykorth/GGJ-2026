@@ -66,5 +66,6 @@ func endGame() -> void:
 func startDialogue(dialogue_name: String, characterAttributes: CharacterAttributes) -> void:
 	characterAttributes.willingness_changed.connect(_on_CurrentCharacter_willingness_changed.bind(characterAttributes))
 	GlobalGameVariables.currentCharacter = characterAttributes
+	SoundPlayer.update_willingness_connection()
 	print('DBG: character assign %s' % [characterAttributes.character_name])
 	Dialogic.start(dialogue_name)
