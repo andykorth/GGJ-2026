@@ -140,7 +140,6 @@ currentChar = ExtResource("18_gg70q")
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeYoua" unique_id=1675716107]
-modulate = Color(0.35199994, 1, 0.19, 1)
 position = Vector2(0, -64)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_m8gu7")

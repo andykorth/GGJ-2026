@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://v4g3lx1pfr2v"]
+
+[ext_resource type="Script" uid="uid://cfwf5d8exox4f" path="res://addons/dialogic/Modules/LayeredPortrait/custom_layered_portrait.gd" id="1_mnfqi"]
+[ext_resource type="Texture2D" uid="uid://cjeol8lar868m" path="res://DialogicFiles/Sprites/youa_base.PNG" id="2_e2mqk"]
+[ext_resource type="Script" uid="uid://dcgike7u5a25m" path="res://Scripts/UpdateCharacterSpriteLayer.gd" id="3_3h8xb"]
+[ext_resource type="Texture2D" uid="uid://c7rnnu5tisioc" path="res://DialogicFiles/Sprites/youa_eyes01.PNG" id="4_mnfqi"]
+[ext_resource type="Texture2D" uid="uid://dw5blagag177w" path="res://DialogicFiles/Sprites/youa_mouth01.PNG" id="5_p7ry2"]
+[ext_resource type="Texture2D" uid="uid://c81g0sy8rtegm" path="res://DialogicFiles/Sprites/youa_eyes02.PNG" id="6_3h8xb"]
+[ext_resource type="Texture2D" uid="uid://cn4narqryb8ub" path="res://DialogicFiles/Sprites/youa_eyes03.PNG" id="7_ub6xd"]
+[ext_resource type="Texture2D" uid="uid://d087ogqfyrc8g" path="res://DialogicFiles/Sprites/youa_mouth02.PNG" id="8_yupdf"]
+[ext_resource type="Texture2D" uid="uid://b6cb3co3uhawx" path="res://DialogicFiles/Sprites/youa_mask.PNG" id="9_0di15"]
+[ext_resource type="Texture2D" uid="uid://blf18vpflr2iw" path="res://DialogicFiles/Sprites/whimsy_mask.PNG" id="11_7ei8n"]
+
+[node name="LayeredPortrait" type="CanvasGroup" unique_id=505737323]
+script = ExtResource("1_mnfqi")
+
+[node name="BaseLayer" type="Sprite2D" parent="." unique_id=620332597]
+texture = ExtResource("2_e2mqk")
+
+[node name="Layers" type="Node2D" parent="BaseLayer" unique_id=424708332 node_paths=PackedStringArray("emotionLayers", "maskLayers")]
+script = ExtResource("3_3h8xb")
+characterName = "Youa"
+emotionLayers = [NodePath("EmotionLayers/Emotion1"), NodePath("EmotionLayers/Emotion2"), NodePath("EmotionLayers/Emotion3")]
+maskLayers = [NodePath("MaskLayers/OGMask"), NodePath("MaskLayers/WhimsyMask")]
+
+[node name="EmotionLayers" type="Node2D" parent="BaseLayer/Layers" unique_id=1596870267]
+
+[node name="Emotion1" type="Node2D" parent="BaseLayer/Layers/EmotionLayers" unique_id=1470034320]
+
+[node name="Eyes" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=1764012788]
+texture = ExtResource("4_mnfqi")
+
+[node name="Mouth" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=139976205]
+texture = ExtResource("5_p7ry2")
+
+[node name="Emotion2" type="Node2D" parent="BaseLayer/Layers/EmotionLayers" unique_id=267063643]
+visible = false
+
+[node name="Eyes" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion2" unique_id=2136603309]
+texture = ExtResource("6_3h8xb")
+
+[node name="Mouth" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion2" unique_id=772744123]
+texture = ExtResource("5_p7ry2")
+
+[node name="Emotion3" type="Node2D" parent="BaseLayer/Layers/EmotionLayers" unique_id=1933726144]
+visible = false
+
+[node name="Eyes" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion3" unique_id=1903007091]
+texture = ExtResource("7_ub6xd")
+
+[node name="Mouth" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion3" unique_id=1948185251]
+texture = ExtResource("8_yupdf")
+
+[node name="MaskLayers" type="Node2D" parent="BaseLayer/Layers" unique_id=1926921973]
+
+[node name="OGMask" type="Sprite2D" parent="BaseLayer/Layers/MaskLayers" unique_id=577743147]
+texture = ExtResource("9_0di15")
+
+[node name="WhimsyMask" type="Sprite2D" parent="BaseLayer/Layers/MaskLayers" unique_id=463063410]
+visible = false
+texture = ExtResource("11_7ei8n")
