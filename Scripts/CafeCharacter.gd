@@ -103,11 +103,16 @@ func _process(delta: float) -> void:
 	else:
 		chatIcon.texture = chatFrame2
 	
+	var currentSpeed = speed
+	if Input.is_action_pressed("debugrun"):
+		currentSpeed = 400
+	
+	
 	# process keyboard input as a test, via arrow keys
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	var velocity = Vector2.ZERO
 	if(input_direction.length_squared() != 0):
-		velocity = input_direction * speed
+		velocity = input_direction * currentSpeed
 		# moving with keyboard cancels scripted moves.
 		destination = position + velocity * delta
 	else:
@@ -117,10 +122,10 @@ func _process(delta: float) -> void:
 			velocity = Vector2.ZERO
 			stepSound.stop()
 		else:
-			velocity = speed * deltaPos.normalized();
+			velocity = currentSpeed * deltaPos.normalized();
 	
 	# animate wiggles based on velocity.
-	var normalizedSpeed = velocity.length() / speed
+	var normalizedSpeed = velocity.length() / currentSpeed
 	var x = cos(Time.get_ticks_msec() / 80.0)
 	bodySprite.rotation = deg_to_rad(x * wiggleDegrees * normalizedSpeed) 
 

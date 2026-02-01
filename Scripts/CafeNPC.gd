@@ -16,6 +16,7 @@ var homePosition: Vector2 # home position
 @export var bounceAmplitude:float = 0.1
 @export var speed:float = 130.0
 var facing : float = 1
+var reachDestinationFunc
 
 func _ready() -> void:
 	destination = position
@@ -30,13 +31,16 @@ func _process(delta: float) -> void:
 
 	# NPCs move towards their specified destination
 	var deltaPos = destination - position
-	if(deltaPos.length() < 1.0):
+	if deltaPos.length() < 1.0:
 		velocity = Vector2.ZERO
 	else:
 		velocity = speed * deltaPos.normalized();
+		
+	if deltaPos.length() < 1.0 && reachDestinationFunc != null:
+		print("NPC reached their destination, invoking our lambda function")
+		reachDestinationFunc.call()
+		reachDestinationFunc = null
 	
-	# animate wiggles based on velocity.
-
 	# animate wiggles based on velocity.
 	var normalizedSpeed = velocity.length() / speed
 	var x = cos(Time.get_ticks_msec() / 80.0)
@@ -50,8 +54,7 @@ func _process(delta: float) -> void:
 		facing = 1
 	
 	bodySprite.scale = spriteScale * Vector2(facing, cos(Time.get_ticks_msec() / 120.0) * bounceAmplitude * normalizedSpeed + 1.0)
-	
-	
+
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
 
@@ -72,8 +75,16 @@ func SetDestination(newDest : Vector2):
 	destination = newDest;
 
 func WalkHome(startPos : Vector2):
+	speed = 130
 	position = startPos
 	SetDestination(homePosition)
+
+func WalkOffscreen(exitPosition : Vector2, afterExitFunction ):
+	print("NPC "+(self.name)+" has decided to walk offscreen.")
+
+	speed = 210
+	reachDestinationFunc = afterExitFunction
+	SetDestination(exitPosition)
 
 	
 func StartChatWith():

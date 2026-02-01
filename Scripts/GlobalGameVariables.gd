@@ -115,16 +115,19 @@ func change_music_good():
 	musicPlayer.play()
 
 func remove_Youa():
-	SoundPlayer.play_current_character_fail()
-	youaNPC.HideCharacter()
-	youaNPC.ignore_character_swapping = true
+	remove_NPC(youaNPC)
 	
 func remove_Easton():
-	SoundPlayer.play_current_character_fail()
-	eastonNPC.HideCharacter()
-	eastonNPC.ignore_character_swapping = true
+	remove_NPC(eastonNPC)
 	
 func remove_Lena():
+	remove_NPC(lenaNPC)
+
+func remove_NPC(npc : CafeNPC):
 	SoundPlayer.play_current_character_fail()
-	lenaNPC.HideCharacter()
-	lenaNPC.ignore_character_swapping = true
+	
+	var afterExitFunction = func () -> void: 
+		npc.ignore_character_swapping = true
+		npc.HideCharacter()
+	npc.WalkOffscreen(Vector2(2570.0, 500.0), afterExitFunction)
+	
