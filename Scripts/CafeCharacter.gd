@@ -27,6 +27,7 @@ var destination: Vector2
 var isWearingMask: bool
 
 var blockedInput: bool = false;
+var facing : int = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -57,9 +58,6 @@ func ChangeCharacter(newChar : CharacterAttributes):
 	# set size instantly
 	bodySprite.scale = Vector2.ONE * spriteScale
 	bodySprite.rotation = 0
-	
-	# TODO swap from player mask to normal mask if you are
-	# releasing a character.
 	
 	#anchor to the bottom of the character automatically.
 	bodySprite.offset = Vector2(0, -500)
@@ -99,7 +97,16 @@ func _process(delta: float) -> void:
 	var x = cos(Time.get_ticks_msec() / 80.0)
 	bodySprite.rotation = deg_to_rad(x * wiggleDegrees * normalizedSpeed) 
 	bodySprite.scale = spriteScale * Vector2(1, cos(Time.get_ticks_msec() / 120.0) * bounceAmplitude * normalizedSpeed + 1.0)
+	
+	# flip player art on direction:
+	if velocity.x > 0:
+		facing = -1
+	elif velocity.x < 0:
+		facing = 1
+	# if velocity is zero, don't change the facing direction
 		
+	bodySprite.scale = Vector2(bodySprite.scale.x * facing, bodySprite.scale.y)
+	
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
 	position.y = clamp(position.y, PLAYER_MIN_Y, PLAYER_MAX_Y)

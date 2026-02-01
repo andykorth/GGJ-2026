@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ftcnopfvt30g" path="res://resources/CharacterAttributes.gd" id="1_fednm"]
 [ext_resource type="Texture2D" uid="uid://qsjorgn0564a" path="res://DialogicFiles/Sprites/LenaOverworldCharacter.png" id="1_s1wqc"]
 [ext_resource type="Texture2D" uid="uid://cp3fwus7rqdn7" path="res://DialogicFiles/Sprites/LenaOverworldMask.png" id="2_bg2qb"]
+[ext_resource type="Texture2D" uid="uid://ci8t3oxw1b2r0" path="res://DialogicFiles/Sprites/WhimsyMaskOverworld.png" id="2_m38nq"]
 [ext_resource type="AudioStream" uid="uid://bjkfqk4m715wl" path="res://GGJ - Mask SFX - sigh1.wav" id="4_nd6xa"]
 [ext_resource type="AudioStream" uid="uid://ecg06v1y7sjf" path="res://GGJ - Mask SFX - sigh2.wav" id="5_dk3wl"]
 [ext_resource type="AudioStream" uid="uid://q10ayhdt4wp1" path="res://GGJ - Mask SFX - sigh3.wav" id="6_dm1j8"]
@@ -16,5 +17,5 @@ intro_timeline = "Lena"
 character_sighs = Array[AudioStream]([ExtResource("4_nd6xa"), ExtResource("5_dk3wl"), ExtResource("6_dm1j8")])
 art_overworld_body_neutral = ExtResource("1_s1wqc")
 art_overworld_mask_self = ExtResource("2_bg2qb")
-art_overworld_mask_player = ExtResource("2_bg2qb")
+art_overworld_mask_player = ExtResource("2_m38nq")
 metadata/_custom_type_script = "uid://ftcnopfvt30g"
