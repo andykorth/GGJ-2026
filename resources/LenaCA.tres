@@ -1,7 +1,8 @@
 [gd_resource type="Resource" script_class="CharacterAttributes" format=3 uid="uid://40gpmt56ish5"]
 
-[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="1_5hq2b"]
 [ext_resource type="Script" uid="uid://ftcnopfvt30g" path="res://resources/CharacterAttributes.gd" id="1_fednm"]
+[ext_resource type="Texture2D" uid="uid://qsjorgn0564a" path="res://DialogicFiles/Sprites/LenaOverworldCharacter.png" id="1_s1wqc"]
+[ext_resource type="Texture2D" uid="uid://cp3fwus7rqdn7" path="res://DialogicFiles/Sprites/LenaOverworldMask.png" id="2_bg2qb"]
 
 [resource]
 script = ExtResource("1_fednm")
@@ -9,5 +10,6 @@ character_name = "Lena"
 willingness = 55.0
 willingness_mask = 50.0
 intro_timeline = "LenaTest"
-art_overworld_body_neutral = ExtResource("1_5hq2b")
+art_overworld_body_neutral = ExtResource("1_s1wqc")
+art_overworld_mask_self = ExtResource("2_bg2qb")
 metadata/_custom_type_script = "uid://ftcnopfvt30g"

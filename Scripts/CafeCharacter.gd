@@ -10,12 +10,14 @@ const CHAT_RANGE = 60
 @export var TEST_SOUND_FILE: AudioStream
 
 @export var speed:float = 120.0
+@export var spriteScale:float = 0.5
 @export var currentChar : CharacterAttributes
 @export var cafe : Node
 
 var wiggleAmplitude:float = 1.0
 var destination: Vector2
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
+@onready var maskSprite: Sprite2D = $CharacterWorldMapSprite/maskSprite
 @onready var chatIcon: Sprite2D = $ChatIcon
 
 var blockedInput: bool = false;
@@ -36,6 +38,7 @@ func DialogEnded():
 	
 func SetUpCharacter():
 	bodySprite.texture = currentChar.art_overworld_body_neutral
+	maskSprite.texture = currentChar.art_dialogue_mask_self
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -64,7 +67,7 @@ func _process(delta: float) -> void:
 	var normalizedSpeed = velocity.length() / speed
 	var x = cos(Time.get_ticks_msec() / 80.0)
 	bodySprite.rotation = deg_to_rad(x * 15.0 * normalizedSpeed) 
-	bodySprite.scale = Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
+	bodySprite.scale = spriteScale * Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
 		
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
