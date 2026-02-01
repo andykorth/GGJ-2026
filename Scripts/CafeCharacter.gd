@@ -112,7 +112,10 @@ func StartDialogWith(character : CharacterAttributes):
 
 func SetDestination(newDest : Vector2):
 	if GlobalGameVariables.playerControlsActive && !blockedInput:
-		print("Set walk dest to: " + str(destination) )
+		# clamp destination to our walkable y range
+		newDest.y = clamp(newDest.y, PLAYER_MIN_Y, PLAYER_MAX_Y)
+		
+		print("Set walk dest to: " + str(newDest) )
 		destination = newDest;
 		SoundPlayer.play_sound(TEST_SOUND_FILE)
 
