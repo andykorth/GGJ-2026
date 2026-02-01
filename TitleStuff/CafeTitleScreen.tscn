@@ -1,25 +1,24 @@
 [gd_scene format=3 uid="uid://dr45ht7q4csbs"]
 
-[ext_resource type="Texture2D" uid="uid://c6hrg5iuhbtn7" path="res://kenney_ui_blue_placeholders/button_rectangle_depth_gradient.png" id="2_bqk26"]
 [ext_resource type="Texture2D" uid="uid://chjl2bvcjm0sm" path="res://TitleStuff/TitleBacking.png" id="2_e8uxl"]
-[ext_resource type="Texture2D" uid="uid://cecblfdsx5de7" path="res://kenney_ui_blue_placeholders/button_rectangle_depth_flat.png" id="3_e8uxl"]
-[ext_resource type="Texture2D" uid="uid://vr18bhcvkgp6" path="res://kenney_ui_blue_placeholders/button_rectangle_gloss.png" id="4_ekx28"]
+[ext_resource type="Texture2D" uid="uid://bnf5hbmbfo2hl" path="res://TitleStuff/Credits1.png" id="3_5oekq"]
+[ext_resource type="Texture2D" uid="uid://5e5yr7rjsvur" path="res://TitleStuff/Credits2.png" id="4_akg42"]
 [ext_resource type="Script" uid="uid://ccgiws166y8yq" path="res://TitleStuff/TitleScript.gd" id="5_gbxlg"]
+[ext_resource type="Texture2D" uid="uid://dcgghd5qscj30" path="res://TitleStuff/Credits3.png" id="5_ns7e5"]
 [ext_resource type="Texture2D" uid="uid://p1tu0lfho808" path="res://TitleStuff/GGJLogo.png" id="6_e8uxl"]
+[ext_resource type="Texture2D" uid="uid://ddqsgnn6j6v36" path="res://TitleStuff/Play1.png" id="6_fqkqf"]
+[ext_resource type="Texture2D" uid="uid://1oe83sbgxs1v" path="res://TitleStuff/Play2.png" id="7_5adf0"]
 [ext_resource type="Texture2D" uid="uid://dqfulikxjlnjg" path="res://TitleStuff/IGDATC.png" id="7_ekx28"]
 [ext_resource type="Texture2D" uid="uid://bslhfl213nyt" path="res://TitleStuff/TitleMasqafe.png" id="8_ekx28"]
+[ext_resource type="Texture2D" uid="uid://cpi8rt2n3e4hj" path="res://TitleStuff/Play3.png" id="8_kdq0o"]
+[ext_resource type="Texture2D" uid="uid://fivi4m4uce4g" path="res://TitleStuff/Quit1.png" id="9_foyq7"]
 [ext_resource type="AudioStream" uid="uid://lvlibtlksnlv" path="res://Audio/Masqafe Menu Theme.mp3" id="9_gbxlg"]
+[ext_resource type="Texture2D" uid="uid://b2nw0n34r7m5i" path="res://TitleStuff/Quit2.png" id="10_udbpe"]
+[ext_resource type="Texture2D" uid="uid://bin8jtjmka2ff" path="res://TitleStuff/Quit3.png" id="11_r86d6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ctgh8"]
 font_size = 35
-font_color = Color(0.352, 0.36519998, 0.55, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_3bbum"]
-line_spacing = 0.0
-font_size = 45
-shadow_size = 3
-shadow_color = Color(0, 0, 0, 1)
-shadow_offset = Vector2(2, 2)
+font_color = Color(0.08221086, 0.036244255, 0, 1)
 
 [node name="GameTitle" type="Control" unique_id=146038311]
 layout_mode = 3
@@ -41,9 +40,9 @@ expand_mode = 3
 
 [node name="subtitle" type="Label" parent="." unique_id=1736155271]
 layout_mode = 0
-offset_left = 143.0
+offset_left = 121.0
 offset_top = 201.0
-offset_right = 1053.0
+offset_right = 1031.0
 offset_bottom = 292.0
 text = "minimum moves to party"
 label_settings = SubResource("LabelSettings_ctgh8")
@@ -70,25 +69,11 @@ offset_left = 48.0
 offset_top = 129.0
 offset_right = 364.0
 offset_bottom = 212.0
-texture_normal = ExtResource("2_bqk26")
-texture_pressed = ExtResource("3_e8uxl")
-texture_hover = ExtResource("4_ekx28")
+texture_normal = ExtResource("3_5oekq")
+texture_pressed = ExtResource("4_akg42")
+texture_hover = ExtResource("5_ns7e5")
 stretch_mode = 5
 metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="example text panel/Credits" unique_id=1939412771]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 3.74
-offset_bottom = 3.7399979
-grow_horizontal = 2
-grow_vertical = 2
-text = "Credits"
-label_settings = SubResource("LabelSettings_3bbum")
-horizontal_alignment = 1
-script = ExtResource("5_gbxlg")
 
 [node name="Playbutton" type="TextureButton" parent="example text panel" unique_id=531080555]
 layout_mode = 0
@@ -96,25 +81,11 @@ offset_left = 48.0
 offset_top = 32.0
 offset_right = 364.0
 offset_bottom = 115.0
-texture_normal = ExtResource("2_bqk26")
-texture_pressed = ExtResource("3_e8uxl")
-texture_hover = ExtResource("4_ekx28")
+texture_normal = ExtResource("6_fqkqf")
+texture_pressed = ExtResource("7_5adf0")
+texture_hover = ExtResource("8_kdq0o")
 stretch_mode = 5
 metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="example text panel/Playbutton" unique_id=582351710]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 3.74
-offset_bottom = 3.7399979
-grow_horizontal = 2
-grow_vertical = 2
-text = "Play"
-label_settings = SubResource("LabelSettings_3bbum")
-horizontal_alignment = 1
-script = ExtResource("5_gbxlg")
 
 [node name="Quit" type="TextureButton" parent="example text panel" unique_id=1973591783]
 layout_mode = 0
@@ -122,25 +93,11 @@ offset_left = 48.0
 offset_top = 228.0
 offset_right = 364.0
 offset_bottom = 311.0
-texture_normal = ExtResource("2_bqk26")
-texture_pressed = ExtResource("3_e8uxl")
-texture_hover = ExtResource("4_ekx28")
+texture_normal = ExtResource("9_foyq7")
+texture_pressed = ExtResource("10_udbpe")
+texture_hover = ExtResource("11_r86d6")
 stretch_mode = 5
 metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="example text panel/Quit" unique_id=1298145805]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 3.74
-offset_bottom = 3.7399979
-grow_horizontal = 2
-grow_vertical = 2
-text = "Quit"
-label_settings = SubResource("LabelSettings_3bbum")
-horizontal_alignment = 1
-script = ExtResource("5_gbxlg")
 
 [node name="GgjLogo" type="Sprite2D" parent="." unique_id=144482976]
 position = Vector2(73, 603)
