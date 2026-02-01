@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ekdln6tkbxq6"
-path="res://.godot/imported/background.png-5e56608cefc46c5035653a095f83e7dc.ctex"
+uid="uid://6ehp54tbge02"
+path="res://.godot/imported/DoorSprite.png-d32aea85b91cf0631250ef7afa7b95af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/background.png"
-dest_files=["res://.godot/imported/background.png-5e56608cefc46c5035653a095f83e7dc.ctex"]
+source_file="res://resources/Overworld/DoorSprite.png"
+dest_files=["res://.godot/imported/DoorSprite.png-d32aea85b91cf0631250ef7afa7b95af.ctex"]
 
 [params]
 
