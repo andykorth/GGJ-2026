@@ -14,6 +14,7 @@ config/name="Masqafe"
 config/description="We all wear masks at times, now you can become a mask! Latch onto willing bodies and make connections with patrons of a cozy cafe to prepare for a special party."
 run/main_scene="uid://dr45ht7q4csbs"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/stretch_mode=0
 boot_splash/image="uid://bxwuwyjjxrbs8"
 config/icon="uid://d1c3jp4hou5fj"
 
