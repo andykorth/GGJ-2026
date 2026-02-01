@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cfwf5d8exox4f" path="res://addons/dialogic/Modules/LayeredPortrait/custom_layered_portrait.gd" id="1_uubi5"]
 [ext_resource type="Texture2D" uid="uid://c25pddokliknb" path="res://DialogicFiles/Sprites/lena_base.PNG" id="2_6eq6i"]
-[ext_resource type="Script" uid="uid://dcgike7u5a25m" path="res://Scripts/UpdateCharacterSpriteLayer.gd" id="3_7mi3e"]
+[ext_resource type="Script" path="res://Scripts/UpdateCharacterSpriteLayer.gd" id="3_7mi3e"]
 [ext_resource type="Texture2D" uid="uid://wod2akb30w8r" path="res://DialogicFiles/Sprites/lena_eyes01.PNG" id="4_ohof8"]
 [ext_resource type="Texture2D" uid="uid://gndwjd3gcsdf" path="res://DialogicFiles/Sprites/lena_mouth01.PNG" id="5_mtkp7"]
 [ext_resource type="Texture2D" uid="uid://drqjj2dgy4s8r" path="res://DialogicFiles/Sprites/lena_eyes02.PNG" id="6_bw2mn"]
