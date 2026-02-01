@@ -24,7 +24,9 @@ texture = ExtResource("1_qt8ew")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=632607298 node_paths=PackedStringArray("characterNode")]
 offset = Vector2(576, 324)
+limit_left = -496
 limit_top = 0
+limit_right = 2909
 limit_bottom = 0
 script = ExtResource("2_2kfh8")
 characterNode = NodePath("../CharacterNode")

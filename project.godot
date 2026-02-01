@@ -26,6 +26,7 @@ SoundPlayer="*uid://dbo1ia6allk4s"
 
 directories/dch_directory={
 "Easton": "res://DialogicFiles/Characters/Easton.dch",
+"Jester": "res://DialogicFiles/Characters/Jester.dch",
 "Lena": "res://DialogicFiles/Characters/Lena.dch",
 "Mask": "res://DialogicFiles/Characters/Mask.dch",
 "Youa": "res://DialogicFiles/Characters/Youa.dch",
@@ -37,6 +38,7 @@ directories/dtl_directory={
 "LenaTest": "res://DialogicFiles/Timelines/LenaTest.dtl",
 "SavedByLena": "res://SavedByLena.dtl",
 "Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl",
+"TheEnd": "res://DialogicFiles/Timelines/TheEnd.dtl",
 "Youa": "res://DialogicFiles/Timelines/Youa.dtl"
 }
 layout/style_directory={}
