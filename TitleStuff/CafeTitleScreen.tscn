@@ -7,10 +7,7 @@
 [ext_resource type="Script" uid="uid://ccgiws166y8yq" path="res://TitleStuff/TitleScript.gd" id="5_gbxlg"]
 [ext_resource type="Texture2D" uid="uid://p1tu0lfho808" path="res://TitleStuff/GGJLogo.png" id="6_e8uxl"]
 [ext_resource type="Texture2D" uid="uid://dqfulikxjlnjg" path="res://TitleStuff/IGDATC.png" id="7_ekx28"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_0bqjh"]
-font_size = 88
-font_color = Color(0.352, 0.36519998, 0.55, 1)
+[ext_resource type="Texture2D" uid="uid://bslhfl213nyt" path="res://TitleStuff/TitleMasqafe.png" id="8_ekx28"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ctgh8"]
 font_size = 35
@@ -41,22 +38,12 @@ offset_bottom = 676.0
 texture = ExtResource("2_e8uxl")
 expand_mode = 3
 
-[node name="title" type="Label" parent="." unique_id=1859665268]
-layout_mode = 0
-offset_left = 143.0
-offset_top = 24.0
-offset_right = 1046.0
-offset_bottom = 145.0
-text = "Masqafe"
-label_settings = SubResource("LabelSettings_0bqjh")
-horizontal_alignment = 1
-
 [node name="subtitle" type="Label" parent="." unique_id=1736155271]
 layout_mode = 0
 offset_left = 143.0
-offset_top = 145.0
+offset_top = 201.0
 offset_right = 1053.0
-offset_bottom = 236.0
+offset_bottom = 292.0
 text = "minimum moves to party"
 label_settings = SubResource("LabelSettings_ctgh8")
 horizontal_alignment = 1
@@ -163,6 +150,11 @@ texture = ExtResource("6_e8uxl")
 position = Vector2(1105, 592)
 scale = Vector2(0.39142856, 0.39142856)
 texture = ExtResource("7_ekx28")
+
+[node name="TitleMasqafe" type="Sprite2D" parent="." unique_id=350260151]
+position = Vector2(563, 257)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ekx28")
 
 [connection signal="pressed" from="example text panel/Credits" to="." method="CreditsButton"]
 [connection signal="pressed" from="example text panel/Playbutton" to="." method="PlayGameButton"]
