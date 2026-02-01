@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dgihcst4htlvb" path="res://DialogicFiles/Sprites/YouaOverworldCharacter.png" id="1_xmk0t"]
 [ext_resource type="Script" uid="uid://ftcnopfvt30g" path="res://resources/CharacterAttributes.gd" id="2_fuc2s"]
-[ext_resource type="Texture2D" uid="uid://cp3fwus7rqdn7" path="res://DialogicFiles/Sprites/LenaOverworldMask.png" id="2_xmk0t"]
+[ext_resource type="Texture2D" uid="uid://ci8t3oxw1b2r0" path="res://DialogicFiles/Sprites/WhimsyMaskOverworld.png" id="2_xmk0t"]
 [ext_resource type="Texture2D" uid="uid://shhrjyl2fyqw" path="res://DialogicFiles/Sprites/YouaOverworldMask.png" id="3_lnb6u"]
 
 [resource]
