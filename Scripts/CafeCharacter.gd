@@ -67,7 +67,7 @@ func ChangeCharacter(newChar : CharacterAttributes):
 	# but if we swapped off someone, show them again
 	cafe.eastonNPC.SetCharVisible(newChar != cafe.eastonNPC)
 	cafe.lenaNPC.SetCharVisible(newChar != cafe.lenaNPC)
-	cafe.jesterNPC.SetCharVisible(newChar != cafe.jesterNPC)
+	cafe.jesterNPC.SetCharVisible(newChar != cafe.jesterNPC and !cafe.jesterNPC.ignore_character_swapping) # Special case.
 	cafe.youaNPC.SetCharVisible(newChar != cafe.youaNPC)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

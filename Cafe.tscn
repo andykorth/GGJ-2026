@@ -238,6 +238,7 @@ position = Vector2(2565, 568)
 script = ExtResource("5_qt8ew")
 spriteScale = 0.25
 currentChar = ExtResource("19_inlb2")
+ignore_character_swapping = true
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeJester" unique_id=850373663]

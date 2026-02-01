@@ -7,6 +7,7 @@ extends Node2D
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
 @onready var maskSprite: Sprite2D = $CharacterWorldMapSprite/maskSprite
 @export var currentChar : CharacterAttributes
+@export var ignore_character_swapping := false ## If true, visibility is not managed by character swapping. Visibility will only be managed by manually calling the ShowCharacter/HideCharacter methods.
 var destination: Vector2
 
 @export var speed:float = 120.0
