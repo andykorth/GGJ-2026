@@ -38,9 +38,11 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Easton": "res://DialogicFiles/Timelines/Easton.dtl",
+"EastonIntro": "res://DialogicFiles/Timelines/EastonIntro.dtl",
 "Lena": "res://DialogicFiles/Timelines/Lena.dtl",
 "LenaTest": "res://DialogicFiles/Timelines/LenaTest.dtl",
 "SavedByLena": "res://SavedByLena.dtl",
+"SavedByYoua": "res://DialogicFiles/Timelines/SavedByYoua.dtl",
 "Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl",
 "TheEnd": "res://DialogicFiles/Timelines/TheEnd.dtl",
 "Youa": "res://DialogicFiles/Timelines/Youa.dtl"
