@@ -28,11 +28,12 @@ script = ExtResource("2_2kfh8")
 characterNode = NodePath("../CharacterNode")
 
 [node name="CharacterNode" type="Node2D" parent="." unique_id=212993648 node_paths=PackedStringArray("cafe")]
-position = Vector2(512, 512)
+position = Vector2(389, 627)
 script = ExtResource("2_12iff")
 TEST_SOUND_FILE = ExtResource("5_f2f8e")
 currentChar = ExtResource("3_12iff")
 cafe = NodePath("..")
+metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
 position = Vector2(0, -64)
@@ -43,13 +44,33 @@ position = Vector2(73.000015, -91)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_4no61")
 
-[node name="NPCNode Barista" type="Node2D" parent="." unique_id=1325653488]
-position = Vector2(1042, 428)
+[node name="NPCNodeLena" type="Node2D" parent="." unique_id=1325653488]
+position = Vector2(813, 578)
 script = ExtResource("5_qt8ew")
 metadata/_edit_group_ = true
 
-[node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNode Barista" unique_id=1594672184]
+[node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeLena" unique_id=1594672184]
 modulate = Color(1, 0.19, 0.19, 1)
+position = Vector2(0, -64)
+texture = ExtResource("2_lddrg")
+
+[node name="NPCNodeEaston" type="Node2D" parent="." unique_id=940530280]
+position = Vector2(1117, 579)
+script = ExtResource("5_qt8ew")
+metadata/_edit_group_ = true
+
+[node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeEaston" unique_id=1488021564]
+modulate = Color(0.19, 0.66250014, 1, 1)
+position = Vector2(0, -64)
+texture = ExtResource("2_lddrg")
+
+[node name="NPCNodeYoua" type="Node2D" parent="." unique_id=495463723]
+position = Vector2(1559, 598)
+script = ExtResource("5_qt8ew")
+metadata/_edit_group_ = true
+
+[node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeYoua" unique_id=1675716107]
+modulate = Color(0.35199994, 1, 0.19, 1)
 position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
 
