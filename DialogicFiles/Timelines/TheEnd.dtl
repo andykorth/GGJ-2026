@@ -1,3 +1,5 @@
+if {General.PeopleStaying} > 0.0:
+	set {Lena.IsStaying} = true
 do GlobalGameVariables.animateCamera(3000.0)
 do GlobalGameVariables.showCharacter("Jester")
 [wait time="0.2"]
@@ -6,7 +8,7 @@ do GlobalGameVariables.MoveJesterNPCTo(2565.0, 650.0)
 join Jester rightmost
 Jester: Never fear, the Jester is here!
 if {General.PeopleStaying} == 0.0:
-	Jester: Who is here for my grand and glorious–
+	Jester: Who is here for my grand and glorious– [aa=0.75]
 	Jester: What? No one is here?
 	join Lena leftmost [mirrored="true"]
 	Lena: It's closing time, we're wrapping up.
