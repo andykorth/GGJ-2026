@@ -11,7 +11,11 @@ extends Node2D
 var destination: Vector2
 var homePosition: Vector2 # home position
 
-@export var speed:float = 120.0
+
+@export var wiggleDegrees:float = 8
+@export var bounceAmplitude:float = 0.1
+@export var speed:float = 130.0
+var facing : float = 1
 
 func _ready() -> void:
 	destination = position
@@ -32,10 +36,21 @@ func _process(delta: float) -> void:
 		velocity = speed * deltaPos.normalized();
 	
 	# animate wiggles based on velocity.
+
+	# animate wiggles based on velocity.
 	var normalizedSpeed = velocity.length() / speed
 	var x = cos(Time.get_ticks_msec() / 80.0)
-	bodySprite.rotation = deg_to_rad(x * 15.0 * normalizedSpeed) 
-	bodySprite.scale = spriteScale*Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
+	bodySprite.rotation = deg_to_rad(x * wiggleDegrees * normalizedSpeed) 
+	
+	# flip npc art on direction:
+	# if velocity is zero, don't change the facing direction
+	if velocity.x > 0:
+		facing = -1
+	elif velocity.x < 0:
+		facing = 1
+	
+	bodySprite.scale = spriteScale * Vector2(facing, cos(Time.get_ticks_msec() / 120.0) * bounceAmplitude * normalizedSpeed + 1.0)
+	
 	
 	# apply position but need to handle collisions.
 	position = position + velocity * delta

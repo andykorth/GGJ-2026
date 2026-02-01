@@ -14,3 +14,24 @@ func _ready() -> void:
 	GlobalGameVariables.youaNPC = youaNPC
 	GlobalGameVariables.jesterNPC = jesterNPC
 	GlobalGameVariables.musicPlayer = musicPlayer
+
+func GetNPCs() -> Array[CafeNPC]:
+	var list : Array[CafeNPC]
+	list.append(lenaNPC)
+	list.append(eastonNPC)
+	list.append(youaNPC)
+	list.append(jesterNPC)
+	return list
+
+func FindNPC(c : CharacterAttributes) -> CafeNPC:
+	if(c == lenaNPC.currentChar):
+		return lenaNPC
+	if(c == eastonNPC.currentChar):
+		return eastonNPC
+	if(c == youaNPC.currentChar):
+		return youaNPC
+	if(c == jesterNPC.currentChar):
+		return jesterNPC
+		
+	#printerr("Missing npc for character attribute: " + str(c))
+	return null

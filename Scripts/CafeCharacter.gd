@@ -51,6 +51,7 @@ func DialogEnded():
 	blockedInput = false;
 	
 func ChangeCharacter(npc : CafeNPC, newChar : CharacterAttributes):
+	var previousChar = currentChar
 	#probably need to hide the one this turned into
 	currentChar = newChar
 	# when you become a character, you are wearing a mask by definition:
@@ -71,8 +72,11 @@ func ChangeCharacter(npc : CafeNPC, newChar : CharacterAttributes):
 	# clamp position
 	ClampPositionAndDestination()
 	
+	# find previous NPC.
 	# The NPC should walk home.
-	npc.WalkHome(oldPlayerPos)
+	var prevNPC = cafe.FindNPC(previousChar)
+	if prevNPC != null:
+		prevNPC.WalkHome(oldPlayerPos)
 	
 	#anchor to the bottom of the character automatically.
 	bodySprite.offset = Vector2(0, -500)
@@ -80,10 +84,12 @@ func ChangeCharacter(npc : CafeNPC, newChar : CharacterAttributes):
 
 	# Hide the actual NPC version now that we have taken over.
 	# but if we swapped off someone, show them again
-	cafe.eastonNPC.SetCharVisible(newChar != cafe.eastonNPC.currentChar and !cafe.eastonNPC.ignore_character_swapping)
-	cafe.lenaNPC.SetCharVisible(newChar != cafe.lenaNPC.currentChar and !cafe.lenaNPC.ignore_character_swapping)
-	cafe.jesterNPC.SetCharVisible(newChar != cafe.jesterNPC.currentChar and !cafe.jesterNPC.ignore_character_swapping) # Special case.
-	cafe.youaNPC.SetCharVisible(newChar != cafe.youaNPC.currentChar and !cafe.youaNPC.ignore_character_swapping)
+	for eachNPC in cafe.GetNPCs():
+		var showMe : bool = \
+			newChar != eachNPC.currentChar \
+			and !eachNPC.ignore_character_swapping
+		print("Check: " + str(eachNPC) + " ?= " + newChar.character_name + " => " + str(showMe))
+		eachNPC.SetCharVisible(showMe)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -133,7 +139,7 @@ func _process(delta: float) -> void:
 	ClampPositionAndDestination()
 	
 	# need to draw a little chat icon if we are in chat range.
-	chatIcon.visible = CheckChatRange() != null
+	chatIcon.visible = CheckChatRange() != null && !GlobalGameVariables.isDialogueActive
 
 func ClampPositionAndDestination():
 	position.y = clamp(position.y, PLAYER_MIN_Y, PLAYER_MAX_Y)
@@ -170,7 +176,7 @@ func StartDialogWith(character : CharacterAttributes):
 
 func SetDestination(newDest : Vector2):
 	if GlobalGameVariables.playerControlsActive && !blockedInput:
-		print("Set walk dest to: " + str(newDest) )
+		print("Set player walk dest to: " + str(newDest) )
 		destination = newDest;
 		ClampPositionAndDestination()
 
