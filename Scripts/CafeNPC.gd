@@ -9,11 +9,13 @@ extends Node2D
 @export var currentChar : CharacterAttributes
 @export var ignore_character_swapping := false ## If true, visibility is not managed by character swapping. Visibility will only be managed by manually calling the ShowCharacter/HideCharacter methods.
 var destination: Vector2
+var homePosition: Vector2 # home position
 
 @export var speed:float = 120.0
 
 func _ready() -> void:
 	destination = position
+	homePosition = position
 	SetUpCharacter()
 
 # They only walk when someone sets their destination.
@@ -53,6 +55,10 @@ func SetUpCharacter():
 func SetDestination(newDest : Vector2):
 	print("Set NPC "+self.name+" walk dest to: " + str(destination) )
 	destination = newDest;
+
+func WalkHome(startPos : Vector2):
+	position = startPos
+	SetDestination(homePosition)
 
 	
 func StartChatWith():

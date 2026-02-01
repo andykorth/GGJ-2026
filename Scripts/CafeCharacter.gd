@@ -65,10 +65,14 @@ func ChangeCharacter(npc : CafeNPC, newChar : CharacterAttributes):
 	bodySprite.rotation = 0
 	
 	# take over a body, swap to their position.
+	var oldPlayerPos = position
 	position = npc.position
 	destination = position
 	# clamp position
 	ClampPositionAndDestination()
+	
+	# The NPC should walk home.
+	npc.WalkHome(oldPlayerPos)
 	
 	#anchor to the bottom of the character automatically.
 	bodySprite.offset = Vector2(0, -500)
