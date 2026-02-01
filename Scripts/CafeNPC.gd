@@ -61,6 +61,12 @@ func StartChatWith():
 	DialogicConnector.startDialogue(currentChar.intro_timeline, currentChar)
 	pass
 
+func SetCharVisible(b : bool):
+	if b:
+		show()
+	else:
+		hide()
+
 func HideCharacter():
 	print('DBG: hide me %s' % [name])
 	hide()
