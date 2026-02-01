@@ -16,4 +16,5 @@ intro_timeline = "Lena"
 character_sighs = Array[AudioStream]([ExtResource("4_nd6xa"), ExtResource("5_dk3wl"), ExtResource("6_dm1j8")])
 art_overworld_body_neutral = ExtResource("1_s1wqc")
 art_overworld_mask_self = ExtResource("2_bg2qb")
+art_overworld_mask_player = ExtResource("2_bg2qb")
 metadata/_custom_type_script = "uid://ftcnopfvt30g"

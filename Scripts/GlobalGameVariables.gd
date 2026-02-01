@@ -33,6 +33,23 @@ func ChangePlayerCharacter(newCharacter : CharacterAttributes):
 	print("Changing character to " + newCharacter.character_name)
 	player.ChangeCharacter(newCharacter)
 
+func ChangePlayerCharacterToLena():
+	ChangePlayerCharacter(lenaNPC.currentChar)
+	
+func ChangePlayerCharacterToEaston():
+	ChangePlayerCharacter(eastonNPC.currentChar)
+	
+func ChangePlayerCharacterToYoua():
+	ChangePlayerCharacter(youaNPC.currentChar)
+
+func MoveLenaNPCTo(x : float):
+	lenaNPC.SetDestination(Vector2(x,0))
+func MoveEastonNPCTo(x : float):
+	eastonNPC.SetDestination(Vector2(x,0))
+func MoveYouaNPCTo(x : float):
+	youaNPC.SetDestination(Vector2(x,0))
+
+
 func incrementDialogStepsTaken():
 	stepsTakenInDialog += 1
 	print(str(stepsTakenInDialog))
