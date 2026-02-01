@@ -7,6 +7,8 @@ extends Node2D
 
 const CHAT_RANGE = 60
 
+@export var TEST_SOUND_FILE: AudioStream
+
 @export var speed:float = 120.0
 @export var currentChar : CharacterAttributes
 @export var cafe : Node
@@ -98,6 +100,7 @@ func SetDestination(newDest : Vector2):
 	if GlobalGameVariables.playerControlsActive && !blockedInput:
 		print("Set walk dest to: " + str(destination) )
 		destination = newDest;
+		SoundPlayer.play_sound(TEST_SOUND_FILE)
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("mouse_left"):
