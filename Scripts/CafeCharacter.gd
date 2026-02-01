@@ -29,6 +29,7 @@ func _ready() -> void:
 	SetUpCharacter()
 	Dialogic.timeline_ended.connect(DialogEnded)
 	chatIcon.visible = false
+	GlobalGameVariables.player = self
 
 
 func DialogEnded():
@@ -40,6 +41,11 @@ func SetUpCharacter():
 	bodySprite.texture = currentChar.art_overworld_body_neutral
 	maskSprite.texture = currentChar.art_dialogue_mask_self
 	pass
+	
+func ChangeCharacter(newChar : CharacterAttributes):
+	#probably need to hide the one this turned into
+	currentChar = newChar
+	SetUpCharacter()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

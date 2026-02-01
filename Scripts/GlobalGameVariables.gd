@@ -5,6 +5,7 @@ var currentCharacter: CharacterAttributes ## The dialogue's current character at
 var playerControlsActive := true
 var stepsTakenInDialog := 0
 var cam : CafeCamera
+var player : CafeCharacter
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +22,11 @@ func activatePlayerControls():
 func deactivatePlayerControls():
 	playerControlsActive = false
 	pass
-	
+
+func ChangePlayerCharacter(newCharacter : CharacterAttributes):
+	print("Changing character to " + newCharacter.character_name)
+	player.ChangeCharacter(newCharacter)
+
 func incrementDialogStepsTaken():
 	stepsTakenInDialog += 1
 	print(str(stepsTakenInDialog))
