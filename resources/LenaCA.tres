@@ -11,7 +11,7 @@
 [resource]
 script = ExtResource("1_fednm")
 character_name = "Lena"
-willingness = 55.0
+willingness = 10.0
 willingness_mask = 50.0
 intro_timeline = "Lena"
 character_sighs = Array[AudioStream]([ExtResource("4_nd6xa"), ExtResource("5_dk3wl"), ExtResource("6_dm1j8")])

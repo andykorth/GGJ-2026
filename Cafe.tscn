@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://dbmfnlrrect2g"]
 
-[ext_resource type="Texture2D" uid="uid://ekdln6tkbxq6" path="res://resources/Overworld/background.png" id="1_qt8ew"]
 [ext_resource type="Script" uid="uid://cugo46dt1ensd" path="res://Scripts/TheCafe.gd" id="1_qy1wl"]
 [ext_resource type="Script" uid="uid://ccpoqts362t8g" path="res://Scripts/CafeCamera.gd" id="2_2kfh8"]
+[ext_resource type="Texture2D" uid="uid://d03st0gkm1n85" path="res://resources/Overworld/background1.png" id="2_7ombi"]
 [ext_resource type="Script" uid="uid://cphvlekiglgoj" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
 [ext_resource type="Resource" uid="uid://bi2ja0rgmn4x7" path="res://resources/TestCharacterAttributes.tres" id="3_12iff"]
 [ext_resource type="Texture2D" uid="uid://b3ulsam2ctp7q" path="res://resources/Overworld/Picture1.png" id="3_ejlj1"]
 [ext_resource type="Texture2D" uid="uid://be6ptnm04v3dm" path="res://resources/Overworld/BoothSprite.png" id="3_f6sol"]
+[ext_resource type="Texture2D" uid="uid://chejbyt42khrw" path="res://resources/Overworld/background2.png" id="3_n6pvo"]
 [ext_resource type="Texture2D" uid="uid://6ehp54tbge02" path="res://resources/Overworld/DoorSprite.png" id="4_8qf8f"]
 [ext_resource type="Script" uid="uid://bmsx5hpfqhkla" path="res://DialogicFiles/DialogManager.gd" id="4_12iff"]
+[ext_resource type="Texture2D" uid="uid://dk2t6mrusdls8" path="res://resources/Overworld/background3.png" id="4_ewqa7"]
 [ext_resource type="Texture2D" uid="uid://sirvsb6e34xe" path="res://resources/Overworld/Picture2.png" id="4_nprpk"]
 [ext_resource type="AudioStream" uid="uid://bhywk6hpyrhm5" path="res://459965__florianreichelt__footsteps-while-running-on-wood.mp3" id="5_f2f8e"]
 [ext_resource type="Script" uid="uid://cif2qmibwq5vg" path="res://Scripts/CafeNPC.gd" id="5_qt8ew"]
@@ -34,106 +36,122 @@
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 script = ExtResource("1_qy1wl")
 
-[node name="CafeBackground" type="Sprite2D" parent="." unique_id=257859885]
-z_index = -1
-position = Vector2(1353, 327)
-scale = Vector2(0.25, 0.219)
-texture = ExtResource("1_qt8ew")
+[node name="Backgrounds" type="Node2D" parent="." unique_id=1386362802]
+z_index = -10
 
-[node name="Picture1" type="Sprite2D" parent="." unique_id=1833976054]
+[node name="CafeBackground" type="Sprite2D" parent="Backgrounds" unique_id=257859885]
+z_index = -1
+position = Vector2(512, 327)
+scale = Vector2(0.25, 0.219)
+texture = ExtResource("2_7ombi")
+
+[node name="CafeBackground-Mid" type="Sprite2D" parent="Backgrounds" unique_id=376395291]
+z_index = -1
+position = Vector2(1536, 327)
+scale = Vector2(0.25, 0.219)
+texture = ExtResource("3_n6pvo")
+
+[node name="CafeBackground-Right" type="Sprite2D" parent="Backgrounds" unique_id=1625159958]
+z_index = -1
+position = Vector2(2560, 327)
+scale = Vector2(0.25, 0.219)
+texture = ExtResource("4_ewqa7")
+
+[node name="Picture1" type="Sprite2D" parent="Backgrounds" unique_id=1833976054]
 position = Vector2(1690, 189)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_ejlj1")
 
-[node name="Picture2" type="Sprite2D" parent="." unique_id=2085862483]
+[node name="Picture2" type="Sprite2D" parent="Backgrounds" unique_id=2085862483]
 position = Vector2(1425, 185)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_nprpk")
 
-[node name="BoothSprite2" type="Sprite2D" parent="." unique_id=616906552]
+[node name="BoothSprite2" type="Sprite2D" parent="Backgrounds" unique_id=616906552]
 position = Vector2(316, 440)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_f6sol")
 
-[node name="LampSprite" type="Sprite2D" parent="." unique_id=1849614420]
+[node name="LampSprite" type="Sprite2D" parent="Backgrounds" unique_id=1849614420]
 z_index = 1
 position = Vector2(318, 352)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_7ombi")
 
-[node name="BoothSprite" type="Sprite2D" parent="." unique_id=1763694745]
+[node name="BoothSprite" type="Sprite2D" parent="Backgrounds" unique_id=1763694745]
 position = Vector2(1098, 443)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_f6sol")
 
-[node name="LampSprite2" type="Sprite2D" parent="." unique_id=1572331938]
+[node name="LampSprite2" type="Sprite2D" parent="Backgrounds" unique_id=1572331938]
 z_index = 1
 position = Vector2(1097, 356)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_7ombi")
 
-[node name="DoorSprite" type="Sprite2D" parent="." unique_id=1053809381]
+[node name="DoorSprite" type="Sprite2D" parent="Backgrounds" unique_id=1053809381]
 position = Vector2(2570, 272)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_8qf8f")
 
-[node name="BoothMug" type="Sprite2D" parent="." unique_id=2132446206]
+[node name="BoothMug" type="Sprite2D" parent="Backgrounds" unique_id=2132446206]
 position = Vector2(1117, 434)
-scale = Vector2(-0.25, 0.25)
+rotation = 3.1415927
+scale = Vector2(0.25, -0.25)
 texture = ExtResource("8_n6pvo")
 
-[node name="BarSprite" type="Sprite2D" parent="." unique_id=1705016773]
+[node name="BarSprite" type="Sprite2D" parent="Backgrounds" unique_id=1705016773]
 position = Vector2(2030, 488)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("14_b3a2q")
 
-[node name="WindowSprite" type="Sprite2D" parent="." unique_id=135000924]
+[node name="WindowSprite" type="Sprite2D" parent="Backgrounds" unique_id=135000924]
 position = Vector2(1140, 155)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_n7jui")
 
-[node name="WindowSprite2" type="Sprite2D" parent="." unique_id=1017766577]
+[node name="WindowSprite2" type="Sprite2D" parent="Backgrounds" unique_id=1017766577]
 position = Vector2(369, 153)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_n7jui")
 
-[node name="MachineSprite" type="Sprite2D" parent="." unique_id=531239516]
+[node name="MachineSprite" type="Sprite2D" parent="Backgrounds" unique_id=531239516]
 z_index = 1
 position = Vector2(1841, 352)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("11_ewqa7")
 
-[node name="IpadSprite" type="Sprite2D" parent="." unique_id=2129061678]
+[node name="IpadSprite" type="Sprite2D" parent="Backgrounds" unique_id=2129061678]
 z_index = 1
 position = Vector2(2227, 381)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_a0nfj")
 
-[node name="PotSprite" type="Sprite2D" parent="." unique_id=1464268898]
+[node name="PotSprite" type="Sprite2D" parent="Backgrounds" unique_id=1464268898]
 z_index = 1
 position = Vector2(1947, 364)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_hofy4")
 
-[node name="MugSprite3" type="Sprite2D" parent="." unique_id=1356767831]
+[node name="MugSprite3" type="Sprite2D" parent="Backgrounds" unique_id=1356767831]
 z_index = 1
 position = Vector2(1774, 391)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_n6pvo")
 
-[node name="MugSprite2" type="Sprite2D" parent="." unique_id=2089739476]
+[node name="MugSprite2" type="Sprite2D" parent="Backgrounds" unique_id=2089739476]
 z_index = 1
 position = Vector2(1807, 381)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_n6pvo")
 
-[node name="MugSprite" type="Sprite2D" parent="." unique_id=130355382]
+[node name="MugSprite" type="Sprite2D" parent="Backgrounds" unique_id=130355382]
 z_index = 1
 position = Vector2(1796, 399)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_n6pvo")
 
-[node name="Curtain1" type="Sprite2D" parent="." unique_id=544907313]
+[node name="Curtain1" type="Sprite2D" parent="Backgrounds" unique_id=544907313]
 z_index = 1
 position = Vector2(170, 19)
 scale = Vector2(0.25, 0.25)
@@ -149,6 +167,7 @@ script = ExtResource("2_2kfh8")
 characterNode = NodePath("../CharacterNode")
 
 [node name="CharacterNode" type="Node2D" parent="." unique_id=212993648 node_paths=PackedStringArray("cafe")]
+z_index = 10
 position = Vector2(2059, 602)
 script = ExtResource("2_12iff")
 TEST_SOUND_FILE = ExtResource("5_f2f8e")
