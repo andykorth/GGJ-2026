@@ -76,10 +76,10 @@ func ChangeCharacter(npc : CafeNPC, newChar : CharacterAttributes):
 
 	# Hide the actual NPC version now that we have taken over.
 	# but if we swapped off someone, show them again
-	cafe.eastonNPC.SetCharVisible(newChar != cafe.eastonNPC.currentChar)
-	cafe.lenaNPC.SetCharVisible(newChar != cafe.lenaNPC.currentChar)
+	cafe.eastonNPC.SetCharVisible(newChar != cafe.eastonNPC.currentChar and !cafe.eastonNPC.ignore_character_swapping)
+	cafe.lenaNPC.SetCharVisible(newChar != cafe.lenaNPC.currentChar and !cafe.lenaNPC.ignore_character_swapping)
 	cafe.jesterNPC.SetCharVisible(newChar != cafe.jesterNPC.currentChar and !cafe.jesterNPC.ignore_character_swapping) # Special case.
-	cafe.youaNPC.SetCharVisible(newChar != cafe.youaNPC.currentChar)
+	cafe.youaNPC.SetCharVisible(newChar != cafe.youaNPC.currentChar and !cafe.youaNPC.ignore_character_swapping)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

@@ -1,11 +1,16 @@
 if {General.PeopleStaying} > 0.0:
-	set {Lena.IsStaying} = true
+	set {Lena.IsStaying} = false
 	set {General.PeopleStaying} += 1.0
+else:
+	do GlobalGameVariables.remove_Lena()
+if {General.PeopleStaying} == 0.0:
 	do GlobalGameVariables.change_music_bad()
 elif {General.PeopleStaying} == 3.0:
 	do GlobalGameVariables.change_music_good()
 else:
 	do GlobalGameVariables.change_music_neutral()
+do GlobalGameVariables.remove_Easton()
+do GlobalGameVariables.change_music_neutral()
 do GlobalGameVariables.animateCamera(3000.0)
 do GlobalGameVariables.showCharacter("Jester")
 [wait time="0.2"]

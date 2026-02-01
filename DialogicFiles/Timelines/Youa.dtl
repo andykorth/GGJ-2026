@@ -14,6 +14,7 @@ Youa: What? Is there something on my face?
 	- I'd like you to wear me.
 		set {GlobalGameVariables.currentCharacter.willingness} -= 5.0
 		Youa: Seriously? Get away from me!
+		do GlobalGameVariables.remove_Youa()
 		leave Youa
 		jump SavedByLena/
 - You have a lovely face.
