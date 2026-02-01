@@ -26,6 +26,8 @@ const PLAYER_MAX_Y = 610
 @export var chatFrame1: Texture
 @export var chatFrame2: Texture
 
+@export var stepSound: AudioStreamPlayer
+
 var destination: Vector2
 var isWearingMask: bool
 
@@ -103,6 +105,7 @@ func _process(delta: float) -> void:
 		var deltaPos = destination - position
 		if(deltaPos.length() < 1.0):
 			velocity = Vector2.ZERO
+			stepSound.stop()
 		else:
 			velocity = speed * deltaPos.normalized();
 	
@@ -167,7 +170,7 @@ func SetDestination(newDest : Vector2):
 		destination = newDest;
 		ClampPositionAndDestination()
 
-		SoundPlayer.play_sound(TEST_SOUND_FILE)
+		stepSound.play()
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("mouse_left"):

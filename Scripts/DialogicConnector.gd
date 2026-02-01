@@ -58,13 +58,14 @@ func _on_Dialogic_timeline_ended() -> void:
 
 
 func endGame() -> void:
-	DialogicConnector.startDialogue(jesterCARes.intro_timeline, jesterCARes)
 	GlobalGameVariables.isGameOver = true
+	DialogicConnector.startDialogue(jesterCARes.intro_timeline, jesterCARes)
 
 
 ## Runs all prep work needed for the game before starting a Dialogic dialogue.
 func startDialogue(dialogue_name: String, characterAttributes: CharacterAttributes) -> void:
 	characterAttributes.willingness_changed.connect(_on_CurrentCharacter_willingness_changed.bind(characterAttributes))
 	GlobalGameVariables.currentCharacter = characterAttributes
+	SoundPlayer.update_willingness_connection()
 	print('DBG: character assign %s' % [characterAttributes.character_name])
 	Dialogic.start(dialogue_name)

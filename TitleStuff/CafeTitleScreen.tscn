@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dr45ht7q4csbs"]
 
-[ext_resource type="Texture2D" uid="uid://dbm3jqyx64tcw" path="res://placeholder title bg.png" id="1_3ph5k"]
 [ext_resource type="Texture2D" uid="uid://c6hrg5iuhbtn7" path="res://kenney_ui_blue_placeholders/button_rectangle_depth_gradient.png" id="2_bqk26"]
+[ext_resource type="Texture2D" uid="uid://chjl2bvcjm0sm" path="res://TitleStuff/TitleBacking.png" id="2_e8uxl"]
 [ext_resource type="Texture2D" uid="uid://cecblfdsx5de7" path="res://kenney_ui_blue_placeholders/button_rectangle_depth_flat.png" id="3_e8uxl"]
 [ext_resource type="Texture2D" uid="uid://vr18bhcvkgp6" path="res://kenney_ui_blue_placeholders/button_rectangle_gloss.png" id="4_ekx28"]
 [ext_resource type="Script" uid="uid://ccgiws166y8yq" path="res://TitleStuff/TitleScript.gd" id="5_gbxlg"]
@@ -34,11 +34,11 @@ script = ExtResource("5_gbxlg")
 
 [node name="Background" type="TextureRect" parent="." unique_id=439593961]
 layout_mode = 0
-offset_left = -19.0
-offset_top = -8.0
-offset_right = 1191.0
-offset_bottom = 747.0
-texture = ExtResource("1_3ph5k")
+offset_left = -27.0
+offset_top = -79.0
+offset_right = 1315.2223
+offset_bottom = 676.0
+texture = ExtResource("2_e8uxl")
 expand_mode = 3
 
 [node name="title" type="Label" parent="." unique_id=1859665268]

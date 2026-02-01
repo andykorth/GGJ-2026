@@ -1,12 +1,18 @@
 [gd_scene format=3 uid="uid://dbo1ia6allk4s"]
 
 [ext_resource type="Script" uid="uid://dnv6muf07g2wv" path="res://Scripts/SoundPlayer.gd" id="1_2ibiy"]
+[ext_resource type="AudioStream" uid="uid://8t3yn47c6vib" path="res://Audio/GGJ - Mask SFX - sigh1 (louder).wav" id="2_le1f2"]
 [ext_resource type="Script" uid="uid://5jwym13mut3t" path="res://Scripts/SoundObject.gd" id="2_vd62v"]
+[ext_resource type="AudioStream" uid="uid://cj5wi45fdq7bc" path="res://Audio/GGJ - Mask SFX - sigh2 (louder).wav" id="3_ea68j"]
+[ext_resource type="AudioStream" uid="uid://b7ca35q12bl8e" path="res://Audio/GGJ - Mask SFX - sigh3 (louder).wav" id="4_jpack"]
+[ext_resource type="AudioStream" uid="uid://bee51binbw2da" path="res://Audio/GGJ - Mask SFX - womp womp.wav" id="5_phw1b"]
 
 [node name="SoundPlayer" type="Node" unique_id=767476423 node_paths=PackedStringArray("sound_object", "sound_holder")]
 script = ExtResource("1_2ibiy")
 sound_object = NodePath("DefaultSoundObject")
 sound_holder = NodePath("SoundHolder")
+character_sighs = Array[AudioStream]([ExtResource("2_le1f2"), ExtResource("3_ea68j"), ExtResource("4_jpack")])
+character_fail_sound = ExtResource("5_phw1b")
 
 [node name="SoundHolder" type="Node" parent="." unique_id=345541629]
 

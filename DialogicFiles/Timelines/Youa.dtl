@@ -1,5 +1,7 @@
 join Youa center
 set {Youa.Emotion} = 2.0
+if {Easton.WhimsyMaskState} == true:
+	jump Youa/MetPeople
 set {GlobalGameVariables.currentCharacter.willingness} = "0"
 Youa: What? Is there something on my face?
 - Not yet!
@@ -23,6 +25,7 @@ Youa: Awww. That is sweet of you.
 set {Youa.Emotion} = 0.0
 Youa: I came here today because I was feeling a little lonely. But I am too shy to actually talk to ... someone.
 set {Youa.Emotion} = 2.0
+label MetPeople
 if {Lena.WhimsyMaskState} == true:
 	Youa: Maybe you could come back with ... someone else?
 elif {Easton.WhimsyMaskState} == true:
@@ -30,9 +33,8 @@ elif {Easton.WhimsyMaskState} == true:
 	- Stay for the party!
 		set {Youa.Emotion} = 1.0
 		Youa: Oh, do you think she would talk to me at the party? That is a great idea. How can I help you to plan?
+		set {GlobalGameVariables.currentCharacter.willingness} += 10.0
 		set {Youa.WhimsyMaskState} = true
-		set {Youa.IsStaying} = true
-		set {General.PeopleStaying} += 1.0
 		do GlobalGameVariables.ChangePlayerCharacterToYoua()
 else:
 	Youa: You should go talk to Easton. Maybe he would like to attend your party.
