@@ -45,6 +45,11 @@ func SetUpCharacter():
 	bodySprite.texture = currentChar.art_overworld_body_neutral
 	pass
 	
+func SetDestination(newDest : Vector2):
+	print("Set NPC "+self.name+" walk dest to: " + str(destination) )
+	destination = newDest;
+
+	
 func StartChatWith():
 	# If you are already in a chat do not let them start another
 	if !GlobalGameVariables.playerControlsActive:

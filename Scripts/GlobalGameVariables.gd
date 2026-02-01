@@ -42,6 +42,13 @@ func ChangePlayerCharacterToEaston():
 func ChangePlayerCharacterToYoua():
 	ChangePlayerCharacter(youaNPC.currentChar)
 
+func MoveLenaNPCTo(x : float):
+	lenaNPC.SetDestination(Vector2(x,0))
+func MoveEastonNPCTo(x : float):
+	eastonNPC.SetDestination(Vector2(x,0))
+func MoveYouaNPCTo(x : float):
+	youaNPC.SetDestination(Vector2(x,0))
+
 
 func incrementDialogStepsTaken():
 	stepsTakenInDialog += 1
