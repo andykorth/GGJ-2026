@@ -27,9 +27,13 @@ if {Lena.WhimsyMaskState} == true:
 	Youa: Maybe you could come back with ... someone else?
 elif {Easton.WhimsyMaskState} == true:
 	Youa: I would really like to get to know Lena better. She is so kind and graceful. I have trouble speaking to her.
+	- Stay for the party!
+		set {Youa.Emotion} = 1.0
+		Youa: Oh, do you think she would talk to me at the party? That is a great idea. How can I help you to play?
+		set {Youa.WhimsyMaskState} = true
+		set {General.PeopleStaying} += 1.0
 else:
-	Youa: It's...nice to meet you.
-	Youa: I...I enjoy this feeling. Alright, I'm ready to put you on.
-	set {Lena.WhimsyMaskState} = true
-	set {Lena.IsStaying} = true
-	set {General.PeopleStaying} += 1.0
+	Youa: You should go talk to Easton. Maybe he would like to attend your party.
+	set {Youa.Emotion} = 2.0
+	Youa: What? I am not going to take you over there.
+	jump SavedByLena/
