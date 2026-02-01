@@ -48,7 +48,7 @@ func DialogEnded():
 	await get_tree().create_timer(0.1).timeout
 	blockedInput = false;
 	
-func ChangeCharacter(newChar : CharacterAttributes):
+func ChangeCharacter(npc : CafeNPC, newChar : CharacterAttributes):
 	#probably need to hide the one this turned into
 	currentChar = newChar
 	# when you become a character, you are wearing a mask by definition:
@@ -62,16 +62,22 @@ func ChangeCharacter(newChar : CharacterAttributes):
 	bodySprite.scale = Vector2.ONE * spriteScale
 	bodySprite.rotation = 0
 	
+	# take over a body, swap to their position.
+	position = npc.position
+	destination = position
+	# clamp position
+	ClampPositionAndDestination()
+	
 	#anchor to the bottom of the character automatically.
 	bodySprite.offset = Vector2(0, -500)
 	maskSprite.offset = Vector2(0, -500)
-	
+
 	# Hide the actual NPC version now that we have taken over.
 	# but if we swapped off someone, show them again
-	cafe.eastonNPC.SetCharVisible(newChar != cafe.eastonNPC)
-	cafe.lenaNPC.SetCharVisible(newChar != cafe.lenaNPC)
-	cafe.jesterNPC.SetCharVisible(newChar != cafe.jesterNPC and !cafe.jesterNPC.ignore_character_swapping) # Special case.
-	cafe.youaNPC.SetCharVisible(newChar != cafe.youaNPC)
+	cafe.eastonNPC.SetCharVisible(newChar != cafe.eastonNPC.currentChar)
+	cafe.lenaNPC.SetCharVisible(newChar != cafe.lenaNPC.currentChar)
+	cafe.jesterNPC.SetCharVisible(newChar != cafe.jesterNPC.currentChar and !cafe.jesterNPC.ignore_character_swapping) # Special case.
+	cafe.youaNPC.SetCharVisible(newChar != cafe.youaNPC.currentChar)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -91,7 +97,7 @@ func _process(delta: float) -> void:
 	if(input_direction.length_squared() != 0):
 		velocity = input_direction * speed
 		# moving with keyboard cancels scripted moves.
-		destination = position
+		destination = position + velocity * delta
 	else:
 		# if there's no input, use the scripted destination:
 		var deltaPos = destination - position
@@ -104,30 +110,34 @@ func _process(delta: float) -> void:
 	var normalizedSpeed = velocity.length() / speed
 	var x = cos(Time.get_ticks_msec() / 80.0)
 	bodySprite.rotation = deg_to_rad(x * wiggleDegrees * normalizedSpeed) 
-	bodySprite.scale = spriteScale * Vector2(1, cos(Time.get_ticks_msec() / 120.0) * bounceAmplitude * normalizedSpeed + 1.0)
-	
+
 	# flip player art on direction:
+	# if velocity is zero, don't change the facing direction
 	if velocity.x > 0:
 		facing = -1
 	elif velocity.x < 0:
 		facing = 1
-	# if velocity is zero, don't change the facing direction
-		
-	bodySprite.scale = Vector2(bodySprite.scale.x * facing, bodySprite.scale.y)
+
+	bodySprite.scale = spriteScale * Vector2(facing,
+		cos(Time.get_ticks_msec() / 120.0) * bounceAmplitude * normalizedSpeed + 1.0)
 	
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
-	position.y = clamp(position.y, PLAYER_MIN_Y, PLAYER_MAX_Y)
+	ClampPositionAndDestination()
 	
 	# need to draw a little chat icon if we are in chat range.
 	chatIcon.visible = CheckChatRange() != null
 
+func ClampPositionAndDestination():
+	position.y = clamp(position.y, PLAYER_MIN_Y, PLAYER_MAX_Y)
+	# clamp destination to our walkable y range
+	destination.y = clamp(destination.y, PLAYER_MIN_Y, PLAYER_MAX_Y)
 
 func CheckChatRange() -> CharacterAttributes:
 	for childNode in cafe.get_children():
 		if childNode is CafeNPC:
 			var delta = position - childNode.position
-			if delta.length() < CHAT_RANGE:
+			if delta.length() < CHAT_RANGE && childNode.visible:
 				return childNode.currentChar
 	return null
 
@@ -148,11 +158,10 @@ func StartDialogWith(character : CharacterAttributes):
 
 func SetDestination(newDest : Vector2):
 	if GlobalGameVariables.playerControlsActive && !blockedInput:
-		# clamp destination to our walkable y range
-		newDest.y = clamp(newDest.y, PLAYER_MIN_Y, PLAYER_MAX_Y)
-		
 		print("Set walk dest to: " + str(newDest) )
 		destination = newDest;
+		ClampPositionAndDestination()
+
 		SoundPlayer.play_sound(TEST_SOUND_FILE)
 
 func _physics_process(delta):

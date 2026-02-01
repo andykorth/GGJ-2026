@@ -34,19 +34,23 @@ func deactivatePlayerControls():
 	playerControlsActive = false
 	pass
 
-func ChangePlayerCharacter(newCharacter: CharacterAttributes):
+func ChangePlayerCharacter(npc : CafeNPC):
+	var newCharacter: CharacterAttributes = npc.currentChar
 	print("Changing character to " + newCharacter.character_name)
-	player.ChangeCharacter(newCharacter)
+	player.ChangeCharacter(npc, newCharacter)
 
 func ChangePlayerCharacterToLena():
-	ChangePlayerCharacter(lenaNPC.currentChar)
+	ChangePlayerCharacter(lenaNPC)
   
 func ChangePlayerCharacterToEaston():
-	ChangePlayerCharacter(eastonNPC.currentChar)
+	ChangePlayerCharacter(eastonNPC)
   
 func ChangePlayerCharacterToYoua():
-	ChangePlayerCharacter(youaNPC.currentChar)
+	ChangePlayerCharacter(youaNPC)
 
+func ChangePlayerCharacterToJester():
+	ChangePlayerCharacter(jesterNPC)
+	
 func MoveLenaNPCTo(x: float, y := 0.0):
 	lenaNPC.SetDestination(Vector2(x, y))
 func MoveEastonNPCTo(x: float, y := 0.0):
