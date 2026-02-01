@@ -13,3 +13,5 @@ Easton: Whadda you looking at? You got a problem?
 	Easton: Haha. You're a smart little mask. I like you, kid! Get ovah here.
 	set {Easton.WhimsyMaskState} = true
 	set {Lena.WhimsyMaskState} = false
+	set {Easton.IsStaying} = true
+	set {General.PeopleStaying} += 1.0

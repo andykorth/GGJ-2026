@@ -10,6 +10,7 @@ script = ExtResource("2_1sygg")
 character_name = "Easton"
 willingness = 55.0
 willingness_mask = 50.0
+intro_timeline = "Easton"
 art_overworld_body_neutral = ExtResource("1_1sygg")
 art_overworld_mask_self = ExtResource("2_8mkl3")
 art_overworld_mask_player = ExtResource("2_csk5r")

@@ -7,7 +7,7 @@ Youa: What? Is there something on my face?
 	set {GlobalGameVariables.currentCharacter.willingness} -= 5.0
 	- I was trying to cheer you up!
 		set {Youa.Emotion} = 1.0
-		set {GlobalGameVariables} += "5.0"
+		set {GlobalGameVariables} += 5.0
 		jump Youa Story
 	- I'd like you to wear me.
 		set {GlobalGameVariables.currentCharacter.willingness} -= 5.0
@@ -27,3 +27,9 @@ if {Lena.WhimsyMaskState} == true:
 	Youa: Maybe you could come back with ... someone else?
 elif {Easton.WhimsyMaskState} == true:
 	Youa: I would really like to get to know Lena better. She is so kind and graceful. I have trouble speaking to her.
+else:
+	Youa: It's...nice to meet you.
+	I...I enjoy this feeling. Alright, I'm ready to put you on.
+	set {Lena.WhimsyMaskState} = true
+	set {Lena.IsStaying} = true
+	set {General.PeopleStaying} += 1.0

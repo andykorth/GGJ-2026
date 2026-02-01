@@ -46,14 +46,20 @@ glossary/default_case_sensitive=true
 variables={
 "Easton": {
 "Emotion": 0,
+"IsStaying": false,
 "WhimsyMaskState": false
+},
+"General": {
+"PeopleStaying": 0
 },
 "Lena": {
 "Emotion": 0,
+"IsStaying": false,
 "WhimsyMaskState": false
 },
 "Youa": {
 "Emotion": 0,
+"IsStaying": false,
 "WhimsyMaskState": false
 }
 }
