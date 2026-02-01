@@ -20,6 +20,7 @@
 [ext_resource type="Resource" uid="uid://40gpmt56ish5" path="res://resources/LenaCA.tres" id="14_hjqjj"]
 [ext_resource type="Resource" uid="uid://cvelytv1rqof6" path="res://resources/EastonCA.tres" id="17_inlb2"]
 [ext_resource type="Resource" uid="uid://brwg0b0lho0ph" path="res://resources/YouaCA.tres" id="18_gg70q"]
+[ext_resource type="Resource" uid="uid://cjlvthwxnuq47" path="res://resources/JesterCA.tres" id="19_inlb2"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 script = ExtResource("1_qy1wl")
@@ -146,6 +147,25 @@ texture = ExtResource("10_m8gu7")
 offset = Vector2(0, -500)
 
 [node name="maskSprite" type="Sprite2D" parent="NPCNodeYoua/CharacterWorldMapSprite" unique_id=1318680406]
+texture = ExtResource("11_rkrhi")
+offset = Vector2(0, -500)
+
+[node name="NPCNodeJester" type="Node2D" parent="." unique_id=1171114269]
+visible = false
+position = Vector2(2565, 568)
+script = ExtResource("5_qt8ew")
+spriteScale = 0.25
+currentChar = ExtResource("19_inlb2")
+metadata/_edit_group_ = true
+
+[node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeJester" unique_id=850373663]
+modulate = Color(1, 0.19, 0.98649985, 1)
+position = Vector2(0, -64)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_m8gu7")
+offset = Vector2(0, -500)
+
+[node name="maskSprite" type="Sprite2D" parent="NPCNodeJester/CharacterWorldMapSprite" unique_id=688451698]
 texture = ExtResource("11_rkrhi")
 offset = Vector2(0, -500)
 
