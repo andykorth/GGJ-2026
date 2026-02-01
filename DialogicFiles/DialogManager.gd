@@ -1,6 +1,8 @@
 extends Node2D
 
-var _lenaCharacter: CharacterAttributes = preload('res://resources/Lena.tres')
+var _lenaCharacter: CharacterAttributes = preload('res://resources/LenaCA.tres')
+var _youaCharacter: CharacterAttributes = preload('res://resources/YouaCA.tres')
+var _eastonCharacter: CharacterAttributes = preload('res://resources/EastonCA.tres')
 
 func _ready():
 	Dialogic.timeline_started.connect(GlobalGameVariables.deactivatePlayerControls)
