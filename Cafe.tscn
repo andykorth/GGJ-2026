@@ -243,7 +243,7 @@ limit_bottom = 0
 script = ExtResource("2_2kfh8")
 characterNode = NodePath("../CharacterNode")
 
-[node name="CharacterNode" type="Node2D" parent="." unique_id=212993648 node_paths=PackedStringArray("cafe")]
+[node name="CharacterNode" type="Node2D" parent="." unique_id=212993648 node_paths=PackedStringArray("cafe", "stepSound")]
 z_index = 10
 position = Vector2(2059, 602)
 script = ExtResource("2_12iff")
@@ -253,7 +253,11 @@ currentChar = ExtResource("3_12iff")
 cafe = NodePath("..")
 chatFrame1 = ExtResource("22_a0nfj")
 chatFrame2 = ExtResource("6_4no61")
+stepSound = NodePath("AudioStreamPlayer")
 metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CharacterNode" unique_id=1114896173]
+stream = ExtResource("25_8oeng")
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
 scale = Vector2(0.25, 0.25)
