@@ -3,4 +3,29 @@ do GlobalGameVariables.showCharacter("Jester")
 [wait time="0.2"]
 do GlobalGameVariables.MoveJesterNPCTo(2565.0, 650.0)
 [wait time="1.0"]
-Jester: Yo it's the end
+Jester: Never fear, the Jester is here!
+if {General.PeopleStaying} == 0.0:
+	Jester: Who is here for my grand and glorious–
+	Jester: What? No one is here?
+	Lena: It's closing time, we're wrapping up.
+	Jester: How poorly this situation portends!
+	set {Jester.WhimsyMaskState} = false
+	Jester: You! You did this on purpose, didn't you?
+	Jester: All I wanted was to bring some wonderful whimsy to these masked individuals...
+	Jester: ...and you just wanted to impose your maleficent misbehavior, just to see what would happen!
+	Jester: Behold! You got the ending you wanted. You happy?
+	return
+else:
+	Jester: Who is here for my grand and glorious gala?
+if {Youa.IsStaying} == true:
+	Lena: I'm not shy!
+if {Easton.IsStaying} == true:
+	Easton: I'm not mad!
+if {Lena.IsStaying} == true:
+	Lena: I know I should be getting home...but I'm glad I decided to stick around and see what happens.
+if {General.PeopleStaying} < 3.0:
+	Jester: Shame that some who I sought to invite chose not to stay...but no matter!
+else:
+	Jester: Fantastic! A full crew!
+Jester: You all are the chosen! The ones who looked past the masks you wear to see one another as you want to be!
+Jester: Let the festivities commence!

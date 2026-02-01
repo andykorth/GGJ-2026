@@ -52,6 +52,9 @@ variables={
 "General": {
 "PeopleStaying": 0
 },
+"Jester": {
+"WhimsyMaskState": false
+},
 "Lena": {
 "Emotion": 0,
 "IsStaying": false,
