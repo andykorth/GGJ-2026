@@ -17,8 +17,12 @@
 [ext_resource type="Texture2D" uid="uid://qnog6ptx1cyp" path="res://DialogicFiles/Sprites/chatIcon.png" id="6_4no61"]
 [ext_resource type="Texture2D" uid="uid://cbiir7bv7piju" path="res://resources/Overworld/LampSprite.png" id="6_7ombi"]
 [ext_resource type="Texture2D" uid="uid://n4yql5iev88j" path="res://resources/Overworld/WindowSprite.png" id="6_n7jui"]
+[ext_resource type="Texture2D" uid="uid://bj6pufueemts8" path="res://resources/Overworld/LampCeiling.png" id="7_a0nfj"]
+[ext_resource type="Texture2D" uid="uid://bwn0k473uobrp" path="res://resources/Overworld/Beads.png" id="8_hofy4"]
 [ext_resource type="Texture2D" uid="uid://fytxatgqmgfs" path="res://resources/Overworld/MugSprite.png" id="8_n6pvo"]
 [ext_resource type="Texture2D" uid="uid://qsjorgn0564a" path="res://DialogicFiles/Sprites/LenaOverworldCharacter.png" id="10_m8gu7"]
+[ext_resource type="Texture2D" uid="uid://cegt3ncb8f3qd" path="res://resources/Overworld/PottedPlant.png" id="10_o5jln"]
+[ext_resource type="Texture2D" uid="uid://t3rwt61chgku" path="res://resources/Overworld/Outlet.png" id="10_vx0kx"]
 [ext_resource type="Texture2D" uid="uid://cxpjvxlhehri4" path="res://resources/Overworld/MachineSprite.png" id="11_ewqa7"]
 [ext_resource type="Texture2D" uid="uid://cp3fwus7rqdn7" path="res://DialogicFiles/Sprites/LenaOverworldMask.png" id="11_rkrhi"]
 [ext_resource type="Texture2D" uid="uid://dnr822r3eespp" path="res://resources/Overworld/IpadSprite.png" id="12_a0nfj"]
@@ -29,6 +33,7 @@
 [ext_resource type="Resource" uid="uid://cvelytv1rqof6" path="res://resources/EastonCA.tres" id="17_inlb2"]
 [ext_resource type="Resource" uid="uid://brwg0b0lho0ph" path="res://resources/YouaCA.tres" id="18_gg70q"]
 [ext_resource type="Resource" uid="uid://cjlvthwxnuq47" path="res://resources/JesterCA.tres" id="19_inlb2"]
+[ext_resource type="Texture2D" uid="uid://svs37408kado" path="res://resources/Overworld/Curtain2.png" id="20_hofy4"]
 [ext_resource type="Texture2D" uid="uid://cstjuaphc6iry" path="res://chatIconSpace.png" id="22_a0nfj"]
 [ext_resource type="Script" uid="uid://dblob17d14283" path="res://debug_end_button.gd" id="22_gg70q"]
 [ext_resource type="Texture2D" uid="uid://hsmgug0aovxh" path="res://DialogicFiles/Sprites/EastonOverworldCharacter.png" id="28_ewqa7"]
@@ -70,10 +75,45 @@ position = Vector2(1425, 185)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_nprpk")
 
+[node name="LampCeiling3" type="Sprite2D" parent="Backgrounds" unique_id=2084263223]
+position = Vector2(1284, 69)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_a0nfj")
+
+[node name="LampCeiling2" type="Sprite2D" parent="Backgrounds" unique_id=1679490748]
+position = Vector2(2378, 94)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_a0nfj")
+
+[node name="Beads" type="Sprite2D" parent="Backgrounds" unique_id=1881099900]
+position = Vector2(860, 216)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_hofy4")
+
+[node name="Beads2" type="Sprite2D" parent="Backgrounds" unique_id=517122928]
+position = Vector2(1634, 204)
+scale = Vector2(-0.25, 0.25)
+texture = ExtResource("8_hofy4")
+
+[node name="LampCeiling" type="Sprite2D" parent="Backgrounds" unique_id=1681338728]
+position = Vector2(537, 72)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("7_a0nfj")
+
 [node name="BoothSprite2" type="Sprite2D" parent="Backgrounds" unique_id=616906552]
 position = Vector2(316, 440)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_f6sol")
+
+[node name="Outlet2" type="Sprite2D" parent="Backgrounds" unique_id=536874066]
+position = Vector2(659, 461)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("10_vx0kx")
+
+[node name="PottedPlant" type="Sprite2D" parent="Backgrounds" unique_id=1183554160]
+position = Vector2(717, 374)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_o5jln")
 
 [node name="LampSprite" type="Sprite2D" parent="Backgrounds" unique_id=1849614420]
 z_index = 1
@@ -98,6 +138,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_8qf8f")
 
 [node name="BoothMug" type="Sprite2D" parent="Backgrounds" unique_id=2132446206]
+z_index = 1
 position = Vector2(1117, 434)
 rotation = 3.1415927
 scale = Vector2(0.25, -0.25)
@@ -177,6 +218,21 @@ texture = ExtResource("14_o5jln")
 position = Vector2(2074, 147)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("31_nprpk")
+
+[node name="Curtain4" type="Sprite2D" parent="Backgrounds" unique_id=1049518323]
+position = Vector2(2517, -97)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("20_hofy4")
+
+[node name="Outlet" type="Sprite2D" parent="Backgrounds" unique_id=1712309625]
+position = Vector2(1463, 471)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_vx0kx")
+
+[node name="Largebeads" type="Sprite2D" parent="Backgrounds" unique_id=149234205]
+position = Vector2(1199, -85)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_hofy4")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=632607298 node_paths=PackedStringArray("characterNode")]
 offset = Vector2(576, 324)
