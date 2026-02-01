@@ -7,6 +7,12 @@ var stepsTakenInDialog := 0
 var cam : CafeCamera
 var player : CafeCharacter
 
+# it is helpful to have fixed references to each character
+# so we can reference them when swapping characters
+var lenaNPC : CafeNPC
+var eastonNPC : CafeNPC
+var youaNPC : CafeNPC
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
