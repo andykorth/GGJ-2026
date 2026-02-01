@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://dbo1ia6allk4s"]
 
-[node name="SoundPlayer" type="Node" unique_id=767476423]
+[ext_resource type="Script" uid="uid://dnv6muf07g2wv" path="res://Scripts/SoundPlayer.gd" id="1_2ibiy"]
+[ext_resource type="Script" uid="uid://5jwym13mut3t" path="res://Scripts/SoundObject.gd" id="2_vd62v"]
+
+[node name="SoundPlayer" type="Node" unique_id=767476423 node_paths=PackedStringArray("sound_object", "sound_holder")]
+script = ExtResource("1_2ibiy")
+sound_object = NodePath("DefaultSoundObject")
+sound_holder = NodePath("SoundHolder")
+
+[node name="SoundHolder" type="Node" parent="." unique_id=345541629]
+
+[node name="DefaultSoundObject" type="AudioStreamPlayer" parent="." unique_id=1808223143]
+script = ExtResource("2_vd62v")

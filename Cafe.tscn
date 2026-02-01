@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://dbmfnlrrect2g"]
 
 [ext_resource type="Texture2D" uid="uid://ekdln6tkbxq6" path="res://resources/background.png" id="1_qt8ew"]
-[ext_resource type="Script" uid="uid://cugo46dt1ensd" path="res://Scripts/TheCafe.gd" id="1_qy1wl"]
+[ext_resource type="Script" path="res://Scripts/TheCafe.gd" id="1_qy1wl"]
 [ext_resource type="Script" uid="uid://ccpoqts362t8g" path="res://Scripts/CafeCamera.gd" id="2_2kfh8"]
 [ext_resource type="Script" uid="uid://cphvlekiglgoj" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
 [ext_resource type="Resource" uid="uid://bi2ja0rgmn4x7" path="res://resources/TestCharacterAttributes.tres" id="3_12iff"]
 [ext_resource type="Script" uid="uid://bmsx5hpfqhkla" path="res://DialogicFiles/DialogManager.gd" id="4_12iff"]
+[ext_resource type="AudioStream" uid="uid://bhywk6hpyrhm5" path="res://459965__florianreichelt__footsteps-while-running-on-wood.mp3" id="5_f2f8e"]
 [ext_resource type="Script" uid="uid://cif2qmibwq5vg" path="res://Scripts/CafeNPC.gd" id="5_qt8ew"]
 [ext_resource type="Texture2D" uid="uid://qnog6ptx1cyp" path="res://DialogicFiles/Sprites/chatIcon.png" id="6_4no61"]
 [ext_resource type="AudioStream" uid="uid://dwrefr6ly236j" path="res://boogie, man!.mp3" id="8_2kfh8"]
@@ -29,6 +30,7 @@ characterNode = NodePath("../CharacterNode")
 [node name="CharacterNode" type="Node2D" parent="." unique_id=212993648 node_paths=PackedStringArray("cafe")]
 position = Vector2(389, 627)
 script = ExtResource("2_12iff")
+TEST_SOUND_FILE = ExtResource("5_f2f8e")
 currentChar = ExtResource("3_12iff")
 cafe = NodePath("..")
 metadata/_edit_group_ = true
@@ -77,4 +79,5 @@ script = ExtResource("4_12iff")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1846297719]
 stream = ExtResource("8_2kfh8")
+volume_db = -17.479
 autoplay = true
