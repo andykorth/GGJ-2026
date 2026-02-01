@@ -1,7 +1,7 @@
 extends Node
 
 
-const END_STEPS := 10 ## How many text events to process before trigging the endgame.
+const END_STEPS := 7 ## How many text events to process before trigging the endgame.
 
 var currentCharacter: CharacterAttributes ## The dialogue's current character attributes. This should be set whenever starting a timeline.
 var playerControlsActive := true
