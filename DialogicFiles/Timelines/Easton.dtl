@@ -12,4 +12,5 @@ Easton: Whadda you looking at? You got a problem?
 	set {GlobalGameVariables.currentCharacter.willingness} += "10.0"
 	Easton: Haha. You're a smart little mask. I like you, kid! Get ovah here.
 	set {Easton.WhimsyMaskState} = true
+	do GlobalGameVariables.ChangePlayerCharacterToEaston()
 	set {Lena.WhimsyMaskState} = false
