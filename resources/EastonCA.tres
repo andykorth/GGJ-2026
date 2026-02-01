@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://qsjorgn0564a" path="res://DialogicFiles/Sprites/LenaOverworldCharacter.png" id="1_1sygg"]
 [ext_resource type="Script" uid="uid://ftcnopfvt30g" path="res://resources/CharacterAttributes.gd" id="2_1sygg"]
 [ext_resource type="Texture2D" uid="uid://cswrwwbb05sfn" path="res://DialogicFiles/Sprites/lena_mask.PNG" id="2_8mkl3"]
-[ext_resource type="Texture2D" uid="uid://cp3fwus7rqdn7" path="res://DialogicFiles/Sprites/LenaOverworldMask.png" id="2_csk5r"]
+[ext_resource type="Texture2D" uid="uid://ci8t3oxw1b2r0" path="res://DialogicFiles/Sprites/WhimsyMaskOverworld.png" id="2_csk5r"]
 
 [resource]
 script = ExtResource("2_1sygg")
