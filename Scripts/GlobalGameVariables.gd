@@ -39,5 +39,6 @@ func incrementDialogStepsTaken():
 	pass
 
 func animateCamera(x : float):
+	print("Starting camera animation: x => " + str(x))
 	cam.ScriptedMove(x, 0)
 	
