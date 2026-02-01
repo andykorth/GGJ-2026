@@ -5,9 +5,9 @@ extends Node2D
 # Might be scripted to move aroudn, but maybe we allow free movement
 # once the mask takes control of a character.
 
-const CHAT_RANGE = 60
-const PLAYER_MIN_Y = 530
-const PLAYER_MAX_Y = 700
+const CHAT_RANGE = 120
+const PLAYER_MIN_Y = 590
+const PLAYER_MAX_Y = 610
 
 @export var TEST_SOUND_FILE: AudioStream
 
