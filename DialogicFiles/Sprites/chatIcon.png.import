@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c25pddokliknb"
-path="res://.godot/imported/lena_base.PNG-c7172bf3ea9cc8d184fb39c41942fbad.ctex"
+uid="uid://qnog6ptx1cyp"
+path="res://.godot/imported/chatIcon.png-e3f7b114500ba9516ba32fb01cfe87db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DialogicFiles/Sprites/lena_base.PNG"
-dest_files=["res://.godot/imported/lena_base.PNG-c7172bf3ea9cc8d184fb39c41942fbad.ctex"]
+source_file="res://DialogicFiles/Sprites/chatIcon.png"
+dest_files=["res://.godot/imported/chatIcon.png-e3f7b114500ba9516ba32fb01cfe87db.ctex"]
 
 [params]
 

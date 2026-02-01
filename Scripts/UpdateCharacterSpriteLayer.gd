@@ -17,6 +17,8 @@ func check_layer_change(change):
 	elif change.variable == characterName + ".WhimsyMaskState":
 		if change.new_value == true:
 			set_character_mask_state(1)
+		else:
+			set_character_mask_state(0)
 	pass
 	
 func set_character_emotion(layerToSet):
