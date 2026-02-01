@@ -14,5 +14,3 @@ label Game begins
 set {Lena.Emotion} = 1.0
 set {Lena.WhimsyMaskState} = true
 Lena: Take me away!
-set {Lena.IsStaying} = true
-set {General.PeopleStaying} += 1.0
