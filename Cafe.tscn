@@ -6,21 +6,61 @@
 [ext_resource type="Script" uid="uid://cphvlekiglgoj" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
 [ext_resource type="Resource" uid="uid://bi2ja0rgmn4x7" path="res://resources/TestCharacterAttributes.tres" id="3_12iff"]
+[ext_resource type="Texture2D" uid="uid://be6ptnm04v3dm" path="res://resources/Overworld/BoothSprite.png" id="3_f6sol"]
+[ext_resource type="Texture2D" uid="uid://6ehp54tbge02" path="res://resources/Overworld/DoorSprite.png" id="4_8qf8f"]
 [ext_resource type="Script" uid="uid://bmsx5hpfqhkla" path="res://DialogicFiles/DialogManager.gd" id="4_12iff"]
 [ext_resource type="AudioStream" uid="uid://bhywk6hpyrhm5" path="res://459965__florianreichelt__footsteps-while-running-on-wood.mp3" id="5_f2f8e"]
 [ext_resource type="Script" uid="uid://cif2qmibwq5vg" path="res://Scripts/CafeNPC.gd" id="5_qt8ew"]
 [ext_resource type="Texture2D" uid="uid://qnog6ptx1cyp" path="res://DialogicFiles/Sprites/chatIcon.png" id="6_4no61"]
+[ext_resource type="Texture2D" uid="uid://n4yql5iev88j" path="res://resources/Overworld/WindowSprite.png" id="6_n7jui"]
 [ext_resource type="AudioStream" uid="uid://dwrefr6ly236j" path="res://boogie, man!.mp3" id="8_2kfh8"]
 [ext_resource type="Texture2D" uid="uid://qsjorgn0564a" path="res://DialogicFiles/Sprites/LenaOverworldCharacter.png" id="10_m8gu7"]
 [ext_resource type="Texture2D" uid="uid://cp3fwus7rqdn7" path="res://DialogicFiles/Sprites/LenaOverworldMask.png" id="11_rkrhi"]
+[ext_resource type="Texture2D" uid="uid://dk7mcafm0nuow" path="res://resources/Overworld/BarSprite.png" id="14_b3a2q"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 script = ExtResource("1_qy1wl")
 
 [node name="CafeBackground" type="Sprite2D" parent="." unique_id=257859885]
-position = Vector2(1207, 292)
-scale = Vector2(0.31289563, 0.2726852)
+z_index = -1
+position = Vector2(1353, 327)
+scale = Vector2(0.25, 0.219)
 texture = ExtResource("1_qt8ew")
+
+[node name="BoothSprite2" type="Sprite2D" parent="." unique_id=616906552]
+position = Vector2(316, 440)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_f6sol")
+
+[node name="BoothSprite" type="Sprite2D" parent="." unique_id=1763694745]
+position = Vector2(1098, 443)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_f6sol")
+
+[node name="DoorSprite" type="Sprite2D" parent="." unique_id=1053809381]
+position = Vector2(2570, 272)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_8qf8f")
+
+[node name="BarSprite" type="Sprite2D" parent="." unique_id=1705016773]
+position = Vector2(2030, 488)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("14_b3a2q")
+
+[node name="WindowSprite" type="Sprite2D" parent="." unique_id=135000924]
+position = Vector2(1140, 155)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_n7jui")
+
+[node name="WindowSprite2" type="Sprite2D" parent="." unique_id=1017766577]
+position = Vector2(519, 155)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_n7jui")
+
+[node name="WindowSprite3" type="Sprite2D" parent="." unique_id=708661787]
+position = Vector2(2062, 148)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_n7jui")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=632607298 node_paths=PackedStringArray("characterNode")]
 offset = Vector2(576, 324)
@@ -32,7 +72,7 @@ script = ExtResource("2_2kfh8")
 characterNode = NodePath("../CharacterNode")
 
 [node name="CharacterNode" type="Node2D" parent="." unique_id=212993648 node_paths=PackedStringArray("cafe")]
-position = Vector2(389, 627)
+position = Vector2(2059, 602)
 script = ExtResource("2_12iff")
 TEST_SOUND_FILE = ExtResource("5_f2f8e")
 currentChar = ExtResource("3_12iff")
@@ -52,13 +92,14 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("6_4no61")
 
 [node name="NPCNodeLena" type="Node2D" parent="." unique_id=1325653488]
-position = Vector2(813, 578)
+position = Vector2(2390, 539)
 script = ExtResource("5_qt8ew")
+spriteScale = 0.25
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeLena" unique_id=1594672184]
 modulate = Color(1, 0.19, 0.19, 1)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_m8gu7")
 offset = Vector2(0, -500)
 
@@ -67,14 +108,15 @@ texture = ExtResource("11_rkrhi")
 offset = Vector2(0, -500)
 
 [node name="NPCNodeEaston" type="Node2D" parent="." unique_id=940530280]
-position = Vector2(1117, 579)
+position = Vector2(268, 634)
 script = ExtResource("5_qt8ew")
+spriteScale = 0.25
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeEaston" unique_id=1488021564]
 modulate = Color(0.19, 0.66250014, 1, 1)
 position = Vector2(0, -64)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_m8gu7")
 offset = Vector2(0, -500)
 
@@ -83,14 +125,15 @@ texture = ExtResource("11_rkrhi")
 offset = Vector2(0, -500)
 
 [node name="NPCNodeYoua" type="Node2D" parent="." unique_id=495463723]
-position = Vector2(1559, 598)
+position = Vector2(1214, 628)
 script = ExtResource("5_qt8ew")
+spriteScale = 0.25
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeYoua" unique_id=1675716107]
 modulate = Color(0.35199994, 1, 0.19, 1)
 position = Vector2(0, -64)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_m8gu7")
 offset = Vector2(0, -500)
 
