@@ -23,8 +23,8 @@ else:
 if {Youa.IsStaying} == true:
 	join Youa center [mirrored="true"]
 	Youa: I'm not shy!
-join Easton left [mirrored="true"]
 if {Easton.IsStaying} == true:
+	join Easton left [mirrored="true"]
 	Easton: I'm not mad!
 if {Lena.IsStaying} == true:
 	join Lena leftmost [mirrored="true"]
