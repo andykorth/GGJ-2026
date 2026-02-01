@@ -8,12 +8,12 @@ Youa: What? Is there something on my face?
 		set {GlobalGameVariables} += "5.0"
 		jump Youa Story
 	- I'd like you to wear me.
-		set {GlobalGameVariables.currentCharacter.willingness} -= 10.0
+		set {GlobalGameVariables.currentCharacter.willingness} -= 5.0
 		Youa: Go away!
 		jump SavedByLena/
 - You have a lovely face.
 	set {Youa.Emotion} = 1.0
-	set {GlobalGameVariables.currentCharacter.willingness} += "10.0"
+	set {GlobalGameVariables.currentCharacter.willingness} += "5.0"
 	Youa: Awww. That is sweet of you to say.
 	jump Youa Story
 label Youa Story
