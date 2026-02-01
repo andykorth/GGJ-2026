@@ -58,9 +58,6 @@ func ChangeCharacter(newChar : CharacterAttributes):
 	bodySprite.scale = Vector2.ONE * spriteScale
 	bodySprite.rotation = 0
 	
-	# TODO swap from player mask to normal mask if you are
-	# releasing a character.
-	
 	#anchor to the bottom of the character automatically.
 	bodySprite.offset = Vector2(0, -500)
 	maskSprite.offset = Vector2(0, -500)

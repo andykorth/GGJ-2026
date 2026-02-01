@@ -5,6 +5,7 @@ extends Node2D
 
 @export var spriteScale:float = 0.5
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
+@onready var maskSprite: Sprite2D = $CharacterWorldMapSprite/maskSprite
 @export var currentChar : CharacterAttributes
 var destination: Vector2
 
@@ -41,8 +42,11 @@ func SetUpCharacter():
 		printerr("Missing current character on npc " + self.name)
 	if currentChar.art_overworld_body_neutral == null:
 		printerr("Missing art_overworld_body_neutral on char " + currentChar.character_name)
+	if currentChar.art_overworld_mask_self == null:
+		printerr("Missing art_overworld_mask_self on char " + currentChar.character_name)
 		
 	bodySprite.texture = currentChar.art_overworld_body_neutral
+	maskSprite.texture = currentChar.art_overworld_mask_self
 	pass
 	
 func SetDestination(newDest : Vector2):
