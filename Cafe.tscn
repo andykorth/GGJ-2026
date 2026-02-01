@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://cugo46dt1ensd" path="res://Scripts/TheCafe.gd" id="1_qy1wl"]
 [ext_resource type="Script" uid="uid://ccpoqts362t8g" path="res://Scripts/CafeCamera.gd" id="2_2kfh8"]
 [ext_resource type="Script" uid="uid://cphvlekiglgoj" path="res://Scripts/CafeCharacter.gd" id="2_12iff"]
-[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_lddrg"]
 [ext_resource type="Resource" uid="uid://bi2ja0rgmn4x7" path="res://resources/TestCharacterAttributes.tres" id="3_12iff"]
 [ext_resource type="Texture2D" uid="uid://b3ulsam2ctp7q" path="res://resources/Overworld/Picture1.png" id="3_ejlj1"]
 [ext_resource type="Texture2D" uid="uid://be6ptnm04v3dm" path="res://resources/Overworld/BoothSprite.png" id="3_f6sol"]
@@ -159,17 +158,21 @@ cafe = NodePath("..")
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="CharacterNode" unique_id=2085887346]
-position = Vector2(0, -64)
-texture = ExtResource("2_lddrg")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_m8gu7")
+offset = Vector2(0, -500)
 
 [node name="maskSprite" type="Sprite2D" parent="CharacterNode/CharacterWorldMapSprite" unique_id=1210010286]
 z_index = 1334
 z_as_relative = false
-texture = ExtResource("2_lddrg")
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("11_rkrhi")
+offset = Vector2(0, -500)
 
-[node name="ChatIcon" type="Sprite2D" parent="CharacterNode" unique_id=551771967]
-position = Vector2(73.000015, -91)
-scale = Vector2(0.1, 0.1)
+[node name="ChatIcon" type="Sprite2D" parent="CharacterNode/CharacterWorldMapSprite" unique_id=551771967]
+z_index = 1335
+position = Vector2(137.04004, -786.5801)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("6_4no61")
 
 [node name="NPCNodeLena" type="Node2D" parent="." unique_id=1325653488]

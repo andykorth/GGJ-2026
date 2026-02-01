@@ -14,14 +14,14 @@ const PLAYER_MAX_Y = 700
 @export var speed:float = 120.0
 @export var spriteScale:float = 0.5
 @export var currentChar : CharacterAttributes
-@export var cafe : Node
+@export var cafe : TheCafe
 
 @export var wiggleDegrees:float = 8
 @export var bounceAmplitude:float = 0.1
 
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
 @onready var maskSprite: Sprite2D = $CharacterWorldMapSprite/maskSprite
-@onready var chatIcon: Sprite2D = $ChatIcon
+@onready var chatIcon: Sprite2D = $CharacterWorldMapSprite/ChatIcon
 
 var destination: Vector2
 var isWearingMask: bool
@@ -51,17 +51,26 @@ func ChangeCharacter(newChar : CharacterAttributes):
 	isWearingMask = true
 	
 	bodySprite.texture = currentChar.art_overworld_body_neutral
-	maskSprite.texture = currentChar.art_dialogue_mask_self
+	maskSprite.texture = currentChar.art_overworld_mask_player
 	bodySprite.visible = true;
 	maskSprite.visible = isWearingMask
 	# set size instantly
 	bodySprite.scale = Vector2.ONE * spriteScale
 	bodySprite.rotation = 0
 	
+	# TODO swap from player mask to normal mask if you are
+	# releasing a character.
+	
 	#anchor to the bottom of the character automatically.
 	bodySprite.offset = Vector2(0, -500)
 	maskSprite.offset = Vector2(0, -500)
 	
+	# Hide the actual NPC version now that we have taken over.
+	# but if we swapped off someone, show them again
+	cafe.eastonNPC.SetCharVisible(newChar == cafe.eastonNPC)
+	cafe.lenaNPC.SetCharVisible(newChar == cafe.lenaNPC)
+	cafe.jesterNPC.SetCharVisible(newChar == cafe.jesterNPC)
+	cafe.youaNPC.SetCharVisible(newChar == cafe.youaNPC)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

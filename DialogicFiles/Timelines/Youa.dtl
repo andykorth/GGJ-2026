@@ -29,7 +29,7 @@ elif {Easton.WhimsyMaskState} == true:
 	Youa: I would really like to get to know Lena better. She is so kind and graceful. I have trouble speaking to her.
 else:
 	Youa: It's...nice to meet you.
-	I...I enjoy this feeling. Alright, I'm ready to put you on.
+	Youa: I...I enjoy this feeling. Alright, I'm ready to put you on.
 	set {Lena.WhimsyMaskState} = true
 	set {Lena.IsStaying} = true
 	set {General.PeopleStaying} += 1.0
