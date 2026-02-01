@@ -1,2 +1,6 @@
+do GlobalGameVariables.animateCamera(3000.0)
+do GlobalGameVariables.showCharacter("Jester")
+[wait time="0.2"]
+do GlobalGameVariables.MoveJesterNPCTo(2565.0, 650.0)
+[wait time="1.0"]
 Jester: Yo it's the end
-do GlobalGameVariables.animateCamera(0.0)

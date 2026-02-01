@@ -62,7 +62,9 @@ func StartChatWith():
 	pass
 
 func HideCharacter():
-	pass
+	print('DBG: hide me %s' % [name])
+	hide()
 
 func ShowCharacter():
-	pass
+	print('DBG: show me %s' % [name])
+	show()

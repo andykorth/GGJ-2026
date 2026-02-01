@@ -6,5 +6,6 @@
 [resource]
 script = ExtResource("1_drcx3")
 character_name = "Jester"
+intro_timeline = "TheEnd"
 art_overworld_body_neutral = ExtResource("1_pjs28")
 metadata/_custom_type_script = "uid://ftcnopfvt30g"

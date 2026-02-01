@@ -21,6 +21,7 @@
 [ext_resource type="Resource" uid="uid://cvelytv1rqof6" path="res://resources/EastonCA.tres" id="17_inlb2"]
 [ext_resource type="Resource" uid="uid://brwg0b0lho0ph" path="res://resources/YouaCA.tres" id="18_gg70q"]
 [ext_resource type="Resource" uid="uid://cjlvthwxnuq47" path="res://resources/JesterCA.tres" id="19_inlb2"]
+[ext_resource type="Script" uid="uid://dblob17d14283" path="res://debug_end_button.gd" id="22_gg70q"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 script = ExtResource("1_qy1wl")
@@ -175,3 +176,11 @@ script = ExtResource("4_12iff")
 stream = ExtResource("8_2kfh8")
 volume_db = -17.479
 autoplay = true
+
+[node name="DEBUGEndButton" type="Button" parent="." unique_id=566382092]
+offset_left = 1616.0
+offset_top = 48.0
+offset_right = 1763.0
+offset_bottom = 79.0
+text = "TRIGGER THE END"
+script = ExtResource("22_gg70q")
