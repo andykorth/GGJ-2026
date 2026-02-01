@@ -5,6 +5,7 @@ extends Node2D
 @onready var eastonNPC: CafeNPC = $NPCNodeEaston
 @onready var youaNPC: CafeNPC = $NPCNodeYoua
 @onready var jesterNPC: CafeNPC = $NPCNodeJester
+@onready var musicPlayer: AudioStreamPlayer = $MusicPlayer
 
 func _ready() -> void:
 	y_sort_enabled = true
@@ -12,3 +13,4 @@ func _ready() -> void:
 	GlobalGameVariables.eastonNPC = eastonNPC
 	GlobalGameVariables.youaNPC = youaNPC
 	GlobalGameVariables.jesterNPC = jesterNPC
+	GlobalGameVariables.musicPlayer = musicPlayer

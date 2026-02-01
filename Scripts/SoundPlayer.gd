@@ -20,7 +20,7 @@ func play_sound(sound: AudioStream):
 	pass
 	
 func play_current_character_success():
-	play_sound(character_fail_sound)
+	play_sound(character_success_sound)
 	pass
 
 func play_current_character_sigh():
@@ -29,7 +29,7 @@ func play_current_character_sigh():
 	pass
 	
 func play_current_character_fail():
-	play_sound(character_success_sound)
+	play_sound(character_fail_sound)
 	pass
 
 func update_willingness_connection():
@@ -38,9 +38,9 @@ func update_willingness_connection():
 	pass
 	
 func play_willingness_sound():
-	if current_willingness > GlobalGameVariables.currentCharacter.willingness:
+	if GlobalGameVariables.currentCharacter.willingness < current_willingness:
 		play_current_character_sigh()
-		play_current_character_fail()
-	elif current_willingness < GlobalGameVariables.currentCharacter.willingness:
+	elif GlobalGameVariables.currentCharacter.willingness > current_willingness:
 		play_current_character_success()
+	current_willingness = GlobalGameVariables.currentCharacter.willingness
 	pass
