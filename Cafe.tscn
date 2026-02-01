@@ -153,6 +153,7 @@ characterNode = NodePath("../CharacterNode")
 position = Vector2(2059, 602)
 script = ExtResource("2_12iff")
 TEST_SOUND_FILE = ExtResource("5_f2f8e")
+spriteScale = 0.25
 currentChar = ExtResource("3_12iff")
 cafe = NodePath("..")
 metadata/_edit_group_ = true

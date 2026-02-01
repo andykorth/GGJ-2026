@@ -16,12 +16,15 @@ const PLAYER_MAX_Y = 700
 @export var currentChar : CharacterAttributes
 @export var cafe : Node
 
-var wiggleAmplitude:float = 1.0
-var destination: Vector2
-var isWearingMask: bool
+@export var wiggleDegrees:float = 8
+@export var bounceAmplitude:float = 0.1
+
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
 @onready var maskSprite: Sprite2D = $CharacterWorldMapSprite/maskSprite
 @onready var chatIcon: Sprite2D = $ChatIcon
+
+var destination: Vector2
+var isWearingMask: bool
 
 var blockedInput: bool = false;
 
@@ -29,27 +32,36 @@ var blockedInput: bool = false;
 func _ready() -> void:
 	# starting position
 	destination = position
-	SetUpCharacter()
 	Dialogic.timeline_ended.connect(DialogEnded)
 	chatIcon.visible = false
 	GlobalGameVariables.player = self
 	isWearingMask = false
-
+	bodySprite.visible = false;
+	maskSprite.visible = false;
 
 func DialogEnded():
 	blockedInput = true;
 	await get_tree().create_timer(0.1).timeout
 	blockedInput = false;
 	
-func SetUpCharacter():
-	bodySprite.texture = currentChar.art_overworld_body_neutral
-	maskSprite.texture = currentChar.art_dialogue_mask_self
-	maskSprite.visible = isWearingMask
-	
 func ChangeCharacter(newChar : CharacterAttributes):
 	#probably need to hide the one this turned into
 	currentChar = newChar
-	SetUpCharacter()
+	# when you become a character, you are wearing a mask by definition:
+	isWearingMask = true
+	
+	bodySprite.texture = currentChar.art_overworld_body_neutral
+	maskSprite.texture = currentChar.art_dialogue_mask_self
+	bodySprite.visible = true;
+	maskSprite.visible = isWearingMask
+	# set size instantly
+	bodySprite.scale = Vector2.ONE * spriteScale
+	bodySprite.rotation = 0
+	
+	#anchor to the bottom of the character automatically.
+	bodySprite.offset = Vector2(0, -500)
+	maskSprite.offset = Vector2(0, -500)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -76,8 +88,8 @@ func _process(delta: float) -> void:
 	# animate wiggles based on velocity.
 	var normalizedSpeed = velocity.length() / speed
 	var x = cos(Time.get_ticks_msec() / 80.0)
-	bodySprite.rotation = deg_to_rad(x * 15.0 * normalizedSpeed) 
-	bodySprite.scale = spriteScale * Vector2(1, cos(Time.get_ticks_msec() / 120.0) * 0.15 * normalizedSpeed + 1.0)
+	bodySprite.rotation = deg_to_rad(x * wiggleDegrees * normalizedSpeed) 
+	bodySprite.scale = spriteScale * Vector2(1, cos(Time.get_ticks_msec() / 120.0) * bounceAmplitude * normalizedSpeed + 1.0)
 		
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
@@ -112,7 +124,10 @@ func StartDialogWith(character : CharacterAttributes):
 
 func SetDestination(newDest : Vector2):
 	if GlobalGameVariables.playerControlsActive && !blockedInput:
-		print("Set walk dest to: " + str(destination) )
+		# clamp destination to our walkable y range
+		newDest.y = clamp(newDest.y, PLAYER_MIN_Y, PLAYER_MAX_Y)
+		
+		print("Set walk dest to: " + str(newDest) )
 		destination = newDest;
 		SoundPlayer.play_sound(TEST_SOUND_FILE)
 
