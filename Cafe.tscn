@@ -143,6 +143,24 @@ position = Vector2(170, 19)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("14_o5jln")
 
+[node name="Curtain2" type="Sprite2D" parent="Backgrounds" unique_id=1036906196]
+z_index = 1
+position = Vector2(687, -35)
+rotation = 3.1415927
+scale = Vector2(0.22, -0.22)
+texture = ExtResource("14_o5jln")
+
+[node name="Curtain3" type="Sprite2D" parent="Backgrounds" unique_id=475506406]
+z_index = 1
+position = Vector2(1580, -62)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("14_o5jln")
+
+[node name="Chalkboard" type="Sprite2D" parent="Backgrounds" unique_id=1955811365]
+position = Vector2(2074, 147)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("31_nprpk")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=632607298 node_paths=PackedStringArray("characterNode")]
 offset = Vector2(576, 324)
 limit_left = -580
@@ -271,20 +289,3 @@ offset_right = 1763.0
 offset_bottom = 79.0
 text = "TRIGGER THE END"
 script = ExtResource("22_gg70q")
-
-[node name="Curtain2" type="Sprite2D" parent="." unique_id=1036906196]
-z_index = 1
-position = Vector2(687, -35)
-scale = Vector2(-0.22, 0.22)
-texture = ExtResource("14_o5jln")
-
-[node name="Curtain3" type="Sprite2D" parent="." unique_id=475506406]
-z_index = 1
-position = Vector2(1580, -62)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("14_o5jln")
-
-[node name="Chalkboard" type="Sprite2D" parent="." unique_id=1955811365]
-position = Vector2(2074, 147)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("31_nprpk")
