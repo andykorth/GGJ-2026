@@ -5,8 +5,8 @@ extends Resource
 @export var character_name: String ## The character's name, shown in dialogue.
 
 @export_group('Willingness')
-@export_range(0.0, 100.0, 0.001) var willingness: float ## The character's willingness to stay at the cafe.
-@export_range(0.0, 100.0, 0.001) var willingness_mask: float ## The character's willingness to have the mask on. Equal or above is yes, below is no.
+@export_range(0.0, 10.0, 0.001) var willingness: float ## The character's willingness to stay at the cafe.
+@export_range(0.0, 10.0, 0.001) var willingness_mask: float ## The character's willingness to have the mask on. Equal or above is yes, below is no.
 
 @export_group('Character Timelines')
 @export var intro_timeline: String ## The name of the character's introduction timeline

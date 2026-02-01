@@ -1,11 +1,17 @@
 join Lena center [animation="Slide From Left"]
 Lena: Hey there! The name's Lena!
-set {Lena.Emotion} = 1.0
-Lena: I was told there was a mask I was supposed to put on? Happy to help any way I can.
-- Yes put me on please
+- Hello! You seem friendly!
 	set {GlobalGameVariables.currentCharacter.willingness} += 10.0
-	set {Lena.WhimsyMaskState} = true
-	Lena: Ooh, nice and snug!
+	set {Lena.Emotion} = 1.0
+- Not interested in talking, sorry.
+Lena: I was told there was a mask I was supposed to put on?
+- Yes put me on please
+	if GlobalGameVariables.currentCharacter.is_willing_to_wear_mask():
+		set {Lena.WhimsyMaskState} = true
+		Lena: Ooh, nice and snug!
+	else:
+		set {Lena.Emotion} = 2.0
+		Lena: Not sure if I want to right now...
 - Actually no I'm good
 	set {GlobalGameVariables.currentCharacter.willingness} -= 10.0
 	set {Lena.Emotion} = 2.0

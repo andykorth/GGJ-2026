@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CharacterAttributes" format=3 uid="uid://cp8sg4rjhbps0"]
+
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="1_5hq2b"]
+[ext_resource type="Script" uid="uid://ftcnopfvt30g" path="res://resources/CharacterAttributes.gd" id="1_fednm"]
+
+[resource]
+script = ExtResource("1_fednm")
+character_name = "Lena"
+willingness_mask = 10.0
+intro_timeline = "LenaTest"
+art_overworld_body_neutral = ExtResource("1_5hq2b")
+metadata/_custom_type_script = "uid://ftcnopfvt30g"
