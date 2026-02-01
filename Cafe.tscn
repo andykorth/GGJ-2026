@@ -256,7 +256,6 @@ stream = ExtResource("29_nprpk")
 autoplay = true
 
 [node name="DEBUGEndButton" type="Button" parent="." unique_id=566382092]
-visible = false
 offset_left = 1616.0
 offset_top = 48.0
 offset_right = 1763.0
