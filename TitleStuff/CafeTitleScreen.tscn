@@ -40,9 +40,9 @@ expand_mode = 3
 
 [node name="subtitle" type="Label" parent="." unique_id=1736155271]
 layout_mode = 0
-offset_left = 143.0
+offset_left = 121.0
 offset_top = 201.0
-offset_right = 1053.0
+offset_right = 1031.0
 offset_bottom = 292.0
 text = "minimum moves to party"
 label_settings = SubResource("LabelSettings_ctgh8")
