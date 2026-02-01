@@ -112,3 +112,15 @@ func change_music_neutral():
 func change_music_good():
 	musicPlayer.stream = goodMusic
 	musicPlayer.play()
+
+func remove_Youa():
+	youaNPC.HideCharacter()
+	youaNPC.ignore_character_swapping = true
+	
+func remove_Easton():
+	eastonNPC.HideCharacter()
+	eastonNPC.ignore_character_swapping = true
+	
+func remove_Lena():
+	lenaNPC.HideCharacter()
+	lenaNPC.ignore_character_swapping = true

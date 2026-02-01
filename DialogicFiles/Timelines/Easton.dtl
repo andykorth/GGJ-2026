@@ -6,6 +6,7 @@ Easton: Whadda you looking at? You got a problem?
 	Easton: You talkin' to me? I know you ain't talkin' to me! Get outta here!
 	set {GlobalGameVariables.currentCharacter.willingness} -= 10.0
 	leave Easton
+	do GlobalGameVariables.remove_Easton()
 	jump SavedByLena/
 - No, sir!
 	set {Easton.Emotion} = 1.0
