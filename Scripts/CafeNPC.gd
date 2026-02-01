@@ -5,7 +5,7 @@ extends Node2D
 
 @export var spriteScale:float = 0.5
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
-@export var currentChar : CharacterAttributes = preload('res://resources/LenaCA.tres')
+@export var currentChar : CharacterAttributes
 var destination: Vector2
 
 @export var speed:float = 120.0
@@ -37,6 +37,11 @@ func _process(delta: float) -> void:
 	position = position + velocity * delta
 
 func SetUpCharacter():
+	if currentChar == null:
+		printerr("Missing current character on npc " + self.name)
+	if currentChar.art_overworld_body_neutral == null:
+		printerr("Missing art_overworld_body_neutral on char " + currentChar.character_name)
+		
 	bodySprite.texture = currentChar.art_overworld_body_neutral
 	pass
 	

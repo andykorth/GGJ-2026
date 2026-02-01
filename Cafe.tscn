@@ -17,6 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://qsjorgn0564a" path="res://DialogicFiles/Sprites/LenaOverworldCharacter.png" id="10_m8gu7"]
 [ext_resource type="Texture2D" uid="uid://cp3fwus7rqdn7" path="res://DialogicFiles/Sprites/LenaOverworldMask.png" id="11_rkrhi"]
 [ext_resource type="Texture2D" uid="uid://dk7mcafm0nuow" path="res://resources/Overworld/BarSprite.png" id="14_b3a2q"]
+[ext_resource type="Resource" uid="uid://40gpmt56ish5" path="res://resources/LenaCA.tres" id="14_hjqjj"]
+[ext_resource type="Resource" uid="uid://cvelytv1rqof6" path="res://resources/EastonCA.tres" id="17_inlb2"]
+[ext_resource type="Resource" uid="uid://brwg0b0lho0ph" path="res://resources/YouaCA.tres" id="18_gg70q"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
 script = ExtResource("1_qy1wl")
@@ -84,6 +87,8 @@ position = Vector2(0, -64)
 texture = ExtResource("2_lddrg")
 
 [node name="maskSprite" type="Sprite2D" parent="CharacterNode/CharacterWorldMapSprite" unique_id=1210010286]
+z_index = 1334
+z_as_relative = false
 texture = ExtResource("2_lddrg")
 
 [node name="ChatIcon" type="Sprite2D" parent="CharacterNode" unique_id=551771967]
@@ -95,6 +100,7 @@ texture = ExtResource("6_4no61")
 position = Vector2(2390, 539)
 script = ExtResource("5_qt8ew")
 spriteScale = 0.25
+currentChar = ExtResource("14_hjqjj")
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeLena" unique_id=1594672184]
@@ -111,6 +117,7 @@ offset = Vector2(0, -500)
 position = Vector2(268, 634)
 script = ExtResource("5_qt8ew")
 spriteScale = 0.25
+currentChar = ExtResource("17_inlb2")
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeEaston" unique_id=1488021564]
@@ -128,6 +135,7 @@ offset = Vector2(0, -500)
 position = Vector2(1214, 628)
 script = ExtResource("5_qt8ew")
 spriteScale = 0.25
+currentChar = ExtResource("18_gg70q")
 metadata/_edit_group_ = true
 
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeYoua" unique_id=1675716107]
