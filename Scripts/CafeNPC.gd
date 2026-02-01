@@ -50,3 +50,9 @@ func StartChatWith():
 		printerr("ERROR, intro_timeline missing for " + currentChar.character_name)
 	DialogicConnector.startDialogue(currentChar.intro_timeline, currentChar)
 	pass
+
+func HideCharacter():
+	pass
+
+func ShowCharacter():
+	pass

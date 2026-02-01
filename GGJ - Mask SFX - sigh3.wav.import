@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://q10ayhdt4wp1"
+path="res://.godot/imported/GGJ - Mask SFX - sigh3.wav-9b02bc9580708dae0f3d2ea90019a00e.sample"
+
+[deps]
+
+source_file="res://GGJ - Mask SFX - sigh3.wav"
+dest_files=["res://.godot/imported/GGJ - Mask SFX - sigh3.wav-9b02bc9580708dae0f3d2ea90019a00e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

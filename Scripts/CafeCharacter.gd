@@ -6,6 +6,8 @@ extends Node2D
 # once the mask takes control of a character.
 
 const CHAT_RANGE = 60
+const PLAYER_MIN_Y = 530
+const PLAYER_MAX_Y = 700
 
 @export var TEST_SOUND_FILE: AudioStream
 
@@ -16,6 +18,7 @@ const CHAT_RANGE = 60
 
 var wiggleAmplitude:float = 1.0
 var destination: Vector2
+var isWearingMask: bool
 @onready var bodySprite: Sprite2D = $CharacterWorldMapSprite
 @onready var maskSprite: Sprite2D = $CharacterWorldMapSprite/maskSprite
 @onready var chatIcon: Sprite2D = $ChatIcon
@@ -29,6 +32,8 @@ func _ready() -> void:
 	SetUpCharacter()
 	Dialogic.timeline_ended.connect(DialogEnded)
 	chatIcon.visible = false
+	GlobalGameVariables.player = self
+	isWearingMask = false
 
 
 func DialogEnded():
@@ -39,7 +44,12 @@ func DialogEnded():
 func SetUpCharacter():
 	bodySprite.texture = currentChar.art_overworld_body_neutral
 	maskSprite.texture = currentChar.art_dialogue_mask_self
-	pass
+	maskSprite.visible = isWearingMask
+	
+func ChangeCharacter(newChar : CharacterAttributes):
+	#probably need to hide the one this turned into
+	currentChar = newChar
+	SetUpCharacter()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -71,6 +81,7 @@ func _process(delta: float) -> void:
 		
 	# apply position but need to handle collisions.
 	position = position + velocity * delta
+	position.y = clamp(position.y, PLAYER_MIN_Y, PLAYER_MAX_Y)
 	
 	# need to draw a little chat icon if we are in chat range.
 	chatIcon.visible = CheckChatRange() != null

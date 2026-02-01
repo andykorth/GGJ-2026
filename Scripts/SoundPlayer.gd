@@ -12,3 +12,12 @@ func play_sound(sound: AudioStream):
 	sound_holder.add_child(new_sound)
 	new_sound.play()
 	pass
+
+func play_current_character_sigh():
+	var soundToPlay = GlobalGameVariables.currentCharacter.character_sighs[randi_range(0, GlobalGameVariables.currentCharacter.character_sighs.size() - 1)]
+	play_sound(soundToPlay)
+	pass
+	
+func play_current_character_fail():
+	play_sound(GlobalGameVariables.currentCharacter.character_fail_sound)
+	pass

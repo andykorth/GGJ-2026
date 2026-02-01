@@ -12,6 +12,10 @@ extends Resource
 @export var intro_timeline: String ## The name of the character's introduction timeline
 @export var timelines_due_to_willingness: Array[String] ## The timelines associated with the characters' willingness
 
+@export_group('Character Audio')
+@export var character_sighs: Array[AudioStream]
+@export var character_fail_sound: AudioStream
+
 @export_group('Art Assets')
 @export_subgroup('Overworld')
 @export var art_overworld_body_neutral: Texture
