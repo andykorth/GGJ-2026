@@ -47,8 +47,9 @@ offset_left = 143.0
 offset_top = 24.0
 offset_right = 1046.0
 offset_bottom = 145.0
-text = "Masqafe  / Mask Cafe"
+text = "Masqafe"
 label_settings = SubResource("LabelSettings_0bqjh")
+horizontal_alignment = 1
 
 [node name="subtitle" type="Label" parent="." unique_id=1736155271]
 layout_mode = 0
