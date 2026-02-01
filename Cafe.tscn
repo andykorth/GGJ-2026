@@ -40,6 +40,8 @@
 [ext_resource type="AudioStream" uid="uid://cpk5wnmwidwa7" path="res://resources/audio/Masqafe Theme - loop trim.mp3" id="29_nprpk"]
 [ext_resource type="Texture2D" uid="uid://dgihcst4htlvb" path="res://DialogicFiles/Sprites/YouaOverworldCharacter.png" id="30_a0nfj"]
 [ext_resource type="Texture2D" uid="uid://bfl6wl6dscmy5" path="res://resources/Overworld/Chalkboard.png" id="31_nprpk"]
+[ext_resource type="Texture2D" uid="uid://brbhim58031y6" path="res://DialogicFiles/Sprites/JesterPawn.png" id="38_gp5as"]
+[ext_resource type="Texture2D" uid="uid://ci8t3oxw1b2r0" path="res://DialogicFiles/Sprites/WhimsyMaskOverworld.png" id="39_o7nih"]
 [ext_resource type="Texture2D" uid="uid://dgfqteqsp5mjx" path="res://resources/Overworld/Busbin.png" id="41_c28dh"]
 
 [node name="Cafe" type="Node2D" unique_id=1597265293]
@@ -345,11 +347,12 @@ metadata/_edit_group_ = true
 [node name="CharacterWorldMapSprite" type="Sprite2D" parent="NPCNodeJester" unique_id=850373663]
 position = Vector2(0, -64)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("10_m8gu7")
+texture = ExtResource("38_gp5as")
 offset = Vector2(0, -500)
 
 [node name="maskSprite" type="Sprite2D" parent="NPCNodeJester/CharacterWorldMapSprite" unique_id=688451698]
-texture = ExtResource("11_rkrhi")
+position = Vector2(0, 124.425)
+texture = ExtResource("39_o7nih")
 offset = Vector2(0, -500)
 
 [node name="DialogManager" type="Node2D" parent="." unique_id=59356439]
