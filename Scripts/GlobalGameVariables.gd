@@ -43,6 +43,7 @@ func ChangePlayerCharacter(npc : CafeNPC):
 	var newCharacter: CharacterAttributes = npc.currentChar
 	print("Changing character to " + newCharacter.character_name)
 	player.ChangeCharacter(npc, newCharacter)
+	SoundPlayer.play_current_character_success()
 
 func ChangePlayerCharacterToLena():
 	ChangePlayerCharacter(lenaNPC)
@@ -114,13 +115,16 @@ func change_music_good():
 	musicPlayer.play()
 
 func remove_Youa():
+	SoundPlayer.play_current_character_fail()
 	youaNPC.HideCharacter()
 	youaNPC.ignore_character_swapping = true
 	
 func remove_Easton():
+	SoundPlayer.play_current_character_fail()
 	eastonNPC.HideCharacter()
 	eastonNPC.ignore_character_swapping = true
 	
 func remove_Lena():
+	SoundPlayer.play_current_character_fail()
 	lenaNPC.HideCharacter()
 	lenaNPC.ignore_character_swapping = true
