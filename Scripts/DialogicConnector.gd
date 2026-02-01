@@ -54,7 +54,7 @@ func _on_Dialogic_timeline_ended() -> void:
 	GlobalGameVariables.currentCharacter = null
 
 	# End dialogue.
-	GlobalGameVariables.isDialogueActive = true
+	GlobalGameVariables.isDialogueActive = false
 
 
 func endGame() -> void:

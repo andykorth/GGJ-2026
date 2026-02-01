@@ -150,6 +150,11 @@ func CheckForNewChats():
 func StartDialogWith(character : CharacterAttributes):
 	# stop any additional motion
 	destination = position
+	
+	if GlobalGameVariables.isDialogueActive:
+		print("Already in a dialog. Can't start another")
+		return
+	
 	# do blocked input but only when you open the dialog successfully
 	print('start dialog with ' + character.character_name);
 	print(character.intro_timeline)
