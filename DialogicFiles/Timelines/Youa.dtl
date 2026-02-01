@@ -1,21 +1,29 @@
 join Youa center
 set {Youa.Emotion} = 2.0
+set {GlobalGameVariables.currentCharacter.willingness} = "0"
 Youa: What? Is there something on my face?
 - Not yet!
 	Youa: EXCUSE ME?!
 	set {GlobalGameVariables.currentCharacter.willingness} -= 5.0
-	- I'm sorry! Why so glum?
+	- I was trying to cheer you up!
+		set {Youa.Emotion} = 1.0
 		set {GlobalGameVariables} += "5.0"
 		jump Youa Story
 	- I'd like you to wear me.
 		set {GlobalGameVariables.currentCharacter.willingness} -= 5.0
-		Youa: Go away!
+		Youa: Seriously? Get away from me!
+		leave Youa
 		jump SavedByLena/
 - You have a lovely face.
 	set {Youa.Emotion} = 1.0
 	set {GlobalGameVariables.currentCharacter.willingness} += "5.0"
-	Youa: Awww. That is sweet of you to say.
 	jump Youa Story
 label Youa Story
-Youa: I came here today because I was feeling a little lonely. But I am far too shy to actually talk to anyone.
-Youa: ... Can you keep a secret?
+Youa: Awww. That is sweet of you.
+set {Youa.Emotion} = 0.0
+Youa: I came here today because I was feeling a little lonely. But I am too shy to actually talk to ... someone.
+set {Youa.Emotion} = 2.0
+if {Lena.WhimsyMaskState} == true:
+	Youa: Maybe you could come back with ... someone else?
+elif {Easton.WhimsyMaskState} == true:
+	Youa: I would really like to get to know Lena better. She is so kind and graceful. I have trouble speaking to her.
