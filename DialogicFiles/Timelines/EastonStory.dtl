@@ -72,7 +72,7 @@ Easton: I'm still figuring out how to tell my partner. This was a huge deal for 
 	Lena: At least you have an evil latte to sip while you think things over.
 	[wait time="0.6"]
 	update Easton [animation="Shake Y" length="0.2"]
-	Easton: That's true. Andit's not the end of everything, I suppose.
+	Easton: That's true. And it's not the end of everything, I suppose.
 	Easton: I need some time alone with my drink now. Thank you.
 	leave Easton [animation="Fade Out Down" length="0.4" wait="true"]
 	set {GlobalGameVariables.currentCharacter.willingness} += "5.0"
