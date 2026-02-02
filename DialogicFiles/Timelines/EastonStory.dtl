@@ -65,6 +65,8 @@ Easton: I'm still figuring out how to tell my partner. This was a huge deal for 
 	Easton: Sure! I've got a bit of time, I suppose. No need to rush back into the thick of things.
 	Lena: Excellent!
 	set {GlobalGameVariables.currentCharacter} += "10.0"
+	set {Easton.WhimsyMaskState} = true
+	set {Lena.WhimsyMaskState} = false
 	do GlobalGameVariables.ChangePlayerCharacterToEaston()
 	[end_timeline]
 - Take a breath.

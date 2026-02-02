@@ -17,6 +17,7 @@ label YouaNoEaston
 - Wanna party?
 	Mask: She should go to the party!
 	Lena: We're gonna have this party soon. Wanna join in?
+	Youa: Yeah!
 update Youa [animation="Shake X" length="0.3"]
 Youa: I don't know...anyone else here.
 Youa: Maybe if I got to know these people better...
@@ -34,6 +35,7 @@ label YouaEaston
 	Easton: Great!
 	set {GlobalGameVariables.currentCharacter.willingness} += "10.0"
 	set {Youa.WhimsyMaskState} = true
+	set {Easton.WhimsyMaskState} = false
 	do GlobalGameVariables.ChangePlayerCharacterToYoua()
 - Try this mask!
 	Mask: I could help with that.
@@ -49,4 +51,5 @@ label YouaEaston
 	Easton: Great!
 	set {GlobalGameVariables.currentCharacter.willingness} += "10.0"
 	set {Youa.WhimsyMaskState} = true
+	set {Easton.WhimsyMaskState} = false
 	do GlobalGameVariables.ChangePlayerCharacterToYoua()
