@@ -29,13 +29,13 @@ func _on_Dialogic_event_handled(eventResource: DialogicEvent) -> void:
 	if GlobalGameVariables.isGameOver or eventResource.event_name != 'Text':
 		return
 	
-	GlobalGameVariables.incrementDialogStepsTaken()
+	##GlobalGameVariables.incrementDialogStepsTaken()
 
-	if GlobalGameVariables.stepsTakenInDialog > GlobalGameVariables.END_STEPS:
-		if GlobalGameVariables.isDialogueActive:
-			await Dialogic.timeline_ended
-		print('DBG: THE END IS NIGH')
-		endGame()
+	## if GlobalGameVariables.stepsTakenInDialog > GlobalGameVariables.END_STEPS:
+	##	if GlobalGameVariables.isDialogueActive:
+	##		await Dialogic.timeline_ended
+	##	print('DBG: THE END IS NIGH')
+	##	endGame()
 
 
 func _on_Dialogic_timeline_started() -> void:
