@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://cfwf5d8exox4f" path="res://addons/dialogic/Modules/LayeredPortrait/custom_layered_portrait.gd" id="1_b7ty3"]
 [ext_resource type="Texture2D" uid="uid://bc5ycctslddt3" path="res://DialogicFiles/Sprites/jester_base.PNG" id="2_b7ty3"]
 [ext_resource type="Script" uid="uid://dcgike7u5a25m" path="res://Scripts/UpdateCharacterSpriteLayer.gd" id="3_qmerl"]
-[ext_resource type="Texture2D" uid="uid://c7rnnu5tisioc" path="res://DialogicFiles/Sprites/youa_eyes01.PNG" id="4_y1mhv"]
-[ext_resource type="Texture2D" uid="uid://dw5blagag177w" path="res://DialogicFiles/Sprites/youa_mouth01.PNG" id="5_gg1iv"]
+[ext_resource type="Texture2D" uid="uid://bk8lfn1hvfsvm" path="res://DialogicFiles/Sprites/jester_eyes03.PNG" id="4_gg1iv"]
+[ext_resource type="Texture2D" uid="uid://iwhwk0bfxqe6" path="res://DialogicFiles/Sprites/jester_brows03.PNG" id="5_6xwdr"]
+[ext_resource type="Texture2D" uid="uid://bon64otduxsjb" path="res://DialogicFiles/Sprites/jester_mouth03.PNG" id="6_7cuvv"]
 [ext_resource type="Texture2D" uid="uid://bxvi2qulph11j" path="res://DialogicFiles/Sprites/jester_eyes01.PNG" id="6_y1mhv"]
 [ext_resource type="Texture2D" uid="uid://q5fq432k24l5" path="res://DialogicFiles/Sprites/jester_brows01.PNG" id="7_gg1iv"]
 [ext_resource type="Texture2D" uid="uid://bo8avixemx5xi" path="res://DialogicFiles/Sprites/jester_mouth01.PNG" id="8_6xwdr"]
@@ -32,12 +33,13 @@ maskLayers = [NodePath("MaskLayers/OGMask"), NodePath("MaskLayers/WhimsyMask")]
 visible = false
 
 [node name="Eyes" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=1764012788]
+texture = ExtResource("4_gg1iv")
 
 [node name="Brows" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=1807691393]
-texture = ExtResource("4_y1mhv")
+texture = ExtResource("5_6xwdr")
 
 [node name="Mouth" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=139976205]
-texture = ExtResource("5_gg1iv")
+texture = ExtResource("6_7cuvv")
 
 [node name="Emotion2" type="Node2D" parent="BaseLayer/Layers/EmotionLayers" unique_id=267063643]
 visible = false
