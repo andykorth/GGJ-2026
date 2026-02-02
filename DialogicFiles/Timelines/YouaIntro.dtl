@@ -32,6 +32,7 @@ label IntroLena
 	label DefaultChoices
 	Lena: How about the–
 	Youa: You know what. I'm not thirsty.
+	jump YouaStory/StoryStart
 - How's it going?
 	Mask: An intriguing soul...
 	update Youa right [move_time="0.4"]
@@ -40,6 +41,7 @@ label IntroLena
 	Youa: I'm...okay.
 	Lena: This your first time here? I know my regulars.
 	Youa: ...yes.
+	jump YouaStory/StoryStart
 - Put me on!
 	Mask: You wanna wear me?
 	update Youa [animation="Heartbeat" length="0.8"]
