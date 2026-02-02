@@ -64,7 +64,7 @@ Easton: I'm still figuring out how to tell my partner. This was a huge deal for 
 	update Easton [animation="Shake Y" length="0.4"]
 	Easton: Sure! I've got a bit of time, I suppose. No need to rush back into the thick of things.
 	Lena: Excellent!
-	set {GlobalGameVariables.currentCharacter} += 0
+	set {GlobalGameVariables.currentCharacter.willingness} += 0
 	set {Easton.WhimsyMaskState} = true
 	set {Lena.WhimsyMaskState} = false
 	do GlobalGameVariables.ChangePlayerCharacterToEaston()
