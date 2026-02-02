@@ -39,6 +39,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "Easton": "res://DialogicFiles/Timelines/Easton.dtl",
 "EastonIntro": "res://DialogicFiles/Timelines/EastonIntro.dtl",
+"EastonMask": "res://DialogicFiles/Timelines/EastonMask.dtl",
+"EastonStory": "res://DialogicFiles/Timelines/EastonStory.dtl",
 "Lena": "res://DialogicFiles/Timelines/Lena.dtl",
 "LenaTest": "res://DialogicFiles/Timelines/LenaTest.dtl",
 "SavedByLena": "res://SavedByLena.dtl",
@@ -53,6 +55,7 @@ variables={
 "Easton": {
 "Emotion": 0,
 "IsStaying": false,
+"StartedStory": false,
 "WhimsyMaskState": false
 },
 "General": {
