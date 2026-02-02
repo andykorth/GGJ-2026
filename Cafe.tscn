@@ -270,6 +270,7 @@ z_index = 10
 position = Vector2(2059, 602)
 script = ExtResource("2_12iff")
 TEST_SOUND_FILE = ExtResource("25_8oeng")
+speed = 200.0
 spriteScale = 0.25
 currentChar = ExtResource("3_12iff")
 cafe = NodePath("..")
