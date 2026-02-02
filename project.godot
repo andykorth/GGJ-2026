@@ -43,11 +43,14 @@ directories/dtl_directory={
 "EastonStory": "res://DialogicFiles/Timelines/EastonStory.dtl",
 "Lena": "res://DialogicFiles/Timelines/Lena.dtl",
 "LenaTest": "res://DialogicFiles/Timelines/LenaTest.dtl",
+"SavedByEaston": "res://DialogicFiles/Timelines/SavedByEaston.dtl",
 "SavedByLena": "res://SavedByLena.dtl",
 "SavedByYoua": "res://DialogicFiles/Timelines/SavedByYoua.dtl",
 "Starting Dialog": "res://DialogicFiles/Timelines/Starting Dialog.dtl",
 "TheEnd": "res://DialogicFiles/Timelines/TheEnd.dtl",
-"Youa": "res://DialogicFiles/Timelines/Youa.dtl"
+"Youa": "res://DialogicFiles/Timelines/Youa.dtl",
+"YouaIntro": "res://DialogicFiles/Timelines/YouaIntro.dtl",
+"YouaStory": "res://DialogicFiles/Timelines/YouaStory.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true

@@ -1,0 +1,105 @@
+label Intro
+join Youa center [animation="Slide In Up" length="0.8" wait="true"]
+Youa: ...hello?
+if {Lena.WhimsyMaskState} == true:
+	jump IntroLena
+elif {Easton.WhimsyMaskState} == true:
+	jump IntroEaston
+label IntroLena
+- Are you gonna order?
+	Mask: You probably need to do your waitressing job...right?
+	update Youa right [move_time="0.4"]
+	join Lena left [animation="Slide From Left" length="0.4"]
+	Lena: Hi! May I take your order?
+	update Youa [animation="Heartbeat" length="0.6" wait="true"]
+	Youa: Uh...maybe?
+	Youa: I don't...know...what I want.
+	label DrinkChoices
+	- Espresso
+		Mask: Maybe the espresso?
+	- Americano
+		Mask: Maybe the americano?
+	- Mocha
+		Mask: Maybe the mocha?
+	- Latte
+		Mask: Maybe the latte?
+	- Evil Latte
+		Mask: Eh. She looks to nice to be evil.
+		jump DrinkChoices
+	- Tea Water
+		Mask: Maybe the...what, tea water? That makes no sense!
+		jump DrinkChoices
+	label DefaultChoices
+	Lena: How about the–
+	Youa: You know what. I'm not thirsty.
+- How's it going?
+	Mask: An intriguing soul...
+	update Youa right [move_time="0.4"]
+	join Lena left [animation="Slide From Left" length="0.4"]
+	Lena: Hi! How are you?
+	Youa: I'm...okay.
+	Lena: This your first time here? I know my regulars.
+	Youa: ...yes.
+- Put me on!
+	Mask: You wanna wear me?
+	update Youa [animation="Heartbeat" length="0.8"]
+	Youa: Eek! A talking mask?!
+	Youa: Too strange...too strange...
+	leave Youa
+	set {GlobalGameVariables.currentCharacter.willingness} -= 10.0
+	do GlobalGameVariables.remove_Youa()
+	update Lena center [move_time="0.4"]
+	jump SavedByLena/
+label IntroEaston
+- Hello!
+	Mask: You should greet her.
+	update Youa right [move_time="0.4"]
+	join Easton left [animation="Slide From Left" length="0.4"]
+	Easton: Hello there! My name's Easton.
+	update Youa [animation="Bounce" length="0.2"]
+	Youa: ...
+	Youa: ...
+	Youa: ...uh...
+	Youa: Oh, sorry I'm– sorry I'm– oh, oh–
+	Youa: ...
+	- It's alright.
+		Mask: She's overwhelmed. Wait a moment.
+		Easton: ...
+		Youa: ...
+		Youa: ...I'm Youa.
+		Youa: S– sorry, I'm not used to...uh...
+		Youa: Social interactions.
+		jump YouaStory/StoryStart
+	- Snap out of it!
+		Mask: Calm her down!
+		Easton: Hey, don't worry about it! I'm just saying hi.
+		[wait time="1.0"]
+		update Lena [animation="Shake X" length="0.3"]
+		Youa: This is too much.
+		leave Youa
+		set {GlobalGameVariables.currentCharacter.willingness} -= 10.0
+		do GlobalGameVariables.remove_Youa()
+		update Easton center [move_time="0.4"]
+		jump SavedByEaston/
+- Come to the party!
+	Mask: See if she wants to go to the party.
+	update Youa right [move_time="0.4"]
+	join Easton left [animation="Slide From Left" length="0.4"]
+	Easton: Hi! There's a party happening soon. Interested in going?
+	[wait time="1.0"]
+	update Youa [animation="Heartbeat" length="0.4"]
+	Youa: N...no...
+	leave Youa
+	set {GlobalGameVariables.currentCharacter.willingness} -= 10.0
+	do GlobalGameVariables.remove_Youa()
+	update Easton center [move_time="0.4"]
+	jump SavedByEaston/
+- Wear this mask!
+	Mask: You wanna wear me?
+	update Youa [animation="Heartbeat" length="0.8"]
+	Youa: Eek! A talking mask?!
+	Youa: Too strange...too strange...
+	leave Youa
+	set {GlobalGameVariables.currentCharacter.willingness} -= 10.0
+	do GlobalGameVariables.remove_Youa()
+	jump SavedByEaston/
