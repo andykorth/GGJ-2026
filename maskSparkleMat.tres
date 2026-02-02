@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b2psoa0yjxwhs"]
+
+[ext_resource type="Shader" uid="uid://dr8q33mi1ycfx" path="res://maskSparkle.gdshader" id="1_58qcw"]
+
+[resource]
+shader = ExtResource("1_58qcw")

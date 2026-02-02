@@ -23,6 +23,8 @@ var musicPlayer: AudioStreamPlayer
 @export var neutralMusic: AudioStream
 @export var goodMusic: AudioStream
 
+@export var doorSlamSounds: Array[AudioStream]
+
 var youa_decision_made
 var easton_decision_made
 
@@ -140,6 +142,7 @@ func remove_NPC(npc : CafeNPC):
 	var afterExitFunction = func () -> void: 
 		npc.ignore_character_swapping = true
 		npc.HideCharacter()
+		SoundPlayer.play_sound(doorSlamSounds[randi_range(0, doorSlamSounds.size() - 1)])
 	npc.WalkOffscreen(Vector2(2570.0, 500.0), afterExitFunction)
 	
 func check_for_end_game():

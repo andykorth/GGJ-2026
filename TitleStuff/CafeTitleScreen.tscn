@@ -15,6 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://lvlibtlksnlv" path="res://Audio/Masqafe Menu Theme.mp3" id="9_gbxlg"]
 [ext_resource type="Texture2D" uid="uid://b2nw0n34r7m5i" path="res://TitleStuff/Quit2.png" id="10_udbpe"]
 [ext_resource type="Texture2D" uid="uid://bin8jtjmka2ff" path="res://TitleStuff/Quit3.png" id="11_r86d6"]
+[ext_resource type="Material" uid="uid://b2psoa0yjxwhs" path="res://maskSparkleMat.tres" id="14_akg42"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ctgh8"]
 font_size = 35
@@ -110,6 +111,7 @@ scale = Vector2(0.39142856, 0.39142856)
 texture = ExtResource("7_ekx28")
 
 [node name="TitleMasqafe" type="Sprite2D" parent="." unique_id=350260151]
+material = ExtResource("14_akg42")
 position = Vector2(563, 257)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_ekx28")
