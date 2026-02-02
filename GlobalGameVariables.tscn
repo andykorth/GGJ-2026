@@ -4,9 +4,12 @@
 [ext_resource type="AudioStream" uid="uid://cl6jifv587suu" path="res://Audio/Masqafe Bad Ending - loop trim.mp3" id="2_fgpws"]
 [ext_resource type="AudioStream" uid="uid://c8yslc3ecvmc4" path="res://Audio/Masqafe Neutral Ending - loop trim.mp3" id="3_lijn5"]
 [ext_resource type="AudioStream" uid="uid://kj3554w2e7l4" path="res://Audio/Masqafe Good Ending - loop trim.mp3" id="4_1emcq"]
+[ext_resource type="AudioStream" uid="uid://dox5qvapdi004" path="res://Audio/DoorSlam.wav" id="5_1emcq"]
+[ext_resource type="AudioStream" uid="uid://dy5e5mgtm1cyi" path="res://Audio/GGJ - Mask SFX - metal-push-bar-door-slam.wav" id="5_lijn5"]
 
 [node name="GlobalGameVariables" type="Node2D" unique_id=1145439037]
 script = ExtResource("1_84iwt")
 badMusic = ExtResource("2_fgpws")
 neutralMusic = ExtResource("3_lijn5")
 goodMusic = ExtResource("4_1emcq")
+doorSlamSounds = Array[AudioStream]([ExtResource("5_1emcq"), ExtResource("5_lijn5")])
