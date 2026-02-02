@@ -32,7 +32,6 @@ const MAX_WILLINGNESS = 10.0 ## What is considered "max" willingness. When willi
 @export var art_dialogue_mask_self: Texture
 @export var art_dialogue_mask_player: Texture
 
-
 func _set_willingness_changed(new_value: float) -> void:
 	willingness = clamp(new_value, 0.0, MAX_WILLINGNESS)
 	willingness_changed.emit()
