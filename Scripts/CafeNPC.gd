@@ -31,12 +31,12 @@ func _process(delta: float) -> void:
 
 	# NPCs move towards their specified destination
 	var deltaPos = destination - position
-	if deltaPos.length() < 1.0:
+	if deltaPos.length() < 4.0:
 		velocity = Vector2.ZERO
 	else:
 		velocity = speed * deltaPos.normalized();
 		
-	if deltaPos.length() < 1.0 && reachDestinationFunc != null:
+	if deltaPos.length() < 4.0 && reachDestinationFunc != null:
 		print("NPC reached their destination, invoking our lambda function")
 		reachDestinationFunc.call()
 		reachDestinationFunc = null

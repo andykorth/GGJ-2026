@@ -118,7 +118,7 @@ func _process(delta: float) -> void:
 	else:
 		# if there's no input, use the scripted destination:
 		var deltaPos = destination - position
-		if(deltaPos.length() < 1.0):
+		if(deltaPos.length() < 4.0):
 			velocity = Vector2.ZERO
 			stepSound.stop()
 		else:
