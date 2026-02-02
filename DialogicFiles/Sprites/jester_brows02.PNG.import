@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc5ycctslddt3"
-path="res://.godot/imported/jester_base.PNG-7a45bb5d07fbaf1c050db405d8f2ea9a.ctex"
+uid="uid://c6w7xg7iyhh1d"
+path="res://.godot/imported/jester_brows02.PNG-7b35e5aa3e9abd35ce97569aefaf81a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DialogicFiles/Sprites/jester_base.PNG"
-dest_files=["res://.godot/imported/jester_base.PNG-7a45bb5d07fbaf1c050db405d8f2ea9a.ctex"]
+source_file="res://DialogicFiles/Sprites/jester_brows02.PNG"
+dest_files=["res://.godot/imported/jester_brows02.PNG-7b35e5aa3e9abd35ce97569aefaf81a7.ctex"]
 
 [params]
 

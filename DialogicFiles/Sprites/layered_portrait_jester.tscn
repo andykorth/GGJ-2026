@@ -1,15 +1,18 @@
 [gd_scene format=3 uid="uid://e80cy0g3ytw5"]
 
 [ext_resource type="Script" uid="uid://cfwf5d8exox4f" path="res://addons/dialogic/Modules/LayeredPortrait/custom_layered_portrait.gd" id="1_b7ty3"]
-[ext_resource type="Texture2D" uid="uid://bphe6vcp0y736" path="res://DialogicFiles/Sprites/jester_base.PNG" id="2_b7ty3"]
+[ext_resource type="Texture2D" uid="uid://bc5ycctslddt3" path="res://DialogicFiles/Sprites/jester_base.PNG" id="2_b7ty3"]
 [ext_resource type="Script" uid="uid://dcgike7u5a25m" path="res://Scripts/UpdateCharacterSpriteLayer.gd" id="3_qmerl"]
 [ext_resource type="Texture2D" uid="uid://c7rnnu5tisioc" path="res://DialogicFiles/Sprites/youa_eyes01.PNG" id="4_y1mhv"]
 [ext_resource type="Texture2D" uid="uid://dw5blagag177w" path="res://DialogicFiles/Sprites/youa_mouth01.PNG" id="5_gg1iv"]
-[ext_resource type="Texture2D" uid="uid://c81g0sy8rtegm" path="res://DialogicFiles/Sprites/youa_eyes02.PNG" id="6_6xwdr"]
-[ext_resource type="Texture2D" uid="uid://cn4narqryb8ub" path="res://DialogicFiles/Sprites/youa_eyes03.PNG" id="7_7cuvv"]
-[ext_resource type="Texture2D" uid="uid://d087ogqfyrc8g" path="res://DialogicFiles/Sprites/youa_mouth02.PNG" id="8_xycm2"]
+[ext_resource type="Texture2D" uid="uid://bxvi2qulph11j" path="res://DialogicFiles/Sprites/jester_eyes01.PNG" id="6_y1mhv"]
+[ext_resource type="Texture2D" uid="uid://q5fq432k24l5" path="res://DialogicFiles/Sprites/jester_brows01.PNG" id="7_gg1iv"]
+[ext_resource type="Texture2D" uid="uid://bo8avixemx5xi" path="res://DialogicFiles/Sprites/jester_mouth01.PNG" id="8_6xwdr"]
+[ext_resource type="Texture2D" uid="uid://kif8yakmutfk" path="res://DialogicFiles/Sprites/jester_eyes02.PNG" id="9_7cuvv"]
 [ext_resource type="Texture2D" uid="uid://b6cb3co3uhawx" path="res://DialogicFiles/Sprites/youa_mask.PNG" id="9_iybov"]
 [ext_resource type="Texture2D" uid="uid://blf18vpflr2iw" path="res://DialogicFiles/Sprites/whimsy_mask.PNG" id="10_od062"]
+[ext_resource type="Texture2D" uid="uid://c6w7xg7iyhh1d" path="res://DialogicFiles/Sprites/jester_brows02.PNG" id="10_xycm2"]
+[ext_resource type="Texture2D" uid="uid://lse4vljud3nk" path="res://DialogicFiles/Sprites/jester_mouth02.PNG" id="11_iybov"]
 
 [node name="LayeredPortrait" type="CanvasGroup" unique_id=505737323]
 script = ExtResource("1_b7ty3")
@@ -24,11 +27,13 @@ emotionLayers = [NodePath("EmotionLayers/Emotion1"), NodePath("EmotionLayers/Emo
 maskLayers = [NodePath("MaskLayers/OGMask"), NodePath("MaskLayers/WhimsyMask")]
 
 [node name="EmotionLayers" type="Node2D" parent="BaseLayer/Layers" unique_id=1596870267]
-visible = false
 
 [node name="Emotion1" type="Node2D" parent="BaseLayer/Layers/EmotionLayers" unique_id=1470034320]
+visible = false
 
 [node name="Eyes" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=1764012788]
+
+[node name="Brows" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=1807691393]
 texture = ExtResource("4_y1mhv")
 
 [node name="Mouth" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=139976205]
@@ -38,19 +43,25 @@ texture = ExtResource("5_gg1iv")
 visible = false
 
 [node name="Eyes" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion2" unique_id=2136603309]
-texture = ExtResource("6_6xwdr")
+texture = ExtResource("6_y1mhv")
+
+[node name="Brows" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion2" unique_id=1153113522]
+texture = ExtResource("7_gg1iv")
 
 [node name="Mouth" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion2" unique_id=772744123]
-texture = ExtResource("5_gg1iv")
+texture = ExtResource("8_6xwdr")
 
 [node name="Emotion3" type="Node2D" parent="BaseLayer/Layers/EmotionLayers" unique_id=1933726144]
 visible = false
 
 [node name="Eyes" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion3" unique_id=1903007091]
-texture = ExtResource("7_7cuvv")
+texture = ExtResource("9_7cuvv")
+
+[node name="Brows" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion3" unique_id=148783978]
+texture = ExtResource("10_xycm2")
 
 [node name="Mouth" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion3" unique_id=1948185251]
-texture = ExtResource("8_xycm2")
+texture = ExtResource("11_iybov")
 
 [node name="MaskLayers" type="Node2D" parent="BaseLayer/Layers" unique_id=1926921973]
 visible = false
