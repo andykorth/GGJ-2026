@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://e80cy0g3ytw5"]
 
 [ext_resource type="Script" uid="uid://cfwf5d8exox4f" path="res://addons/dialogic/Modules/LayeredPortrait/custom_layered_portrait.gd" id="1_b7ty3"]
-[ext_resource type="Texture2D" uid="uid://bc5ycctslddt3" path="res://DialogicFiles/Sprites/jester_base.PNG" id="2_b7ty3"]
+[ext_resource type="Texture2D" uid="uid://bcbvhcai7jnpa" path="res://DialogicFiles/Sprites/jester_base.PNG" id="2_b7ty3"]
 [ext_resource type="Script" uid="uid://dcgike7u5a25m" path="res://Scripts/UpdateCharacterSpriteLayer.gd" id="3_qmerl"]
 [ext_resource type="Texture2D" uid="uid://bk8lfn1hvfsvm" path="res://DialogicFiles/Sprites/jester_eyes03.PNG" id="4_gg1iv"]
 [ext_resource type="Texture2D" uid="uid://iwhwk0bfxqe6" path="res://DialogicFiles/Sprites/jester_brows03.PNG" id="5_6xwdr"]
@@ -30,7 +30,6 @@ maskLayers = [NodePath("MaskLayers/OGMask"), NodePath("MaskLayers/WhimsyMask")]
 [node name="EmotionLayers" type="Node2D" parent="BaseLayer/Layers" unique_id=1596870267]
 
 [node name="Emotion1" type="Node2D" parent="BaseLayer/Layers/EmotionLayers" unique_id=1470034320]
-visible = false
 
 [node name="Eyes" type="Sprite2D" parent="BaseLayer/Layers/EmotionLayers/Emotion1" unique_id=1764012788]
 texture = ExtResource("4_gg1iv")
