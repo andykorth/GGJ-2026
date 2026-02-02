@@ -33,7 +33,7 @@ label YouaEaston
 	update Youa [animation="Shake Y"]
 	Youa: You know what? Sure!
 	Easton: Great!
-	set {GlobalGameVariables.currentCharacter.willingness} += "10.0"
+	set {GlobalGameVariables.currentCharacter.willingness} += 0
 	set {Youa.WhimsyMaskState} = true
 	set {Easton.WhimsyMaskState} = false
 	do GlobalGameVariables.ChangePlayerCharacterToYoua()
@@ -49,7 +49,7 @@ label YouaEaston
 	Youa: You know what? I'll do it!
 	Youa: I'll put on the mask!
 	Easton: Great!
-	set {GlobalGameVariables.currentCharacter.willingness} += "10.0"
+	set {GlobalGameVariables.currentCharacter.willingness} += 0
 	set {Youa.WhimsyMaskState} = true
 	set {Easton.WhimsyMaskState} = false
 	do GlobalGameVariables.ChangePlayerCharacterToYoua()
