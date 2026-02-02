@@ -6,7 +6,7 @@ elif {Youa.WhimsyMaskState} == true:
 	jump EastonIntroYoua
 label EastonIntroLena
 Easton: You!  I ordered that drink five minutes ago! What took you so long?
-- Oops.
+- Oops, my bad.
 	Mask: That was my fault for delaying you. Oops.
 	update Easton right [move_time="0.4"]
 	join Lena left [animation="Slide From Left" length="0.4"]
@@ -14,6 +14,9 @@ Easton: You!  I ordered that drink five minutes ago! What took you so long?
 	set {Easton.Emotion} = 1.0
 	Easton: Ah, at last. My refreshing evil latte.
 	Easton: Uh, sorry about earlier. Didn't mean to sound that way.
+	leave Lena [animation="Fade Out" length="0.2"]
+	update Easton center [move_time="0.2"]
+	jump EastonStory/StoryStart
 - Get wrecked!
 	Mask: Are you going to take that from him?
 	update Easton right [move_time="0.4"]
@@ -29,9 +32,11 @@ Easton: You!  I ordered that drink five minutes ago! What took you so long?
 	do GlobalGameVariables.remove_Easton()
 	jump SavedByLena/
 - Wear me!
-	Mask: You want to wear me?
+	Mask: You should put me on and go to this party!
+	update Easton [animation="Heartbeat"]
 	set {Easton.Emotion} = 2.0
-	Easton: What? A talking mask? Buzz off, I've got way more important things to deal with than this garbage.
+	Easton: What? A talking mask? Party?!
+	Easton: Buzz off, I've got way more important things to deal with than this garbage.
 	leave Easton [animation="Slide To Right" length="0.4"]
 	set {GlobalGameVariables.currentCharacter.willingness} -= 10.0
 	do GlobalGameVariables.remove_Easton()
@@ -41,3 +46,4 @@ Easton: Whaddya want? Can't you see I'm busy?
 - You're just...sitting there.
 - Oh...um, sorry...I'll go.
 	Easton: ...
+label EastonStory

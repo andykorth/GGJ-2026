@@ -1,0 +1,89 @@
+label Intro
+join Easton center [animation="Slide From Right" length="0.4"]
+Easton: Oh, hey. Sorry again about earlier. This day...
+if {Easton.StartedStory} == true:
+	jump StoryContinued
+label StoryStart
+Easton: It's rough... Had a business deal go wrong today.
+Easton: It was for half a million ems. It would've been our biggest deal so far this year.
+Easton: But they backed out of it at the last minute. Said I wasn't their type.
+Easton: Their...type? Just because I wear a gold mask and they wear silver?
+Easton: I believe in a world where you can succeed no matter who you are. This attitude is revolting! Offensive!
+- I'm sorry.
+	Mask: That's rough.
+	update Easton right [move_time="0.4"]
+	join Lena left [animation="Slide From Left" length="0.4"]
+	Lena: No wonder you're upset. I'm so sorry.
+	update Easton [animation="Shake Y" length="0.4"]
+	Easton: Thanks. It's surprising how much a kind word makes a difference.
+	Easton: ...I know that's ironic, considering how I treated you earlier.
+	set {Easton.StartedStory} = true
+	jump StoryContinued
+- They can get wrecked!
+	Mask: What evil pigs!
+	update Easton right [move_time="0.4"]
+	join Lena left [animation="Slide From Left" length="0.4"]
+	Lena: That's horrid! They didn't deserve what you had to offer!
+	update Easton [animation="Bounce" length="0.4"]
+	Easton: I know, right? Last time I talk with those silver-sucking charlatans!
+	Easton: I need to go deal with the fallout now. Here's a bit extra on your tip!
+	leave Easton [animation="Slide To Right" length="0.6" wait="true"]
+	update Lena center [move_time="0.4"]
+	do GlobalGameVariables.remove_Easton()
+	jump SavedByLena/Speaking
+- Wear me!
+	Mask: Put me on him!
+	update Easton right [move_time="0.4"]
+	join Lena left [animation="Slide From Left" length="0.4"]
+	Lena: Uh, hey. You wanna put on this magical mask? There's this party–
+	update Easton [animation="Heartbeat"]
+	Easton: What? How does that even...
+	Easton: You know what, nevermind. I'll be going now. Here's your tip.
+	leave Easton [animation="Slide To Right" length="0.6" wait="true"]
+	update Lena center [move_time="0.4"]
+	do GlobalGameVariables.remove_Easton()
+	jump SavedByLena/Speaking
+label StoryContinued
+Easton: I'm still figuring out how to tell my partner. This was a huge deal for our company. The fall-through, the lack of promised payment...
+- Just relax.
+	Mask: Things will work out. They usually do.
+	update Lena [animation="Shake X" length="0.4"]
+	Lena: I know it seems like things are falling apart. But you have already come this far. You had one chance, and surely someone of your caliber will make another deal. A better one, with people that respect you.
+	[wait time="0.6"]
+	update Easton [animation="Heartbeat"]
+	[wait time="0.4"]
+	Easton: You have a way with words...and sentiments.
+	Easton: You're right. We'll figure something out. We always have...we always will.
+	Mask: Indeed.
+	Easton: A talking mask...how did you come across such a rare thing?
+	Lena: I just found it lying here. It's trying to invite people to a party.
+	Lena: Want to stay for that?
+	[wait time="1.0"]
+	update Easton [animation="Heartbeat" length="0.2"]
+	[wait time="1.0"]
+	update Easton [animation="Shake Y" length="0.4"]
+	Easton: Sure! I've got a bit of time, I suppose. No need to rush back into the thick of things.
+	Lena: Excellent!
+	set {GlobalGameVariables.currentCharacter} += "10.0"
+	do GlobalGameVariables.ChangePlayerCharacterToEaston()
+	[end_timeline]
+- Take a breath.
+	Mask: He should step back. Let things calm down.
+	Lena: At least you have an evil latte to sip while you think things over.
+	[wait time="0.6"]
+	update Easton [animation="Shake Y" length="0.2"]
+	Easton: That's true. Andit's not the end of everything, I suppose.
+	Easton: I need some time alone with my drink now. Thank you.
+	leave Easton [animation="Fade Out Down" length="0.4" wait="true"]
+	set {GlobalGameVariables.currentCharacter.willingness} += "5.0"
+	[end_timeline]
+- Try a magical mask?
+	Mask: Maybe now he'll want to try me on?
+	Lena: Hey...you want to stay for a party? I've got this magical mask that's inviting everyone.
+	[wait time="1.0"]
+	Easton: What? No, sorry, I don't have the time.
+	Easton: I ought to get going. Here's your tip.
+	leave Easton [animation="Slide To Right" length="0.6" wait="true"]
+	update Lena center [move_time="0.4"]
+	do GlobalGameVariables.remove_Easton()
+	jump SavedByLena/Speaking
