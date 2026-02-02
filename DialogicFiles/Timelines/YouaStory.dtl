@@ -5,3 +5,48 @@ label StoryStart
 Youa: I don't usually...go places. But...I wanted to try. Today.
 Youa: I grew up an only child. I have no friends. I have my books. I have my shows.
 Youa: But today, something feels different. Like I need to talk to someone.
+Youa: Engage in social...uh, engagement!
+if {Easton.WhimsyMaskState} == true:
+	jump YouaEaston
+else:
+	jump YouaNoEaston
+label YouaNoEaston
+- This mask might help.
+	Mask: I could help with that.
+	Lena: I have this mask. It's good with people. Maybe you could put it on?
+- Wanna party?
+	Mask: She should go to the party!
+	Lena: We're gonna have this party soon. Wanna join in?
+update Youa [animation="Shake X" length="0.3"]
+Youa: I don't know...anyone else here.
+Youa: Maybe if I got to know these people better...
+[end_timeline]
+label StillNoEaston
+Youa: I know what you said earlier...but I still don't really know anyone else here...
+[end_timeline]
+label YouaEaston
+- There's this party...
+	Mask: The party would be great for that!
+	Easton: There's this party that's happening soon...maybe you could attend?
+	[wait time="1.0"]
+	update Youa [animation="Shake Y"]
+	Youa: You know what? Sure!
+	Easton: Great!
+	set {GlobalGameVariables.currentCharacter.willingness} += "10.0"
+	set {Youa.WhimsyMaskState} = true
+	do GlobalGameVariables.ChangePlayerCharacterToYoua()
+- Try this mask!
+	Mask: I could help with that.
+	Easton: This mask I'm wearing...it was given to me by someone. It helps with...uh, people stuff. Want to try it?
+	[wait time="1.0"]
+	update Youa [animation="Shake Y"]
+	Youa: That mask...the barista was wearing it earlier, wasn't she?
+	Youa: So...you talked with her?
+	Easton: Just like we're talking now.
+	Youa: Is this...socializing?
+	Youa: You know what? I'll do it!
+	Youa: I'll put on the mask!
+	Easton: Great!
+	set {GlobalGameVariables.currentCharacter.willingness} += "10.0"
+	set {Youa.WhimsyMaskState} = true
+	do GlobalGameVariables.ChangePlayerCharacterToYoua()
