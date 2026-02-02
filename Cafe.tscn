@@ -33,6 +33,7 @@
 [ext_resource type="Resource" uid="uid://brwg0b0lho0ph" path="res://resources/YouaCA.tres" id="18_gg70q"]
 [ext_resource type="Resource" uid="uid://cjlvthwxnuq47" path="res://resources/JesterCA.tres" id="19_inlb2"]
 [ext_resource type="Texture2D" uid="uid://svs37408kado" path="res://resources/Overworld/Curtain2.png" id="20_hofy4"]
+[ext_resource type="Texture2D" uid="uid://ck4hhmrpvhu3p" path="res://resources/Overworld/Painting.png" id="21_f4weq"]
 [ext_resource type="Texture2D" uid="uid://cstjuaphc6iry" path="res://chatIconSpace.png" id="22_a0nfj"]
 [ext_resource type="Script" uid="uid://dblob17d14283" path="res://debug_end_button.gd" id="22_gg70q"]
 [ext_resource type="Texture2D" uid="uid://csydonrleyvie" path="res://resources/Overworld/EndTable.png" id="22_isd7h"]
@@ -206,6 +207,13 @@ z_index = 1
 position = Vector2(170, 19)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("14_o5jln")
+
+[node name="Painting" type="Sprite2D" parent="Backgrounds" unique_id=1287445937]
+z_index = -1
+position = Vector2(846, 129)
+rotation = -0.022789586
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("21_f4weq")
 
 [node name="Curtain2" type="Sprite2D" parent="Backgrounds" unique_id=1036906196]
 z_index = 1
