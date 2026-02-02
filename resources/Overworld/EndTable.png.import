@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc5ycctslddt3"
-path="res://.godot/imported/jester_base.PNG-7a45bb5d07fbaf1c050db405d8f2ea9a.ctex"
+uid="uid://csydonrleyvie"
+path="res://.godot/imported/EndTable.png-53cb6fe35b88f4775a2e8aca40ec7859.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DialogicFiles/Sprites/jester_base.PNG"
-dest_files=["res://.godot/imported/jester_base.PNG-7a45bb5d07fbaf1c050db405d8f2ea9a.ctex"]
+source_file="res://resources/Overworld/EndTable.png"
+dest_files=["res://.godot/imported/EndTable.png-53cb6fe35b88f4775a2e8aca40ec7859.ctex"]
 
 [params]
 

@@ -23,6 +23,9 @@ var musicPlayer: AudioStreamPlayer
 @export var neutralMusic: AudioStream
 @export var goodMusic: AudioStream
 
+var youa_decision_made
+var easton_decision_made
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -50,9 +53,13 @@ func ChangePlayerCharacterToLena():
   
 func ChangePlayerCharacterToEaston():
 	ChangePlayerCharacter(eastonNPC)
+	easton_decision_made = true
+	check_for_end_game()
   
 func ChangePlayerCharacterToYoua():
 	ChangePlayerCharacter(youaNPC)
+	youa_decision_made = true
+	check_for_end_game()
 
 func ChangePlayerCharacterToJester():
 	ChangePlayerCharacter(jesterNPC)
@@ -67,10 +74,10 @@ func MoveJesterNPCTo(x: float, y := 0.0):
 	jesterNPC.SetDestination(Vector2(x, y))
 
 
-func incrementDialogStepsTaken():
-	stepsTakenInDialog += 1
-	print('DBG: steps taken: %s' % [stepsTakenInDialog])
-	pass
+##func incrementDialogStepsTaken():
+##	stepsTakenInDialog += 1
+##	print('DBG: steps taken: %s' % [stepsTakenInDialog])
+##	pass
 
 func animateCamera(x: float):
 	print("Starting camera animation: x => " + str(x))
@@ -116,9 +123,13 @@ func change_music_good():
 
 func remove_Youa():
 	remove_NPC(youaNPC)
+	youa_decision_made = true
+	check_for_end_game()
 	
 func remove_Easton():
 	remove_NPC(eastonNPC)
+	easton_decision_made = true
+	check_for_end_game()
 	
 func remove_Lena():
 	remove_NPC(lenaNPC)
@@ -130,4 +141,10 @@ func remove_NPC(npc : CafeNPC):
 		npc.ignore_character_swapping = true
 		npc.HideCharacter()
 	npc.WalkOffscreen(Vector2(2570.0, 500.0), afterExitFunction)
+	
+func check_for_end_game():
+	if youa_decision_made == true && easton_decision_made == true:
+		await Dialogic.timeline_ended
+		print('DBG: THE END IS NIGH')
+		DialogicConnector.endGame()
 	

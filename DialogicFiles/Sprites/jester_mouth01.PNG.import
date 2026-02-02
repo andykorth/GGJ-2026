@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc5ycctslddt3"
-path="res://.godot/imported/jester_base.PNG-7a45bb5d07fbaf1c050db405d8f2ea9a.ctex"
+uid="uid://bo8avixemx5xi"
+path="res://.godot/imported/jester_mouth01.PNG-733a987cb9d709aa65cbc234388a5ca8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://DialogicFiles/Sprites/jester_base.PNG"
-dest_files=["res://.godot/imported/jester_base.PNG-7a45bb5d07fbaf1c050db405d8f2ea9a.ctex"]
+source_file="res://DialogicFiles/Sprites/jester_mouth01.PNG"
+dest_files=["res://.godot/imported/jester_mouth01.PNG-733a987cb9d709aa65cbc234388a5ca8.ctex"]
 
 [params]
 

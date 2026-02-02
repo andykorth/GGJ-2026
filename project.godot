@@ -80,6 +80,10 @@ variables={
 
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="Masqafe"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
